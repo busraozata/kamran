@@ -16,8 +16,121 @@
 
 <body>
     <header>
+        <div class="container-fluid">
+            <div class="header-inner d-flex align-items-center justify-content-between">
+                <div class="img-wrapper">
+                    <a href="index.html">
+                        <img src="./img/logo.png" class="img-fluid" alt="logo">
+                    </a>
+                    <div class="menu-bar services_toggle">
+                        <label for="hamburger" class="hamburger " class="">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </label>
 
+                    </div>
+                </div>
+                <button id="toggle-btn"><i class="fa fa-bars"></i> </button>
+
+                <div class="navigation">
+                    <ul class="menu-area d-flex justify-content-center align-items-center">
+                        <li class="nav-item"><a href="index.html" class="nav-link active">ANA SAYFA</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">HAKKIMDA</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="services.html" class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">AMELİYATLAR</a>
+                            <!--   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="service-detail.html">Beyin ve Sinir Cerrahisi</a></li>
+                                <li><a class="dropdown-item" href="service-detail.html">GUMMY SMILE</a></li>
+                                <li><a class="dropdown-item" href="service-detail.html">İMPLANT TEDAVİSİ</a></li>
+                                <li><a class="dropdown-item" href="service-detail.html">LAMİNE KAPLAMA</a></li>
+                                <li><a class="dropdown-item" href="service-detail.html">KANAL TEDAVİSİ</a></li>
+                                <li><a class="dropdown-item" href="service-detail.html">PORSELEN KAPLAMA</a></li>
+                                <li><a class="dropdown-item" href="service-detail.html">DİŞ TAŞI TEMİZLİĞİ</a></li>
+
+                            </ul> -->
+                        </li>
+                        <li class="nav-item"><a href="blog.html" class="nav-link">BLOG</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link"> İLETİŞİM</a></li>
+                    </ul>
+                    <div class="language d-xl-none d-flex justify-content-center align-items-center">
+                        <img src="./img/world.png" class="img-fluid" alt="world">
+                        <ul class="d-flex align-items-center">
+                            <li class="nav-item active">TR</li>
+                            <li class="nav-item">ENG</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="language d-xl-flex d-none justify-content-center align-items-center">
+                    <img src="./img/world.png" class="img-fluid" alt="world">
+                    <ul class="d-flex align-items-center">
+                        <li class="nav-item active">TR</li>
+                        <li class="nav-item">ENG</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </header>
+
+    <div class="services-menu">
+        <div class="menu-bar services_toggle">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <div class="row w-100">
+            <div class="col-lg-12">
+                <img src="./img/logo.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 left-area flex-column d-flex align-items-center justify-content-center">
+                <div class="content">
+                    <h2>
+                        Hızlı
+                        <span>
+                            Randevu
+                        </span>
+                    </h2>
+                    <p>
+                        Formdaki bilgileri doldurun, size hemen uygun randevu
+                        gün ve saatleri ile ilgili dönüş yapalım.
+                    </p>
+                    <p>
+                        Dilerseniz <a href="tel:+90 531 261 60 17">+90 531 261 60 17</a> numaralı çözüm
+                        merkezimizden bize ulaşabilirsiniz
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 right-area">
+                <div class="form-area">
+                    <form action="">
+                        <div class="col-lg-12 mb-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Adınız Soyadınız*">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mb-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="E-Posta Adresiniz*">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mb-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Telefonunuz*">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mb-4">
+                            <div class="form-group">
+                               <textarea name="" id="" class="form-control" placeholder="Mesajınız*"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <button class="btn">Gönder</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <section class="banner">
         <div class="swiper mySwiperBanner">
             <div class="swiper-wrapper">
@@ -27,7 +140,7 @@
 
                         </div>
                         <div class="col-lg-4">
-                            <div class="content">
+                            <div class="big-content">
                                 <div class="index">
                                     <span>01</span>
                                 </div>
@@ -54,9 +167,9 @@
 
                         </div>
                         <div class="col-lg-4">
-                            <div class="content">
+                            <div class="big-content">
                                 <div class="index">
-                                    <span>01</span>
+                                    <span>02</span>
                                 </div>
                                 <h1>
                                     Beyin ve Sinir Cerrahisi
@@ -81,9 +194,36 @@
 
                         </div>
                         <div class="col-lg-4">
-                            <div class="content">
+                            <div class="big-content">
                                 <div class="index">
-                                    <span>01</span>
+                                    <span>03</span>
+                                </div>
+                                <h1>
+                                    Beyin ve Sinir Cerrahisi
+                                    (Nöroşirürji) Nedir ?
+                                </h1>
+                                <p>
+                                    Halk arasında beyin ve sinir cerrahisi olarak da bilinen nöroşirürji,
+                                    beyin ve sinir hastalıkları ile ilgilenen bilim dalıdır. Başta beyin
+                                    ve omurilik dokusunda bulunan ve / veya bu dokulara bası
+                                    yapan tümörlerin tedavileri olmak üzere bel ve boyun fıtıkları,
+                                    kafa, omurilik travmaları, beyin damarı tıkanıklıkları,
+                                    anevrizma, beyin kanaması gibi hastalıklar, nöroşirürji
+                                    uzmanları tarafından takip ve tedavi edilir.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row w-100 align-items-center">
+                        <div class="col-lg-8" style="background: url(./img/service-banner.jpg) no-repeat; height: 100vh; background-size: cover; background-position: center;">
+
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="big-content">
+                                <div class="index">
+                                    <span>04</span>
                                 </div>
                                 <h1>
                                     Beyin ve Sinir Cerrahisi
@@ -106,63 +246,161 @@
         </div>
         <div class="swiper-area">
             <div class="row justify-content-end">
-                <div class="col-lg-5">
+                <div class="col-lg-9">
                     <div class="swiper mySwiperServices">
+                        <div class="navigate-button">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                Slide 1
+                                <div class="content">
+                                    <div class="d-flex align-items-start">
+                                        <div class="index">
+                                            <span>02</span>
+                                        </div>
+                                        <div>
+                                            <a href="">
+                                                <h1>
+                                                    Beyin ve Sinir Cerrahisi
+                                                    (Nöroşirürji) Nedir ?
+                                                </h1>
+                                            </a>
+                                            <p>
+                                                Halk arasında beyin ve sinir cerrahisi olarak da
+                                                bilinen nöroşirürji, beyin ve sinir hastalıkları
+                                                ile ilgilenen bilim dalıdır.
+                                            </p>
+                                            <a href="" class="btn">BİLGİ AL</a>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <div class="d-flex align-items-start">
+                                        <div class="index">
+                                            <span>03</span>
+                                        </div>
+                                        <div>
+                                            <a href="">
+                                                <h1>
+                                                    Beyin ve Sinir Cerrahisi
+                                                    (Nöroşirürji) Nedir ?
+                                                </h1>
+                                            </a>
+                                            <p>
+                                                Halk arasında beyin ve sinir cerrahisi olarak da
+                                                bilinen nöroşirürji, beyin ve sinir hastalıkları
+                                                ile ilgilenen bilim dalıdır.
+                                            </p>
+                                            <a href="" class="btn">BİLGİ AL</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <div class="d-flex align-items-start">
+                                        <div class="index">
+                                            <span>04</span>
+                                        </div>
+                                        <div>
+                                            <a href="">
+                                                <h1>
+                                                    Beyin ve Sinir Cerrahisi
+                                                    (Nöroşirürji) Nedir ?
+                                                </h1>
+                                            </a>
+                                            <p>
+                                                Halk arasında beyin ve sinir cerrahisi olarak da
+                                                bilinen nöroşirürji, beyin ve sinir hastalıkları
+                                                ile ilgilenen bilim dalıdır.
+                                            </p>
+                                            <a href="" class="btn">BİLGİ AL</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <div class="d-flex align-items-start">
+                                        <div class="index">
+                                            <span>01</span>
+                                        </div>
+                                        <div>
+                                            <a href="">
+                                                <h1>
+                                                    Beyin ve Sinir Cerrahisi
+                                                    (Nöroşirürji) Nedir ?
+                                                </h1>
+                                            </a>
+                                            <p>
+                                                Halk arasında beyin ve sinir cerrahisi olarak da
+                                                bilinen nöroşirürji, beyin ve sinir hastalıkları
+                                                ile ilgilenen bilim dalıdır.
+                                            </p>
+                                            <a href="" class="btn">BİLGİ AL</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
 
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="swiper mySwiperServicesImage">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide" style="background: url(./img/service.jpg) no-repeat; background-size: cover; background-position: center;">
 
-                            </div>
-                            <div class="swiper-slide" style="background: url(./img/service.jpg) no-repeat; background-size: cover; background-position: center;">
-
-                            </div>
-                            <div class="swiper-slide" style="background: url(./img/service.jpg) no-repeat; background-size: cover; background-position: center;">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
     <section class="doctor-about">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <div class="content">
-                        <h3>DR. KAMRAN AGHAYEV <span>kimdir?</span></h3>
-                        <span class="text">
-                            Doç. Dr. Kamran Aghayev Beyin ve Sinir Cerrahisi Uzmanıdır.
-                            Kompleks beyin ve omurga hastalıklarının cerrahi
-                            tedavisinde ihtisaslaşmıştır.
-                        </span>
-                        <p>
-                            İlgi alanları ileri omurga cerrahisi, beyin anevrizmalarının mikrocerrahi tedavisi, derin beyin stimülasyon tedavisi, endoskopik kafa kaide
-                            cerrahisi, beyin tümörleri, torasik outlet sendromu gibi çeşitli
-                            hastalıklar içermektedir. Dr. Aghayev İngiliz, Rus, Türk ve
-                            Azeri dillerinde serbest konuşmaktadır.
-                        </p>
-                        <p>
+                    <div class="top">
+                        <div class="content">
+                            <h3>Dr. Kamran AGHAYEV <span>kimdir?</span></h3>
+                            <span class="text">
+                                Doç. Dr. Kamran Aghayev Beyin ve Sinir Cerrahisi Uzmanıdır.
+                                Kompleks beyin ve omurga hastalıklarının cerrahi
+                                tedavisinde ihtisaslaşmıştır.
+                            </span>
+                            <p>
+                                İlgi alanları ileri omurga cerrahisi, beyin anevrizmalarının
+                                mikrocerrahi tedavisi, derin beyin stimülasyon tedavisi,
+                                endoskopik kafa kaide cerrahisi, beyin tümörleri, torasik
+                                outlet sendromu gibi çeşitli hastalıklar içermektedir.
+                                Dr. Aghayev İngiliz, Rus, Türk ve Azeri dillerinde
+                                serbest konuşmaktadır.
 
-                            İlgi alanları ileri omurga cerrahisi, beyin anevrizmalarının mikrocerrahi tedavisi, derin beyin stimülasyon tedavisi, endoskopik kafa kaide
-                            cerrahisi, beyin tümörleri, torasik outlet sendromu gibi çeşitli hastalıklar içermektedir. Dr. Aghayev İngiliz, Rus, Türk ve Azeri dillerinde serbest konuşmaktadır.İlgi alanları ileri omurga cerrahisi, beyin anevrizmalarının mikrocerrahi tedavisi, derin beyin stimülasyon tedavisi, endoskopik kafa kaidecerrahisi, beyin tümörleri, torasik outlet sendromu gibi çeşitlihastalıklar içermektedir. Dr. Aghayev İngiliz, Rus, Türk vebAzeri dillerinde serbest konuşmaktadır.
-                        </p>
-                        <a href="#" class="btn">DEVAM ET</a>
+                            </p>
+
+                            <a href="#" class="btn">DEVAM ET</a>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="scientific-studies">
+                            <div>
+                                <h4>Bilimsel Çalışmalar</h4>
+                                <span>Yayın Listesi;</span>
+                            </div>
+                            <div>
+
+                                <ul>
+                                    <li><a href="">Hakemli Dergi Makaleleri</a></li>
+                                    <li><a href="">Kitap Bölümleri</a></li>
+                                    <li><a href="">Bilimsel Özetler - Sunumlar</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <div class="img-wrapper">
+                    <div class="img-wrapper position-relative">
                         <img src="./img/kamran-aghayev.jpg" class="img-fluid" alt="kamran-aghayev">
                     </div>
                 </div>
@@ -172,173 +410,606 @@
 
     <section class="patient-comments">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <div class="comments">
-                        <h5 class="text-center">Hasta Yorumları</h5>
-                        <div class="swiper mySwiperComments">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="content">
-                                        <span class="contact">-Subaranoik kanaması</span>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Quis ipsum suspendisse ultrices gravida.
-                                        </p>
-                                        <div class="d-flex flex-column align-items-start">
-                                            <span class="title">Selin BULDU</span>
-                                            <span class="time">3 şubat 2022</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="content">
-                                        <span class="contact">-Subaranoik kanaması</span>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Quis ipsum suspendisse ultrices gravida.
-                                        </p>
-                                        <div class="d-flex flex-column align-items-start">
-                                            <span class="title">Selin BULDU</span>
-                                            <span class="time">3 şubat 2022</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="content">
-                                        <span class="contact">-Subaranoik kanaması</span>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Quis ipsum suspendisse ultrices gravida.
-                                        </p>
-                                        <div class="d-flex flex-column align-items-start">
-                                            <span class="title">Selin BULDU</span>
-                                            <span class="time">3 şubat 2022</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="content">
-                                        <span class="contact">-Subaranoik kanaması</span>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Quis ipsum suspendisse ultrices gravida.
-                                        </p>
-                                        <div class="d-flex flex-column align-items-start">
-                                            <span class="title">Selin BULDU</span>
-                                            <span class="time">3 şubat 2022</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="img-wrapper ">
-                        <img src="./img/patient-comment.jpg" class="img-fluid" alt="">
-                        <div class="content-area">
-                            <a href="" class="play-button">
-                                <img src="./img/play.png" class="img-fluid" alt="">
-                            </a>
-                            <h3>
-                                Beyin ve Sinir Cerrahisi
-                                (Nöroşirürji) Nedir ?
-                            </h3>
-                            <p>
-                                Halk arasında beyin ve sinir cerrahisi olarak da bilinen nöroşirürji, beyin ve sinir hastalıkları ile ilgilenen bilim dalıdır. Başta beyin
-                                ve omurilik dokusunda bulunan ve / veya bu dokulara bası yapan tümörlerin tedavileri olmak üzere bel ve boyun fıtıkları,
-                                kafa, omurilik travmaları, beyin damarı tıkanıklıkları, anevrizma, beyin kanaması gibi hastalıklar, nöroşirürji uzmanları tarafından
-                                takip ve tedavi edilir.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-title">
+                <h2>HASTA
+                    <span>
+                        Yorumları
+                    </span>
+                </h2>
             </div>
-        </div>
-    </section>
+            <div class="area">
 
-    <section class="blog">
-        <div class="container">
-            <div class="title">
-                <h4>BLOG</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet,
-                    ng elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="swiper mySwiperBlog">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <a href=""><img src="./img/blog.jpg" class="card-img-top" alt="..."></a>
-                            <div class="card-body">
-                                <a href="">
-                                    <h5 class="card-title">BEYİN KANAMASI</h5>
-                                </a>
-                                <p class="card-text">
-                                    Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır.
-                                    5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin ameliyatları
-                                    sadece uzman beyin cerrahları tarafından yapılabilir.
-                                </p>
-                                <a href="#" class="btn">DEVAM ET</a>
+                <div class="swiper mySwiperComments">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="box">
+                                <div class="img-wrapper">
+                                    <img src="./img/user.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="subject">
+                                    <span>-Subaranoik kanaması</span>
+                                </div>
+                                <div class="text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                </div>
+                                <div class="d-flex flex-column align-items-start">
+                                    <span class="title">Selin BULDU</span>
+                                    <span class="time">3 şubat 2022</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <a href=""><img src="./img/blog.jpg" class="card-img-top" alt="..."></a>
-                            <div class="card-body">
-                                <a href="">
-                                    <h5 class="card-title">BEYİN KANAMASI</h5>
-                                </a>
-                                <p class="card-text">
-                                    Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır.
-                                    5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin ameliyatları
-                                    sadece uzman beyin cerrahları tarafından yapılabilir.
-                                </p>
-                                <a href="#" class="btn">DEVAM ET</a>
+                        <div class="swiper-slide">
+                            <div class="box">
+                                <div class="img-wrapper">
+                                    <img src="./img/user.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="subject">
+                                    <span>-Subaranoik kanaması</span>
+                                </div>
+                                <div class="text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                </div>
+                                <div class="d-flex flex-column align-items-start">
+                                    <span class="title">Selin BULDU</span>
+                                    <span class="time">3 şubat 2022</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <a href=""> <img src="./img/blog.jpg" class="card-img-top" alt="..."></a>
-                            <div class="card-body">
-                                <a href="">
-                                    <h5 class="card-title">BEYİN KANAMASI</h5>
-                                </a>
-                                <p class="card-text">
-                                    Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır.
-                                    5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin ameliyatları
-                                    sadece uzman beyin cerrahları tarafından yapılabilir.
-                                </p>
-                                <a href="#" class="btn">DEVAM ET</a>
+                        <div class="swiper-slide">
+                            <div class="box">
+                                <div class="img-wrapper">
+                                    <img src="./img/user.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="subject">
+                                    <span>-Subaranoik kanaması</span>
+                                </div>
+                                <div class="text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                </div>
+                                <div class="d-flex flex-column align-items-start">
+                                    <span class="title">Selin BULDU</span>
+                                    <span class="time">3 şubat 2022</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <a href=""><img src="./img/blog.jpg" class="card-img-top" alt="..."></a>
-                            <div class="card-body">
-                                <a href="">
-                                    <h5 class="card-title">BEYİN KANAMASI</h5>
-                                </a>
-                                <p class="card-text">
-                                    Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır.
-                                    5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin ameliyatları
-                                    sadece uzman beyin cerrahları tarafından yapılabilir.
-                                </p>
-                                <a href="#" class="btn">DEVAM ET</a>
+                        <div class="swiper-slide">
+                            <div class="box">
+                                <div class="img-wrapper">
+                                    <img src="./img/user.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="subject">
+                                    <span>-Subaranoik kanaması</span>
+                                </div>
+                                <div class="text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                </div>
+                                <div class="d-flex flex-column align-items-start">
+                                    <span class="title">Selin BULDU</span>
+                                    <span class="time">3 şubat 2022</span>
+                                </div>
                             </div>
                         </div>
+
                     </div>
-                </div>
-                <div class="pagination-area">
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="video">
+        <div class="container-fluid">
+            <div class="section-title">
+                <h2>VİDEO</h2>
+                <P>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </P>
+            </div>
+            <div class="swiper-container swiper--top">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="row w-100">
+                            <div class="col-lg-7">
+                                <div class="img-wrapper position-relative d-flex align-items-center justify-content-center">
+                                    <div class="play-button position-absolute">
+                                        <a href="">
+                                            <img src="./img/play.png" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                    <img src="./img/video-img.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-5 right">
+                                <div class="content">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <h4>
+                                        Beyin ve Sinir Cerrahisi
+                                        (Nöroşirürji) Nedir ?
+                                    </h4>
+                                    <p>
+                                        Halk arasında beyin ve sinir cerrahisi olarak da bilinen nöroşirürji, beyin
+                                        ve sinir hastalıkları ile ilgilenen bilim dalıdır. Başta beyin ve omurilik
+                                        dokusunda bulunan ve / veya bu dokulara bası yapan tümörlerin
+                                        tedavileri olmak üzere bel ve boyun fıtıkları, kafa, omurilik travmaları,
+                                        beyin damarı tıkanıklıkları, anevrizma, beyin kanaması gibi hastalıklar,
+                                        nöroşirürji uzmanları tarafından takip ve tedavi edilir.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row w-100">
+                            <div class="col-lg-7">
+                                <div class="img-wrapper position-relative d-flex align-items-center justify-content-center">
+                                    <div class="play-button position-absolute">
+                                        <a href="">
+                                            <img src="./img/play.png" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                    <img src="./img/video-img.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-5 right">
+                                <div class="content">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <h4>
+                                        Beyin ve Sinir Cerrahisi
+                                        (Nöroşirürji) Nedir ?
+                                    </h4>
+                                    <p>
+                                        Halk arasında beyin ve sinir cerrahisi olarak da bilinen nöroşirürji, beyin
+                                        ve sinir hastalıkları ile ilgilenen bilim dalıdır. Başta beyin ve omurilik
+                                        dokusunda bulunan ve / veya bu dokulara bası yapan tümörlerin
+                                        tedavileri olmak üzere bel ve boyun fıtıkları, kafa, omurilik travmaları,
+                                        beyin damarı tıkanıklıkları, anevrizma, beyin kanaması gibi hastalıklar,
+                                        nöroşirürji uzmanları tarafından takip ve tedavi edilir.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row w-100">
+                            <div class="col-lg-7">
+                                <div class="img-wrapper position-relative d-flex align-items-center justify-content-center">
+                                    <div class="play-button position-absolute">
+                                        <a href="">
+                                            <img src="./img/play.png" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                    <img src="./img/video-img.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-5 right">
+                                <div class="content">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <h4>
+                                        Beyin ve Sinir Cerrahisi
+                                        (Nöroşirürji) Nedir ?
+                                    </h4>
+                                    <p>
+                                        Halk arasında beyin ve sinir cerrahisi olarak da bilinen nöroşirürji, beyin
+                                        ve sinir hastalıkları ile ilgilenen bilim dalıdır. Başta beyin ve omurilik
+                                        dokusunda bulunan ve / veya bu dokulara bası yapan tümörlerin
+                                        tedavileri olmak üzere bel ve boyun fıtıkları, kafa, omurilik travmaları,
+                                        beyin damarı tıkanıklıkları, anevrizma, beyin kanaması gibi hastalıklar,
+                                        nöroşirürji uzmanları tarafından takip ve tedavi edilir.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row w-100">
+                            <div class="col-lg-7">
+                                <div class="img-wrapper position-relative d-flex align-items-center justify-content-center">
+                                    <div class="play-button position-absolute">
+                                        <a href="">
+                                            <img src="./img/play.png" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                    <img src="./img/video-img.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-5 right">
+                                <div class="content">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <h4>
+                                        Beyin ve Sinir Cerrahisi
+                                        (Nöroşirürji) Nedir ?
+                                    </h4>
+                                    <p>
+                                        Halk arasında beyin ve sinir cerrahisi olarak da bilinen nöroşirürji, beyin
+                                        ve sinir hastalıkları ile ilgilenen bilim dalıdır. Başta beyin ve omurilik
+                                        dokusunda bulunan ve / veya bu dokulara bası yapan tümörlerin
+                                        tedavileri olmak üzere bel ve boyun fıtıkları, kafa, omurilik travmaları,
+                                        beyin damarı tıkanıklıkları, anevrizma, beyin kanaması gibi hastalıklar,
+                                        nöroşirürji uzmanları tarafından takip ve tedavi edilir.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row w-100">
+                            <div class="col-lg-7">
+                                <div class="img-wrapper position-relative d-flex align-items-center justify-content-center">
+                                    <div class="play-button position-absolute">
+                                        <a href="">
+                                            <img src="./img/play.png" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                    <img src="./img/video-img.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-5 right">
+                                <div class="content">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <h4>
+                                        Beyin ve Sinir Cerrahisi
+                                        (Nöroşirürji) Nedir ?
+                                    </h4>
+                                    <p>
+                                        Halk arasında beyin ve sinir cerrahisi olarak da bilinen nöroşirürji, beyin
+                                        ve sinir hastalıkları ile ilgilenen bilim dalıdır. Başta beyin ve omurilik
+                                        dokusunda bulunan ve / veya bu dokulara bası yapan tümörlerin
+                                        tedavileri olmak üzere bel ve boyun fıtıkları, kafa, omurilik travmaları,
+                                        beyin damarı tıkanıklıkları, anevrizma, beyin kanaması gibi hastalıklar,
+                                        nöroşirürji uzmanları tarafından takip ve tedavi edilir.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row w-100">
+                            <div class="col-lg-7">
+                                <div class="img-wrapper position-relative d-flex align-items-center justify-content-center">
+                                    <div class="play-button position-absolute">
+                                        <a href="">
+                                            <img src="./img/play.png" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                    <img src="./img/video-img.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-5 right">
+                                <div class="content">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <h4>
+                                        Beyin ve Sinir Cerrahisi
+                                        (Nöroşirürji) Nedir ?
+                                    </h4>
+                                    <p>
+                                        Halk arasında beyin ve sinir cerrahisi olarak da bilinen nöroşirürji, beyin
+                                        ve sinir hastalıkları ile ilgilenen bilim dalıdır. Başta beyin ve omurilik
+                                        dokusunda bulunan ve / veya bu dokulara bası yapan tümörlerin
+                                        tedavileri olmak üzere bel ve boyun fıtıkları, kafa, omurilik travmaları,
+                                        beyin damarı tıkanıklıkları, anevrizma, beyin kanaması gibi hastalıklar,
+                                        nöroşirürji uzmanları tarafından takip ve tedavi edilir.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-container swiper--bottom">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="row w-100">
+                            <div class="col-lg-7">
+                                <div class="img-wrapper position-relative d-flex align-items-center justify-content-center">
+                                    <div class="play-button position-absolute">
+                                        <a href="">
+                                            <img src="./img/play.png" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                    <img src="./img/video-img.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-5 right">
+                                <div class="content">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <h4>
+                                        Beyin ve Sinir Cerrahisi
+                                        (Nöroşirürji) Nedir ?
+                                    </h4>
+                                    <p>
+                                        Halk arasında beyin ve sinir cerrahisi olarak da bilinen nöroşirürji, beyin
+                                        ve sinir hastalıkları ile ilgilenen bilim dalıdır. Başta beyin ve omurilik
+                                        dokusunda bulunan ve / veya bu dokulara bası yapan tümörlerin
+                                        tedavileri olmak üzere bel ve boyun fıtıkları, kafa, omurilik travmaları,
+                                        beyin damarı tıkanıklıkları, anevrizma, beyin kanaması gibi hastalıklar,
+                                        nöroşirürji uzmanları tarafından takip ve tedavi edilir.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row w-100">
+                            <div class="col-lg-7">
+                                <div class="img-wrapper position-relative d-flex align-items-center justify-content-center">
+                                    <div class="play-button position-absolute">
+                                        <a href="">
+                                            <img src="./img/play.png" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                    <img src="./img/video-img.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-5 right">
+                                <div class="content">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <h4>
+                                        Beyin ve Sinir Cerrahisi
+                                        (Nöroşirürji) Nedir ?
+                                    </h4>
+                                    <p>
+                                        Halk arasında beyin ve sinir cerrahisi olarak da bilinen nöroşirürji, beyin
+                                        ve sinir hastalıkları ile ilgilenen bilim dalıdır. Başta beyin ve omurilik
+                                        dokusunda bulunan ve / veya bu dokulara bası yapan tümörlerin
+                                        tedavileri olmak üzere bel ve boyun fıtıkları, kafa, omurilik travmaları,
+                                        beyin damarı tıkanıklıkları, anevrizma, beyin kanaması gibi hastalıklar,
+                                        nöroşirürji uzmanları tarafından takip ve tedavi edilir.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row w-100">
+                            <div class="col-lg-7">
+                                <div class="img-wrapper position-relative d-flex align-items-center justify-content-center">
+                                    <div class="play-button position-absolute">
+                                        <a href="">
+                                            <img src="./img/play.png" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                    <img src="./img/video-img.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-5 right">
+                                <div class="content">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <h4>
+                                        Beyin ve Sinir Cerrahisi
+                                        (Nöroşirürji) Nedir ?
+                                    </h4>
+                                    <p>
+                                        Halk arasında beyin ve sinir cerrahisi olarak da bilinen nöroşirürji, beyin
+                                        ve sinir hastalıkları ile ilgilenen bilim dalıdır. Başta beyin ve omurilik
+                                        dokusunda bulunan ve / veya bu dokulara bası yapan tümörlerin
+                                        tedavileri olmak üzere bel ve boyun fıtıkları, kafa, omurilik travmaları,
+                                        beyin damarı tıkanıklıkları, anevrizma, beyin kanaması gibi hastalıklar,
+                                        nöroşirürji uzmanları tarafından takip ve tedavi edilir.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row w-100">
+                            <div class="col-lg-7">
+                                <div class="img-wrapper position-relative d-flex align-items-center justify-content-center">
+                                    <div class="play-button position-absolute">
+                                        <a href="">
+                                            <img src="./img/play.png" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                    <img src="./img/video-img.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-5 right">
+                                <div class="content">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <h4>
+                                        Beyin ve Sinir Cerrahisi
+                                        (Nöroşirürji) Nedir ?
+                                    </h4>
+                                    <p>
+                                        Halk arasında beyin ve sinir cerrahisi olarak da bilinen nöroşirürji, beyin
+                                        ve sinir hastalıkları ile ilgilenen bilim dalıdır. Başta beyin ve omurilik
+                                        dokusunda bulunan ve / veya bu dokulara bası yapan tümörlerin
+                                        tedavileri olmak üzere bel ve boyun fıtıkları, kafa, omurilik travmaları,
+                                        beyin damarı tıkanıklıkları, anevrizma, beyin kanaması gibi hastalıklar,
+                                        nöroşirürji uzmanları tarafından takip ve tedavi edilir.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row w-100">
+                            <div class="col-lg-7">
+                                <div class="img-wrapper position-relative d-flex align-items-center justify-content-center">
+                                    <div class="play-button position-absolute">
+                                        <a href="">
+                                            <img src="./img/play.png" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                    <img src="./img/video-img.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-5 right">
+                                <div class="content">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <h4>
+                                        Beyin ve Sinir Cerrahisi
+                                        (Nöroşirürji) Nedir ?
+                                    </h4>
+                                    <p>
+                                        Halk arasında beyin ve sinir cerrahisi olarak da bilinen nöroşirürji, beyin
+                                        ve sinir hastalıkları ile ilgilenen bilim dalıdır. Başta beyin ve omurilik
+                                        dokusunda bulunan ve / veya bu dokulara bası yapan tümörlerin
+                                        tedavileri olmak üzere bel ve boyun fıtıkları, kafa, omurilik travmaları,
+                                        beyin damarı tıkanıklıkları, anevrizma, beyin kanaması gibi hastalıklar,
+                                        nöroşirürji uzmanları tarafından takip ve tedavi edilir.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="blog">
+        <div class="container-fluid">
+            <div class="section-title">
+                <h2>BLOG</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="title">
+                        <h2>YENİ
+                            <span>
+                                Yazılar
+                            </span>
+                        </h2>
+                    </div>
+                    <div class="text">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="swiper mySwiperBlog">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href=""><img src="./img/blog.jpg" class="card-img-top" alt="..."></a>
+                                    <div class="card-body">
+                                        <a href="">
+                                            <h5 class="card-title">BEYİN KANAMASI</h5>
+                                        </a>
+                                        <p class="card-text">
+                                            Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır.
+                                            5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin ameliyatları
+                                            sadece uzman beyin cerrahları tarafından yapılabilir.
+                                        </p>
+                                        <div class="text-two">
+                                            <p>
+                                                Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır.
+                                                5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin ameliyatları sadece uzman
+                                                beyin cerrahları tarafından yapılabilir. Beyin ameliyatları, operasyonun
+                                                neden yapıldığına göre farklı şekillerde planlanır.
+                                            </p>
+                                        </div>
+                                        <a href="#" class="btn">DEVAM ET</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href=""><img src="./img/blog.jpg" class="card-img-top" alt="..."></a>
+                                    <div class="card-body">
+                                        <a href="">
+                                            <h5 class="card-title">BEYİN KANAMASI</h5>
+                                        </a>
+                                        <p class="card-text">
+                                            Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır.
+                                            5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin ameliyatları
+                                            sadece uzman beyin cerrahları tarafından yapılabilir.
+                                        </p>
+                                        <div class="text-two">
+                                            <p>
+                                                Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır.
+                                                5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin ameliyatları sadece uzman
+                                                beyin cerrahları tarafından yapılabilir. Beyin ameliyatları, operasyonun
+                                                neden yapıldığına göre farklı şekillerde planlanır.
+                                            </p>
+                                        </div>
+                                        <a href="#" class="btn">DEVAM ET</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href=""><img src="./img/blog.jpg" class="card-img-top" alt="..."></a>
+                                    <div class="card-body">
+                                        <a href="">
+                                            <h5 class="card-title">BEYİN KANAMASI</h5>
+                                        </a>
+                                        <p class="card-text">
+                                            Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır.
+                                            5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin ameliyatları
+                                            sadece uzman beyin cerrahları tarafından yapılabilir.
+                                        </p>
+                                        <div class="text-two">
+                                            <p>
+                                                Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır.
+                                                5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin ameliyatları sadece uzman
+                                                beyin cerrahları tarafından yapılabilir. Beyin ameliyatları, operasyonun
+                                                neden yapıldığına göre farklı şekillerde planlanır.
+                                            </p>
+                                        </div>
+                                        <a href="#" class="btn">DEVAM ET</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href=""><img src="./img/blog.jpg" class="card-img-top" alt="..."></a>
+                                    <div class="card-body">
+                                        <a href="">
+                                            <h5 class="card-title">BEYİN KANAMASI</h5>
+                                        </a>
+                                        <p class="card-text">
+                                            Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır.
+                                            5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin ameliyatları
+                                            sadece uzman beyin cerrahları tarafından yapılabilir.
+                                        </p>
+                                        <div class="text-two">
+                                            <p>
+                                                Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır.
+                                                5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin ameliyatları sadece uzman
+                                                beyin cerrahları tarafından yapılabilir. Beyin ameliyatları, operasyonun
+                                                neden yapıldığına göre farklı şekillerde planlanır.
+                                            </p>
+                                        </div>
+                                        <a href="#" class="btn">DEVAM ET</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href=""><img src="./img/blog.jpg" class="card-img-top" alt="..."></a>
+                                    <div class="card-body">
+                                        <a href="">
+                                            <h5 class="card-title">BEYİN KANAMASI</h5>
+                                        </a>
+                                        <p class="card-text">
+                                            Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır.
+                                            5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin ameliyatları
+                                            sadece uzman beyin cerrahları tarafından yapılabilir.
+                                        </p>
+                                        <div class="text-two">
+                                            <p>
+                                                Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır.
+                                                5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin ameliyatları sadece uzman
+                                                beyin cerrahları tarafından yapılabilir. Beyin ameliyatları, operasyonun
+                                                neden yapıldığına göre farklı şekillerde planlanır.
+                                            </p>
+                                        </div>
+                                        <a href="#" class="btn">DEVAM ET</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="space">
         <div class="container">
             <div class="row">
@@ -447,12 +1118,14 @@
         </div>
     </footer>
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.10/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
+
 </body>
 
 </html>
