@@ -1,55 +1,4 @@
-/* var FRAMES = 250;
-var FPS = 20;
-var video = document.getElementById("video");
 
-window.addEventListener("scroll", function (e) {
-  var time = ((window.scrollY / 1000) * FRAMES) / FPS;
-  video.currentTime = time;
-  console.log(time);
-  // alert('Hizo scroll')
-});
-
-window.addEventListener("load", function (e) {
-  video.pause();
-  video.currentTime = 0;
-}); */
-
-/* var FRAMES = 250;
-var FPS = 20;
-var video = document.getElementById("video");
-
-window.addEventListener("scroll", function (e) {
-  var time = ((window.scrollY / 1000) * FRAMES) / FPS;
-  video.currentTime = time;
-  console.log(time);
-  // alert('Hizo scroll')
-});
-
-window.addEventListener("load", function (e) {
-  video.pause();
-  video.currentTime = 0;
-}); */
-
-/* const registerVideo = (bound, video) => {
-  bound = document.querySelector(bound);
-  video = document.querySelector(video);
-  const scrollVideo = () => {
-    if (video.duration) {
-      const distanceFromTop =
-        window.scrollY + bound.getBoundingClientRect().top;
-      const rawPercentScrolled =
-        (window.scrollY - distanceFromTop) /
-        (bound.scrollHeight - window.innerHeight);
-      const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 100);
-
-      video.currentTime = video.duration * percentScrolled;
-    }
-    requestAnimationFrame(scrollVideo);
-  };
-  requestAnimationFrame(scrollVideo);
-};
-
-registerVideo("#bound-one", "#bound-one video"); */
 
 $(document).ready(function () {
   $(".services_toggle").click(function () {
@@ -59,7 +8,7 @@ $(document).ready(function () {
 });
 
 var swiperTop = new Swiper(".mySwiperBanner", {
-  spaceBetween: 10,
+  spaceBetween: 0,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -73,6 +22,10 @@ var swiperServices = new Swiper(".mySwiperServices", {
   touchRatio: 0.2,
   loop: true,
   loopedSlides: 3,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
 });
 swiperTop.controller.control = swiperServices;
 swiperServices.controller.control = swiperTop;
@@ -84,51 +37,67 @@ var swiper = new Swiper(".mySwiperComments", {
     el: ".swiper-pagination",
     clickable: true,
   },
+ /*  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  }, */
 });
 var swiper = new Swiper(".mySwiperBlog", {
-  slidesPerView: 4,
-  spaceBetween: 20,
+  slidesPerView: 3,
+  spaceBetween: 0,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+/*   autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  }, */
 });
 
-let SwiperTop = new Swiper(".swiper--top", {
-  spaceBetween: 0,
-  centeredSlides: true,
-  speed: 8000,
+let SwiperTopVideo = new Swiper(".swiper--top", {
+  spaceBetween: 10,
+/*   centeredSlides: true, */
+ /*  speed: 8000,
   autoplay: {
     delay: 1,
-  },
-  loop: true,
-  slidesPerView: "1.5",
-  allowTouchMove: false,
-  disableOnInteraction: true,
+  }, */
+ 
+  slidesPerView: "2",
+/*   allowTouchMove: false,
+  disableOnInteraction: true, */
+
   pagination: {
     el: ".swiper-pagination",
-    clickable: false,
+    clickable: true,
   },
 });
 
-let SwiperBottom = new Swiper(".swiper--bottom", {
-  spaceBetween: 0,
-  centeredSlides: true,
-  speed: 8000,
-  autoplay: {
-    delay: 1,
-    reverseDirection: true,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: false,
-  },
-  loop: true,
-  loopedSlides: 4,
-  slidesPerView: "1.5",
-  allowTouchMove: false,
-  disableOnInteraction: true,
-});
+/* 
+const registerVideo = (bound, video) => {
+	bound = document.querySelector(bound);
+	video = document.querySelector(video);
+	const scrollVideo = ()=>{
+		if(video.duration) {
+			const distanceFromTop = window.scrollY + bound.getBoundingClientRect().top;
+			const rawPercentScrolled = (window.scrollY - distanceFromTop) / (bound.scrollHeight - window.innerHeight);
+			const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
+			
+			video.currentTime = video.duration * percentScrolled * 3;
+		}
+		requestAnimationFrame(scrollVideo);
+	}
+	requestAnimationFrame(scrollVideo);
+}
+
+
+registerVideo(".services", ".services video"); */
+
+
+
 
 AOS.init();
