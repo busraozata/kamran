@@ -32,10 +32,10 @@ var swiperServices = new Swiper(".mySwiperServices", {
   loop: true,
   loopedSlides: 3,
   slidesPerView: 1,
-  /*  autoplay: {
+   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
-  }, */
+  },
   breakpoints: {
     640: {
       slidesPerView: 1,
