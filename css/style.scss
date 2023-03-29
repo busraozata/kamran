@@ -1053,7 +1053,7 @@ header {
 
 .doctor-about {
   /* padding: 6rem 16rem; */
-  padding: 15rem 0rem 0rem 0rem;
+  padding: 15rem 0rem 3rem 0rem;
   position: relative;
   overflow: hidden;
   @media screen and (max-width: $sm-breakpoint) {
@@ -1082,7 +1082,8 @@ header {
       }
       @media screen and (max-width: $xl-breakpoint) {
         max-width: 36rem;
-        padding: 4rem 4rem 9rem 4rem;
+        padding: 4rem 4rem 5rem 4rem;
+        margin-right: -3.5rem;
       }
       @media screen and (max-width: $lg-breakpoint) {
         max-width: 100%;
@@ -1320,9 +1321,11 @@ header {
 }
 
 .services {
-  padding: 5rem 0rem 5rem 0rem;
+  padding: 3rem 0rem 5rem 0rem;
   overflow: hidden;
-
+  @media screen and (max-width: $xl-breakpoint) {
+    padding: 3rem 0rem 3rem 0rem;
+  }
   .slide-area {
     position: relative;
     h2 {
@@ -1500,7 +1503,7 @@ header {
       padding: 3rem 6rem 2rem 4rem;
     }
     @media screen and (max-width: $xl-breakpoint) {
-      padding: 3rem 2rem 2rem 2rem;
+      padding: 3rem 2rem 2rem 3rem;
     }
     @media screen and (max-width: $sm-breakpoint) {
       padding: 1rem 2rem 0.5rem 2rem;
@@ -1679,6 +1682,9 @@ header {
 .full-blog {
   overflow: hidden;
   padding: 4rem 0rem 8rem 5rem;
+  @media screen and (max-width: $xl-breakpoint) {
+    padding: 4rem 0rem 6rem 5rem;
+  }
   @media screen and (max-width: $lg-breakpoint) {
     padding: 4rem 0rem 4rem 0rem;
   }
@@ -2173,8 +2179,8 @@ header {
   margin-bottom: -9rem;
   position: relative;
   z-index: 9;
-  .container{
-    @media screen and (max-width:$lg-breakpoint) {
+  .container {
+    @media screen and (max-width: $lg-breakpoint) {
       padding: 0;
       max-width: 100%;
     }
@@ -2197,7 +2203,7 @@ header {
   }
   .box {
     display: flex;
-    
+
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -2206,7 +2212,7 @@ header {
     @media screen and (max-width: $xl-breakpoint) {
       height: 16rem;
     }
-    @media screen and (max-width:$lg-breakpoint) {
+    @media screen and (max-width: $lg-breakpoint) {
       width: 100%;
       background-color: #ebebeb;
       height: 14rem;
@@ -2238,7 +2244,6 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
-     
     }
   }
 }

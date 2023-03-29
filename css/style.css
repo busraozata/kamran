@@ -1406,7 +1406,7 @@ header .header-inner .search-area .fas fa-search {
 
 .doctor-about {
   /* padding: 6rem 16rem; */
-  padding: 15rem 0rem 0rem 0rem;
+  padding: 15rem 0rem 3rem 0rem;
   position: relative;
   overflow: hidden;
 }
@@ -1459,7 +1459,8 @@ header .header-inner .search-area .fas fa-search {
 @media screen and (max-width: 1200px) {
   .doctor-about .top .content {
     max-width: 36rem;
-    padding: 4rem 4rem 9rem 4rem;
+    padding: 4rem 4rem 5rem 4rem;
+    margin-right: -3.5rem;
   }
 }
 
@@ -1779,8 +1780,14 @@ header .header-inner .search-area .fas fa-search {
 }
 
 .services {
-  padding: 5rem 0rem 5rem 0rem;
+  padding: 3rem 0rem 5rem 0rem;
   overflow: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+  .services {
+    padding: 3rem 0rem 3rem 0rem;
+  }
 }
 
 .services .slide-area {
@@ -2018,7 +2025,7 @@ header .header-inner .search-area .fas fa-search {
 
 @media screen and (max-width: 1200px) {
   .video .section-title {
-    padding: 3rem 2rem 2rem 2rem;
+    padding: 3rem 2rem 2rem 3rem;
   }
 }
 
@@ -2292,6 +2299,12 @@ header .header-inner .search-area .fas fa-search {
 .full-blog {
   overflow: hidden;
   padding: 4rem 0rem 8rem 5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .full-blog {
+    padding: 4rem 0rem 6rem 5rem;
+  }
 }
 
 @media screen and (max-width: 991px) {
