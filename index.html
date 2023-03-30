@@ -38,11 +38,14 @@
                 <button id="toggle-btn"><i class="fa fa-bars"></i> </button>
 
                 <div class="navigation">
+                    <a href="index.html" class="d-xl-none d-block logo">
+                        <img src="./img/logo.png" class="img-fluid" alt="logo">
+                    </a>
                     <ul class="menu-area d-flex justify-content-center align-items-center">
                         <li class="nav-item"><a href="index.html" class="nav-link active">ANA SAYFA</a></li>
                         <li class="nav-item"><a href="about.html" class="nav-link">HAKKIMDA</a></li>
                         <li class="nav-item dropdown">
-                            <a href="services.html" class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">AMELİYATLAR</a>
+                            <a href="services.html" class="nav-link dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">AMELİYATLAR</a>
                             <!--   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                 <li><a class="dropdown-item" href="service-detail.html">Beyin ve Sinir Cerrahisi</a></li>
                                 <li><a class="dropdown-item" href="service-detail.html">GUMMY SMILE</a></li>
@@ -57,11 +60,57 @@
                         <li class="nav-item"><a href="blog.html" class="nav-link">BLOG</a></li>
                         <li class="nav-item"><a href="contact.html" class="nav-link"> İLETİŞİM</a></li>
                     </ul>
+                    <div class="search-area d-xl-none d-block">
+                        <div class="search">
+                            <input class="search-txt" type="text" name="" />
+                            <div id="borderTop"></div>
 
+
+                            <a class="search-btn" href="#">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="social-media d-xl-none d-block">
+                        <ul class="d-flex">
+                            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="speed-appointment d-xl-none d-block  services_toggle">
+                        <h2>
+                            Hızlı
+                            <span>
+                                Randevu
+                            </span>
+                        </h2>
+                    </div>
+                    <div class="language d-xl-none d-block">
+                        <div class="language-icon">
+                            <img src="./img/language.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="dropdown dropdown-language">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>TR</span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#" style="background: url(./img/en.png) no-repeat; background-size: cover; background-position: center;"><span>EN</span></a></li>
+                                <li><a class="dropdown-item" href="#" style="background: url(./img/ru.png) no-repeat; background-size: cover; background-position: center;"><span>RU</span></a></li>
+                                <li><a class="dropdown-item" href="#" style="background: url(./img/ar.png) no-repeat; background-size: cover; background-position: center;"><span>AR</span></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                  
+                    
                 </div>
                 <div class="search-area d-xl-block d-none">
                     <div class="search">
                         <input class="search-txt" type="text" name="" />
+                        <div id="borderTop"></div>
+
 
                         <a class="search-btn" href="#">
                             <i class="fas fa-search"></i>
@@ -74,14 +123,17 @@
                     </div>
                     <div class="dropdown dropdown-language">
                         <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            TR
+                            <span>TR</span>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#">EN</a></li>
+                            <li><a class="dropdown-item" href="#" style="background: url(./img/en.png) no-repeat; background-size: cover; background-position: center;"><span>EN</span></a></li>
+                            <li><a class="dropdown-item" href="#" style="background: url(./img/ru.png) no-repeat; background-size: cover; background-position: center;"><span>RU</span></a></li>
+                            <li><a class="dropdown-item" href="#" style="background: url(./img/ar.png) no-repeat; background-size: cover; background-position: center;"><span>AR</span></a></li>
 
                         </ul>
                     </div>
                 </div>
+
             </div>
         </div>
     </header>
@@ -147,28 +199,30 @@
                 <div class="col-lg-6 right-area">
                     <div class="form-area">
                         <form action="">
-                            <div class="col-lg-12 mb-4">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Adınız Soyadınız*">
+                            <div class="row">
+                                <div class="col-lg-12 mb-4 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Adınız Soyadınız*">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-12 mb-4">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="E-Posta Adresiniz*">
+                                <div class="col-lg-12 mb-4 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="E-Posta Adresiniz*">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-12 mb-4">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Telefonunuz*">
+                                <div class="col-lg-12 mb-4 col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Telefonunuz*">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-12 mb-4">
-                                <div class="form-group">
-                                    <textarea name="" id="" class="form-control" placeholder="Mesajınız*"></textarea>
+                                <div class="col-lg-12 mb-4 col-md-12">
+                                    <div class="form-group">
+                                        <textarea name="" id="" class="form-control" placeholder="Mesajınız*"></textarea>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <button class="btn">Gönder</button>
+                                <div class="col-lg-12">
+                                    <button class="btn">GÖNDER</button>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -324,7 +378,7 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="content">
-                                    <div class="d-flex align-items-start">
+                                    <div class="d-flex align-items-start service-slide">
                                         <div class="index">
                                             <span>02</span>
                                         </div>
@@ -348,7 +402,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="content">
-                                    <div class="d-flex align-items-start">
+                                    <div class="d-flex align-items-start service-slide">
                                         <div class="index">
                                             <span>03</span>
                                         </div>
@@ -372,7 +426,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="content">
-                                    <div class="d-flex align-items-start">
+                                    <div class="d-flex align-items-start service-slide">
                                         <div class="index">
                                             <span>04</span>
                                         </div>
@@ -396,7 +450,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="content">
-                                    <div class="d-flex align-items-start">
+                                    <div class="d-flex align-items-start service-slide">
                                         <div class="index">
                                             <span>01</span>
                                         </div>
@@ -429,7 +483,7 @@
     <section class="doctor-about">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6" data-aos="fade-right">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="3000">
                     <div class="top">
                         <div class="content">
                             <h3>Dr. Kamran AGHAYEV <span>kimdir?</span></h3>
@@ -468,7 +522,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left">
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="3000">
                     <div class="img-wrapper position-relative">
                         <img src="./img/kamran-aghayev.jpg" class="img-fluid" alt="kamran-aghayev">
                     </div>
@@ -481,139 +535,223 @@
         <div class="container-fluid">
             <div class="slide-area">
                 <h2>AMELİYATLAR</h2>
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                        <video autoplay muted loop id="myVideo">
-                            <source src="./video/brain.mp4" type="video/mp4">
-                        </video>
-                        <div class="content">
-                            <div>
-                                <h5>
-                                    Beyin Ameliyatları
-                                </h5>
-                                <p class="small-text">
-                                    Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde
-                                    gerçekleşen beyinameliyatları sadece uzman beyin cerrahları tarafından yapılabilir.
-                                </p>
-                                <p>
-                                    Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun
-                                    sürelerde gerçekleşen beyin sadece uzman beyin cerrahları tarafından yapılabilir.Beyin ameliyatları,
-                                    operasyonun neden yapıldığına göre farklı şekillerde planlanır. gibi uzun sürelerde gerçekleşen
-                                    beyin ameliyatlarısadece uzman beyin cerrahları tarafından yapılabilir.Beyin ameliyatları, operasyonun
-                                    yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin sadece
-                                    uzman beyin cerrahları tarafından Beyin ameliyatları, operasyonun neden yapıldığına göre farklı
-                                    şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin
-                                    sadece uzman beyin cerrahları tarafından yapılabilir.
-                                </p>
-                                <a href="" class="btn">DEVAM ET</a>
+                <div class="d-xl-block d-none slide-desktop" >
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <video autoplay muted loop id="myVideo">
+                                <source src="./video/brain.mp4" type="video/mp4">
+                            </video>
+                            <div class="content">
+                                <div>
+                                    <h5>
+                                        Beyin Ameliyatları
+                                    </h5>
+                                    <p class="small-text">
+                                        Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde
+                                        gerçekleşen beyinameliyatları sadece uzman beyin cerrahları tarafından yapılabilir.
+                                    </p>
+                                    <p>
+                                        Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun
+                                        sürelerde gerçekleşen beyin sadece uzman beyin cerrahları tarafından yapılabilir.Beyin ameliyatları,
+                                        operasyonun neden yapıldığına göre farklı şekillerde planlanır. gibi uzun sürelerde gerçekleşen
+                                        beyin ameliyatlarısadece uzman beyin cerrahları tarafından yapılabilir.Beyin ameliyatları, operasyonun
+                                        yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin sadece
+                                        uzman beyin cerrahları tarafından Beyin ameliyatları, operasyonun neden yapıldığına göre farklı
+                                        şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin
+                                        sadece uzman beyin cerrahları tarafından yapılabilir.
+                                    </p>
+                                    <a href="" class="btn">DEVAM ET</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <video autoplay muted loop id="myVideo">
+                                <source src="./video/iskelet.mp4" type="video/mp4">
+                            </video>
+                            <div class="content">
+                                <div>
+                                    <h5>
+                                        Omurga Ameliyatları
+                                    </h5>
+                                    <p class="small-text">
+                                        Omurga ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde
+                                        gerçekleşen beyinameliyatları sadece uzman beyin cerrahları tarafından yapılabilir.
+                                    </p>
+                                    <p>
+                                        Omurga ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun
+                                        sürelerde gerçekleşen beyin sadece uzman beyin cerrahları tarafından yapılabilir.Beyin ameliyatları,
+                                        operasyonun neden yapıldığına göre farklı şekillerde planlanır. gibi uzun sürelerde gerçekleşen
+                                        beyin ameliyatlarısadece uzman beyin cerrahları tarafından yapılabilir.Beyin ameliyatları, operasyonun
+                                        yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin sadece
+                                        uzman beyin cerrahları tarafından Beyin ameliyatları, operasyonun neden yapıldığına göre farklı
+                                        şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin
+                                        sadece uzman beyin cerrahları tarafından yapılabilir.
+                                    </p>
+                                    <a href="" class="btn">DEVAM ET</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <video autoplay muted loop id="myVideo">
+                                <source src="./video/video2.mp4" type="video/mp4">
+                            </video>
+                            <div class="content">
+                                <div>
+                                    <h5>
+                                        Periferik Sinir
+                                        Cerrahi
+                                    </h5>
+                                    <p class="small-text">
+                                        Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde
+                                        gerçekleşen beyinameliyatları sadece uzman beyin cerrahları tarafından yapılabilir.
+                                    </p>
+                                    <p>
+                                        Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun
+                                        sürelerde gerçekleşen beyin sadece uzman beyin cerrahları tarafından yapılabilir.Beyin ameliyatları,
+                                        operasyonun neden yapıldığına göre farklı şekillerde planlanır. gibi uzun sürelerde gerçekleşen
+                                        beyin ameliyatlarısadece uzman beyin cerrahları tarafından yapılabilir.Beyin ameliyatları, operasyonun
+                                        yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin sadece
+                                        uzman beyin cerrahları tarafından Beyin ameliyatları, operasyonun neden yapıldığına göre farklı
+                                        şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin
+                                        sadece uzman beyin cerrahları tarafından yapılabilir.
+                                    </p>
+                                    <a href="" class="btn">DEVAM ET</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                        <video autoplay muted loop id="myVideo">
-                            <source src="./video/iskelet.mp4" type="video/mp4">
-                        </video>
-                        <div class="content">
-                            <div>
-                                <h5>
-                                    Omurga Ameliyatları
-                                </h5>
-                                <p class="small-text">
-                                    Omurga ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde
-                                    gerçekleşen beyinameliyatları sadece uzman beyin cerrahları tarafından yapılabilir.
-                                </p>
-                                <p>
-                                    Omurga ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun
-                                    sürelerde gerçekleşen beyin sadece uzman beyin cerrahları tarafından yapılabilir.Beyin ameliyatları,
-                                    operasyonun neden yapıldığına göre farklı şekillerde planlanır. gibi uzun sürelerde gerçekleşen
-                                    beyin ameliyatlarısadece uzman beyin cerrahları tarafından yapılabilir.Beyin ameliyatları, operasyonun
-                                    yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin sadece
-                                    uzman beyin cerrahları tarafından Beyin ameliyatları, operasyonun neden yapıldığına göre farklı
-                                    şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin
-                                    sadece uzman beyin cerrahları tarafından yapılabilir.
-                                </p>
-                                <a href="" class="btn">DEVAM ET</a>
-                            </div>
+                    <nav>
+                        <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+                            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                                <div class="menu-item">
+                                    <div class="img-wrapper">
+                                        <img src="./img/brain.png" class="img-fluid" alt="">
+                                    </div>
+                                    <h5>
+                                        Beyin
+                                        Ameliyatları
+                                    </h5>
+                                    <p>
+                                        Beyin ameliyatları, operasyonun neden
+                                        yapıldığına göre farklı şekillerde planlanır.
+                                    </p>
+                                </div>
+                            </button>
+                            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+                                <div class="menu-item">
+                                    <div class="img-wrapper">
+                                        <img src="./img/spine.png" class="img-fluid" alt="">
+                                    </div>
+                                    <h5>
+                                        Omurga
+                                        Ameliyatları
+                                    </h5>
+                                    <p>
+                                        Omurga ameliyatları, operasyonun neden
+                                        yapıldığına göre farklı şekillerde planlanır.
+                                    </p>
+                                </div>
+                            </button>
+                            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
+                                <div class="menu-item">
+                                    <div class="img-wrapper">
+                                        <img src="./img/femur.png" class="img-fluid" alt="">
+                                    </div>
+                                    <h5>
+                                        Periferik Sinir
+                                        Cerrahi
+                                    </h5>
+                                    <p>
+                                        Periferik Sinir Cerrahi, operasyonun neden
+                                        yapıldığına göre farklı şekillerde planlanır.
+                                    </p>
+                                </div>
+                            </button>
                         </div>
-                    </div>
-                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                        <video autoplay muted loop id="myVideo">
-                            <source src="./video/video2.mp4" type="video/mp4">
-                        </video>
-                        <div class="content">
-                            <div>
-                                <h5>
-                                    Periferik Sinir
-                                    Cerrahi
-                                </h5>
-                                <p class="small-text">
-                                    Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde
-                                    gerçekleşen beyinameliyatları sadece uzman beyin cerrahları tarafından yapılabilir.
-                                </p>
-                                <p>
-                                    Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun
-                                    sürelerde gerçekleşen beyin sadece uzman beyin cerrahları tarafından yapılabilir.Beyin ameliyatları,
-                                    operasyonun neden yapıldığına göre farklı şekillerde planlanır. gibi uzun sürelerde gerçekleşen
-                                    beyin ameliyatlarısadece uzman beyin cerrahları tarafından yapılabilir.Beyin ameliyatları, operasyonun
-                                    yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin sadece
-                                    uzman beyin cerrahları tarafından Beyin ameliyatları, operasyonun neden yapıldığına göre farklı
-                                    şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin
-                                    sadece uzman beyin cerrahları tarafından yapılabilir.
-                                </p>
-                                <a href="" class="btn">DEVAM ET</a>
+                    </nav>
+                </div>
+                <div class="mobile-service d-xl-none d-block">
+                    <div class="swiper mySwiperMobileService">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <video autoplay muted loop id="myVideo">
+                                    <source src="./video/brain.mp4" type="video/mp4">
+                                </video>
+                                <div class="content">
+                                    <div>
+                                        <h5>
+                                            Beyin Ameliyatları
+                                        </h5>
+
+                                        <p>
+                                            Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun
+                                            sürelerde gerçekleşen beyin sadece uzman beyin cerrahları tarafından yapılabilir.Beyin ameliyatları,
+                                            operasyonun neden yapıldığına göre farklı şekillerde planlanır. gibi uzun sürelerde gerçekleşen
+                                            beyin ameliyatlarısadece uzman beyin cerrahları tarafından yapılabilir.Beyin ameliyatları, operasyonun
+                                            yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin sadece
+                                            uzman beyin cerrahları tarafından Beyin ameliyatları, operasyonun neden yapıldığına göre farklı
+                                            şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin
+                                            sadece uzman beyin cerrahları tarafından yapılabilir.
+                                        </p>
+                                        <a href="" class="btn">DEVAM ET</a>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="swiper-slide">
+
+                                <video autoplay muted loop id="myVideo">
+                                    <source src="./video/iskelet.mp4" type="video/mp4">
+                                </video>
+                                <div class="content">
+                                    <div>
+                                        <h5>
+                                            Omurga Ameliyatları
+                                        </h5>
+
+                                        <p>
+                                            Omurga ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun
+                                            sürelerde gerçekleşen beyin sadece uzman beyin cerrahları tarafından yapılabilir.Beyin ameliyatları,
+                                            operasyonun neden yapıldığına göre farklı şekillerde planlanır. gibi uzun sürelerde gerçekleşen
+                                            beyin ameliyatlarısadece uzman beyin cerrahları tarafından yapılabilir.Beyin ameliyatları, operasyonun
+                                            yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin sadece
+                                            uzman beyin cerrahları tarafından Beyin ameliyatları, operasyonun neden yapıldığına göre farklı
+                                            şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin
+                                            sadece uzman beyin cerrahları tarafından yapılabilir.
+                                        </p>
+                                        <a href="" class="btn">DEVAM ET</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+
+                                <video autoplay muted loop id="myVideo">
+                                    <source src="./video/video2.mp4" type="video/mp4">
+                                </video>
+                                <div class="content">
+                                    <div>
+                                        <h5>
+                                            Periferik Sinir
+                                            Cerrahi
+                                        </h5>
+
+                                        <p>
+                                            Beyin ameliyatları, operasyonun neden yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun
+                                            sürelerde gerçekleşen beyin sadece uzman beyin cerrahları tarafından yapılabilir.Beyin ameliyatları,
+                                            operasyonun neden yapıldığına göre farklı şekillerde planlanır. gibi uzun sürelerde gerçekleşen
+                                            beyin ameliyatlarısadece uzman beyin cerrahları tarafından yapılabilir.Beyin ameliyatları, operasyonun
+                                            yapıldığına göre farklı şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin sadece
+                                            uzman beyin cerrahları tarafından Beyin ameliyatları, operasyonun neden yapıldığına göre farklı
+                                            şekillerde planlanır. 5 ile 14 saat gibi uzun sürelerde gerçekleşen beyin
+                                            sadece uzman beyin cerrahları tarafından yapılabilir.
+                                        </p>
+                                        <a href="" class="btn">DEVAM ET</a>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-                <nav>
-                    <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
-                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
-                            <div class="menu-item">
-                                <div class="img-wrapper">
-                                    <img src="./img/brain.png" class="img-fluid" alt="">
-                                </div>
-                                <h5>
-                                    Beyin
-                                    Ameliyatları
-                                </h5>
-                                <p>
-                                    Beyin ameliyatları, operasyonun neden
-                                    yapıldığına göre farklı şekillerde planlanır.
-                                </p>
-                            </div>
-                        </button>
-                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
-                            <div class="menu-item">
-                                <div class="img-wrapper">
-                                    <img src="./img/spine.png" class="img-fluid" alt="">
-                                </div>
-                                <h5>
-                                    Omurga
-                                    Ameliyatları
-                                </h5>
-                                <p>
-                                    Omurga ameliyatları, operasyonun neden
-                                    yapıldığına göre farklı şekillerde planlanır.
-                                </p>
-                            </div>
-                        </button>
-                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
-                            <div class="menu-item">
-                                <div class="img-wrapper">
-                                    <img src="./img/femur.png" class="img-fluid" alt="">
-                                </div>
-                                <h5>
-                                    Periferik Sinir
-                                    Cerrahi
-                                </h5>
-                                <p>
-                                    Periferik Sinir Cerrahi, operasyonun neden
-                                    yapıldığına göre farklı şekillerde planlanır.
-                                </p>
-                            </div>
-                        </button>
-                    </div>
-                </nav>
             </div>
         </div>
     </section>
@@ -1220,7 +1358,7 @@
                                 <a href="">Bildiriler, Makaleler ve Yayınlar...</a>
                             </div>
                         </div>
-                       
+
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -1307,6 +1445,32 @@
             </div>
         </div>
     </footer>
+    <div class="hover-icon d-flex justify-content-center align-items-center">
+        <img src="./img/hover-icon.png" class="img-fluid" alt="hover img">
+        <ul class="social-box flex-column  d-flex align-items-center justify-content-center">
+            <li class="social-item d-flex justify-content-center align-items-center">
+                <a href="" class="d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </li>
+            <li class="social-item d-flex justify-content-center align-items-center">
+                <a href="" class="d-flex justify-content-center align-items-center">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+            </li>
+            <li class="social-item d-flex justify-content-center align-items-center">
+                <a href="" class="d-flex align-items-center justify-content-center">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </li>
+            <li class="social-item d-flex justify-content-center align-items-center">
+                <a href="" class="d-flex align-items-center justify-content-center">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

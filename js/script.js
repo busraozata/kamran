@@ -17,12 +17,14 @@ $(document).ready(function () {
   });
 });
 
+window.addEventListener("scroll", function () {
+  let header = document.querySelector("header");
+  header.classList.toggle("sticky", window.scrollY > 100);
+});
+
 var swiperTop = new Swiper(".mySwiperBanner", {
   spaceBetween: 0,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+
   loop: true,
   loopedSlides: 3,
 });
@@ -31,14 +33,18 @@ var swiperServices = new Swiper(".mySwiperServices", {
   touchRatio: 0.2,
   loop: true,
   loopedSlides: 3,
-  slidesPerView: 1,
-   autoplay: {
+  slidesPerView: 2,
+  autoplay: {
     delay: 2500,
     disableOnInteraction: false,
   },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
   breakpoints: {
     640: {
-      slidesPerView: 1,
+      slidesPerView: 2,
       spaceBetween: 20,
     },
     768: {
@@ -61,17 +67,22 @@ var swiperServices = new Swiper(".mySwiperServices", {
 });
 swiperTop.controller.control = swiperServices;
 swiperServices.controller.control = swiperTop;
-
+var swiper = new Swiper(".mySwiperMobileService", {
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+});
 var swiper = new Swiper(".mySwiperComments", {
   spaceBetween: 60,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  /*  autoplay: {
+  autoplay: {
     delay: 2500,
     disableOnInteraction: false,
-  }, */
+  },
   breakpoints: {
     640: {
       slidesPerView: 1,
@@ -234,5 +245,27 @@ const registerVideo = (bound, video) => {
 
 
 registerVideo(".services", ".services video"); */
+
+var tabChange = function () {
+  var tabs = $(".nav-tabs > button");
+  var active = tabs.filter(".active");
+  var next = active.next("button").length
+    ? active.next("button")
+    : tabs.filter(":first-child");
+  next.tab("show");
+};
+var tabCycle = setInterval(tabChange, 6000);
+$(function () {
+  $(".nav-tabs button").click(function(e) {
+    e.preventDefault();
+    clearInterval(tabCycle);
+    $(this).tab("show");
+    setTimeout(function() {
+      tabCycle = setInterval(tabChange, 6000);
+    }, 6000);
+  });
+});
+
+
 
 AOS.init();

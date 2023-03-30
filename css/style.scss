@@ -184,7 +184,7 @@ header {
     padding: 2rem 2rem 0rem 2rem;
   }
   @media screen and (max-width: $lg-breakpoint) {
-    padding: 3rem 1rem 3rem 1rem;
+    padding: 2rem 1rem 2rem 1rem;
   }
   &.sticky {
     position: fixed;
@@ -192,18 +192,22 @@ header {
     width: 100%;
     z-index: 99999999999;
     transition: 0.3s all;
-    padding: 0.1rem 3rem;
-    @media screen and (max-width: $xl-breakpoint) {
-      padding: 1rem 2rem 1rem 2rem;
+    background-color: #fff;
+    padding: 1rem 6rem 0.5rem 6rem;
+    @media screen and (max-width: 1750px) {
+      padding: 1rem 5rem 0.5rem 4rem;
     }
-    @media screen and (max-width: $lg-breakpoint) {
-      padding: 1rem 1rem 1rem 1rem;
+    @media screen and (max-width: 1440px) {
+      padding: 1rem 2rem 0.5rem 2rem;
+    }
+    @media screen and (max-width: 1366px) {
+      padding: 1rem 2rem 0.5rem 2rem;
+    }
+    @media screen and (max-width: $xl-breakpoint) {
+      padding: 2rem 1rem 2rem 1rem;
     }
 
     .navigation {
-      @media screen and (max-width: $lg-breakpoint) {
-        top: 3.5rem !important;
-      }
       .nav-link {
         @media screen and (min-width: $xl-breakpoint) {
           padding: 2.5rem 0rem !important;
@@ -213,15 +217,92 @@ header {
         }
       }
     }
-    img {
-      @media screen and (min-width: $xl-breakpoint) {
-        max-width: 16rem !important;
-      }
-    }
   }
 
   .header-inner {
+    .social-media {
+      margin-bottom: 2rem;
+      @media screen and (max-width: $lg-breakpoint) {
+        padding-left: 2rem;
+      }
+      ul {
+        margin-right: 2.2rem;
+        @media screen and (max-width: 1440px) {
+          margin-right: 1.2rem;
+          margin-top: 1rem;
+        }
+        @media screen and (max-width: $lg-breakpoint) {
+          margin-right: 5.2rem;
+          padding-left: 0rem;
+          justify-content: flex-start;
+          margin-top: 2rem;
+        }
+        li {
+          margin-right: 1rem;
+          a {
+            color: var(--color-blue4);
+            font-size: 1.3rem;
+            &:hover {
+              color: var(--color-blue2);
+            }
+          }
+        }
+      }
+    }
+    .speed-appointment {
+      padding-left: 2rem;
+      h2 {
+        color: var(--text-color);
+        font-weight: bold;
+        font-size: 7rem;
+        display: flex;
+        flex-direction: column;
+        line-height: 0.9;
+        margin-bottom: 6rem;
+        span {
+          color: var(--color-black);
+          font-family: "Australia Custom", sans-serif;
+          font-weight: 300;
+          font-size: 7rem;
+          @media screen and (max-width: 1660px) {
+            font-size: 6rem;
+          }
+          @media screen and (max-width: 1440px) {
+            font-size: 3rem;
+          }
+          @media screen and (max-width: $lg-breakpoint) {
+            font-size: 3rem;
+          }
+          @media screen and (max-width: $sm-breakpoint) {
+            font-size: 2rem;
+          }
+        }
+        @media screen and (max-width: 1660px) {
+          font-size: 6rem;
+        }
+        @media screen and (max-width: 1440px) {
+          font-size: 3rem;
+          margin-bottom: 2rem;
+        }
+        @media screen and (max-width: $lg-breakpoint) {
+          font-size: 3rem;
+          margin-bottom: 3rem;
+        }
+        @media screen and (max-width: $sm-breakpoint) {
+          font-size: 2rem;
+        }
+      }
+    }
     .language {
+      @media screen and (max-width: $xl-breakpoint) {
+        padding-left: 2rem;
+
+        .btn {
+          span {
+            padding-left: 2rem;
+          }
+        }
+      }
       position: relative;
       .dropdown-language {
         position: absolute;
@@ -235,8 +316,44 @@ header {
         margin-top: 1rem !important;
         border: 1px solid var(--color-black);
         padding: 0rem !important;
+        background-color: transparent;
+        border: none;
+        @media screen and (max-width: $xl-breakpoint) {
+          margin-left: 0.4rem !important;
+        }
         .dropdown-item {
           font-weight: bold;
+          background-color: #e1f3ff;
+          border: 2px solid var(--color-black);
+          padding: 0.25rem 0.7rem;
+          margin-bottom: 0.5rem;
+          position: relative;
+          z-index: 9;
+          color: var(--color-black) !important;
+          span {
+            transition: 0.3s all;
+          }
+          &:hover {
+            span {
+              opacity: 0;
+            }
+            &::before {
+              background-color: #ffffff75;
+            }
+          }
+          &::before {
+            content: "";
+            background-color: #e1f3ff;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            position: absolute;
+            z-index: -1;
+            transition: 0.3s all;
+          }
         }
       }
       .btn {
@@ -257,6 +374,9 @@ header {
       margin: 0rem 1.4rem;
       margin-top: 1rem;
       cursor: pointer;
+      @media screen and (max-width: $lg-breakpoint) {
+        display: none;
+      }
       i {
         color: var(--color-yellow);
         font-size: 1.5rem;
@@ -326,7 +446,7 @@ header {
       display: flex;
 
       img {
-        max-width: 16rem;
+        max-width: 14rem;
         object-fit: cover;
         transition: 0.3s all;
         @media screen and (min-width: 2500px) {
@@ -337,6 +457,9 @@ header {
         }
         @media screen and (max-width: 1366px) {
           max-width: 12rem;
+        }
+        @media screen and (max-width: $sm-breakpoint) {
+          max-width: 10rem;
         }
       }
       span {
@@ -396,25 +519,39 @@ header {
       }
 
       @media screen and (max-width: $xl-breakpoint) {
+        .logo {
+          padding-left: 2rem;
+          max-width: 12rem;
+          margin-bottom: 2rem;
+        }
         padding-top: 2rem;
         flex-direction: column;
         position: fixed;
         height: 100vh;
         width: 100%;
         background-color: var(--color-white);
-        z-index: 99999999;
+        z-index: 999999;
         bottom: 0;
         left: -100rem;
-        top: 5.5rem !important;
+        top: 0rem !important;
+        display: block;
         text-align: left;
         justify-content: flex-start !important;
         align-items: flex-start !important;
         transition: 0.3s all;
+        background-color: var(--color-white);
+        &:before {
+          content: "";
+          background: url(../img/bg.png) no-repeat;
+          width: 100%;
+          height: 100%;
+          background-size: contain;
+          background-position: bottom;
+          position: absolute;
+          z-index: -1;
+        }
         &.active {
           left: 0;
-        }
-        @media screen and (max-width: $sm-breakpoint) {
-          top: 4.5rem !important;
         }
       }
       li {
@@ -464,6 +601,11 @@ header {
           display: inline-flex;
           justify-content: center;
           align-items: center;
+          padding: 3.8rem 0rem;
+          transition: 0.3s all;
+          &:hover {
+            color: var(--color-dark-blue);
+          }
           @media screen and (min-width: 2500px) {
             font-size: 2.2rem !important;
           }
@@ -473,10 +615,16 @@ header {
           @media screen and (max-width: 1750px) {
             font-size: 1.2rem;
           }
-          @media screen and (min-width: $xl-breakpoint) {
-            padding: 3.8rem 0rem;
-          }
+
           @media screen and (max-width: $xl-breakpoint) {
+            font-size: 1.5rem;
+            padding: 0.5rem 0rem;
+            padding-left: 1rem;
+          }
+          @media screen and (max-width: $lg-breakpoint) {
+            font-size: 1.3rem;
+          }
+          @media screen and (max-width: $sm-breakpoint) {
             font-size: 1rem;
           }
           &::after {
@@ -486,24 +634,51 @@ header {
       }
     }
     .search-area {
+      @media screen and (max-width: $xl-breakpoint) {
+        padding-left: 2rem;
+        margin: 1rem 0rem 2rem 0rem;
+      }
       .search {
         border-radius: 40px;
         display: flex;
+        position: relative;
       }
 
       .search:hover > .search-txt {
         width: 150px;
         color: var(--color-black);
       }
+      .search {
+        &:hover {
+          #borderTop {
+            width: 6rem !important;
+          }
+        }
+      }
+
+      .search-txt {
+        position: relative;
+      }
+      #borderTop {
+        border-top: 3px solid var(--color-black);
+        position: absolute;
+        /* bottom: 0; */
+        top: 0rem;
+        left: 0.5rem;
+        border-radius: 50% 0rem 0rem 20%;
+        width: 3rem;
+        transition: 0.3s all;
+      }
 
       .search-btn {
         color: var(--color-black);
 
-        width: 40px;
+        width: 35px;
         display: flex;
         justify-content: center;
         align-items: center;
         border: 3px solid var(--color-black);
+        height: 1.8rem;
         border-left: 0rem;
         border-radius: 0rem 2rem 2rem 0rem;
       }
@@ -517,21 +692,15 @@ header {
         color: var(--color-black);
         font-size: 16px;
         transition: ease-in 0.4s;
-        width: 110px;
+        width: 80px;
         border: 3px solid var(--color-black);
         border-radius: 5rem 0rem 0rem 5rem;
         padding: 0.1rem 0.5rem;
+        height: 1.8rem;
         border-top: 0;
         z-index: 9;
         position: relative;
-        &::before {
-          content: "dfdlkjfdlkjfkdjf";
-          height: 4rem;
-          background-color: #000;
-          width: 4rem;
-          position: absolute;
-          top: 3;
-        }
+        padding-top: 0.3rem;
       }
       .fas fa-search {
         font-weight: 200;
@@ -546,6 +715,12 @@ header {
     z-index: 99;
     transform: rotate(270deg);
     left: -9rem;
+    @media screen and (max-width: 1440px) {
+      left: -11rem;
+    }
+    @media screen and (max-width: $xl-breakpoint) {
+      display: none;
+    }
     ul {
       display: flex;
       li {
@@ -554,6 +729,14 @@ header {
           color: var(--color-black);
           font-weight: 100;
           font-size: 1.5rem;
+          transition: 0.3s all;
+          @media screen and (max-width: 1660px) {
+            font-size: 1.4rem;
+          }
+          &:hover {
+            color: var(--color-dark-blue);
+            font-weight: 300;
+          }
         }
       }
     }
@@ -571,6 +754,24 @@ header {
   overflow-y: auto;
   justify-content: center;
   align-items: center;
+  @media screen and (max-height: 780px) {
+    padding-bottom: 2rem;
+    padding-top: 8rem;
+  }
+  @media screen and (max-width: $lg-breakpoint) {
+    padding-top: 13rem;
+    align-items: flex-start;
+  }
+  @media screen and (max-width: $sm-breakpoint) {
+    padding-top: 0rem;
+  }
+  @media screen and (max-height: 740px) {
+    padding-top: 19rem;
+  }
+  @media screen and (max-height: 670px) {
+    padding-top: 17rem;
+  }
+
   .area {
     display: flex;
     justify-content: center;
@@ -600,6 +801,31 @@ header {
       font-family: "Australia Custom", sans-serif;
       font-weight: 300;
       font-size: 7rem;
+      @media screen and (max-width: 1660px) {
+        font-size: 6rem;
+      }
+      @media screen and (max-width: 1440px) {
+        font-size: 5rem;
+      }
+      @media screen and (max-width: $lg-breakpoint) {
+        font-size: 4rem;
+      }
+      @media screen and (max-width: $sm-breakpoint) {
+        font-size: 2.5rem;
+      }
+    }
+    @media screen and (max-width: 1660px) {
+      font-size: 6rem;
+    }
+    @media screen and (max-width: 1440px) {
+      font-size: 5rem;
+    }
+    @media screen and (max-width: $lg-breakpoint) {
+      font-size: 4rem;
+      margin-bottom: 3rem;
+    }
+    @media screen and (max-width: $sm-breakpoint) {
+      font-size: 2.5rem;
     }
   }
 
@@ -607,7 +833,7 @@ header {
     position: absolute;
     z-index: 9999999;
     right: 2rem;
-    top: 1rem;
+    top: 3rem;
     font-size: 1.5rem;
     cursor: pointer;
 
@@ -621,10 +847,39 @@ header {
   }
   .logo {
     padding-left: 17rem;
+    @media screen and (max-width: 1800px) {
+      margin-top: 2rem;
+    }
+    @media screen and (max-width: 1660px) {
+      padding-left: 11rem;
+      margin-top: 1rem;
+    }
+    @media screen and (max-width: 1440px) {
+      max-width: 24rem;
+      padding-left: 8rem;
+    }
+    @media screen and (max-height: 750px) {
+      margin-top: 7rem;
+    }
+    @media screen and (max-width: $xl-breakpoint) {
+      padding-left: 2rem;
+      max-width: 16rem;
+      margin-top: 0rem;
+      margin-bottom: 3rem;
+    }
+    @media screen and (max-width: $sm-breakpoint) {
+      max-width: 14rem;
+    }
   }
   .left-area {
+    @media screen and (max-width: $lg-breakpoint) {
+      align-items: flex-start !important;
+    }
     .navigation {
       margin-bottom: 7rem;
+      @media screen and (max-width: $lg-breakpoint) {
+        margin-bottom: 3rem;
+      }
       ul {
         padding-left: 0.5rem;
         li {
@@ -647,42 +902,89 @@ header {
             font-weight: 300;
             font-size: 1rem;
             line-height: 0.4;
+            transition: 0.3s all;
+            &:hover {
+              color: var(--color-dark-blue);
+            }
           }
         }
       }
     }
     .content {
       padding-left: 23rem;
+      @media screen and (max-width: 1660px) {
+        padding-left: 17rem;
+      }
+      @media screen and (max-width: 1440px) {
+        padding-left: 13rem;
+      }
+      @media screen and (max-width: $xl-breakpoint) {
+        padding-left: 0rem;
+      }
+      @media screen and (max-width: $lg-breakpoint) {
+        padding-left: 1.5rem;
+      }
       p {
         color: var(--color-black);
         font-size: 1rem;
+        font-weight: 500;
+        @media screen and (max-width: $xl-breakpoint) {
+          max-width: 25rem;
+        }
+        @media screen and (max-width: $lg-breakpoint) {
+          max-width: 100% !important;
+        }
         a {
           color: var(--color-black);
+          transition: 0.3s all;
+          &:hover {
+            color: var(--color-dark-blue) !important;
+          }
         }
       }
     }
   }
   .right-area {
     padding-right: 0rem;
+    @media screen and (max-width: $lg-breakpoint) {
+      padding: 0rem 2rem;
+      margin-top: 2rem;
+    }
 
     .form-area {
       display: flex;
       justify-content: flex-end;
       form {
         background-color: #e1f3ff;
-        padding: 5rem 9rem 0rem 9rem;
-        height: 46rem;
+        padding: 8rem 9rem 5rem 9rem;
+
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         max-width: 45rem;
         width: 100%;
+        @media screen and (max-width: 1600px) {
+          padding: 7rem 6rem 4rem 7rem;
+          max-width: 40rem;
+        }
+        @media screen and (max-width: $xl-breakpoint) {
+          padding: 4rem 3rem 4rem 3rem;
+        }
+        @media screen and (max-width: $lg-breakpoint) {
+          max-width: 100%;
+          align-items: inherit;
+        }
+        @media screen and (max-width: $sm-breakpoint) {
+          padding: 2rem 2rem 2rem 2rem;
+        }
         .form-control {
           width: 100%;
           resize: none;
           background-color: transparent;
           border: none;
+          padding-bottom: 1rem;
+          border-radius: 0;
           border-bottom: 4px solid var(--color-white);
           &:focus {
             box-shadow: none;
@@ -691,9 +993,22 @@ header {
         }
         textarea {
           width: 100%;
+          height: 7rem;
         }
         .btn {
           margin-top: 4rem;
+          font-weight: bold;
+          padding-left: 0rem;
+          font-size: 1.1rem;
+          color: #383838;
+          transition: 0.3s all;
+          &:hover {
+            color: var(--color-dark-blue);
+          }
+          @media screen and (max-width: $sm-breakpoint) {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+          }
         }
       }
     }
@@ -710,7 +1025,7 @@ header {
   align-items: center;
   .social-media {
     position: absolute;
-    z-index: 99;
+    z-index: 9;
     transform: rotate(270deg);
     left: -9rem;
     @media screen and (max-width: 1750px) {
@@ -735,6 +1050,11 @@ header {
           font-size: 1.5rem;
           @media screen and (max-width: 1440px) {
             font-size: 1.3rem;
+          }
+          transition: 0.3s all;
+          &:hover {
+            color: var(--color-dark-blue);
+            font-weight: 300;
           }
         }
       }
@@ -775,11 +1095,13 @@ header {
         }
       }
       &.swiper-slide-active {
-        .img-wrapper {
-          animation: fadeInUp 1.5s !important;
-        }
-        .big-content {
-          animation: fadeInRight 1.5s;
+        @media screen and (min-width: $xl-breakpoint) {
+          .img-wrapper {
+            animation: fadeInUp 1.5s !important;
+          }
+          .big-content {
+            animation: fadeInRight 1.5s;
+          }
         }
       }
       .col-lg-8 {
@@ -866,6 +1188,9 @@ header {
       height: 3rem;
       width: 5rem;
     }
+    @media screen and (max-width: $sm-breakpoint) {
+      padding-left: 0.4rem;
+    }
 
     .swiper-button-next,
     .swiper-button-prev {
@@ -874,9 +1199,16 @@ header {
       right: 0;
       top: 1.2rem;
       bottom: 0;
+      @media screen and (max-width: $sm-breakpoint) {
+        height: 1.3rem;
+        top: 0.8rem;
+      }
     }
     .swiper-button-prev {
       margin-right: 1rem;
+      @media screen and (max-width: $sm-breakpoint) {
+        margin-right: 0.6rem;
+      }
       &::after {
         display: none;
       }
@@ -919,13 +1251,29 @@ header {
   }
   .mySwiperServices {
     /* pointer-events:none;  */
-
+    .service-slide {
+      @media screen and (max-width: $sm-breakpoint) {
+        flex-direction: column;
+      }
+    }
     .swiper-slide {
       height: 19rem;
       background-color: var(--color-white) !important;
-
+position: relative;
       @media screen and (max-width: 1440px) {
         height: 17rem;
+      }
+      @media screen and (max-width: $sm-breakpoint) {
+        height: 14rem;
+      }
+      &::before{
+        background-color: var(--color-white);
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        right: -2rem;
       }
       &:nth-child(1) {
         opacity: 0 !important;
@@ -945,6 +1293,9 @@ header {
         @media screen and (max-width: 1500px) {
           padding: 6rem 2rem 3rem 2rem;
         }
+        @media screen and (max-width: $sm-breakpoint) {
+          padding: 6rem 1rem 3rem 1rem;
+        }
         .index {
           margin-top: -2.7rem;
           span {
@@ -953,7 +1304,7 @@ header {
               font-size: 2.5rem !important;
             }
             @media screen and (max-width: $sm-breakpoint) {
-              font-size: 2rem !important;
+              font-size: 1.5rem !important;
             }
           }
         }
@@ -971,7 +1322,7 @@ header {
             font-size: 1.3rem !important;
           }
           @media screen and (max-width: $sm-breakpoint) {
-            font-size: 1.2rem !important;
+            font-size: 1rem !important;
             max-width: 15rem;
             margin-bottom: 1rem;
           }
@@ -984,6 +1335,12 @@ header {
           @media screen and (max-width: 1500px) {
             font-size: 0.8rem;
           }
+          @media screen and (max-width: $sm-breakpoint) {
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+          }
         }
         .btn {
           font-weight: 900;
@@ -991,6 +1348,9 @@ header {
           font-size: 0.8rem;
           padding-left: 0rem;
           transition: 0.3s all;
+          @media screen and (max-width: $sm-breakpoint) {
+            font-size: 0.7rem;
+          }
           &:focus {
             box-shadow: none;
             outline: none;
@@ -1044,6 +1404,8 @@ header {
           }
           @media screen and (max-width: $sm-breakpoint) {
             font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
           }
         }
       }
@@ -1056,8 +1418,11 @@ header {
   padding: 15rem 0rem 3rem 0rem;
   position: relative;
   overflow: hidden;
+  @media screen and (max-width: $xl-breakpoint) {
+    padding: 7rem 0rem 3rem 0rem;
+  }
   @media screen and (max-width: $sm-breakpoint) {
-    padding: 14rem 0rem 0rem 0rem;
+    padding: 6rem 0rem 0rem 0rem;
   }
   .container-fluid {
     padding: 0;
@@ -1069,7 +1434,7 @@ header {
       justify-content: flex-start;
     }
     .content {
-      box-shadow: 0px 10px 34px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 10px 13px -3px rgba(0, 0, 0, 0.1);
       max-width: 41rem;
       width: 100%;
       background-color: #ebf7ff;
@@ -1084,6 +1449,7 @@ header {
         max-width: 36rem;
         padding: 4rem 4rem 5rem 4rem;
         margin-right: -3.5rem;
+        margin-top: -2rem;
       }
       @media screen and (max-width: $lg-breakpoint) {
         max-width: 100%;
@@ -1105,7 +1471,7 @@ header {
           font-size: 2.8rem;
         }
         @media screen and (max-width: $xl-breakpoint) {
-          font-size: 2rem;
+          font-size: 2.3rem;
           max-width: 15rem;
         }
         @media screen and (max-width: $sm-breakpoint) {
@@ -1143,7 +1509,7 @@ header {
         display: block;
         margin-bottom: 2rem;
         @media screen and (max-width: $xl-breakpoint) {
-          max-width: 19rem;
+          max-width: 28rem;
         }
         @media screen and (max-width: $lg-breakpoint) {
           max-width: 100%;
@@ -1157,7 +1523,7 @@ header {
         font-weight: normal;
         font-size: 1rem;
         @media screen and (max-width: $xl-breakpoint) {
-          max-width: 19rem;
+          max-width: 28rem;
         }
         @media screen and (max-width: $lg-breakpoint) {
           max-width: 100%;
@@ -1172,9 +1538,13 @@ header {
         padding-left: 0rem;
         border: none;
         font-size: 0.9rem;
+        transition: 0.3s all;
         &:focus {
           outline: none;
           box-shadow: none;
+        }
+        &:hover {
+          color: var(--color-black);
         }
         @media screen and (max-width: $sm-breakpoint) {
           font-size: 0.8rem;
@@ -1188,7 +1558,7 @@ header {
     padding-bottom: 3rem;
 
     .scientific-studies {
-      box-shadow: 0px 10px 34px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 10px 13px -3px rgba(0, 0, 0, 0.1);
       background-color: var(--color-dark-blue);
       max-width: 35rem;
       width: 100%;
@@ -1246,6 +1616,7 @@ header {
   }
 
   .img-wrapper {
+    box-shadow: 0px 10px 13px -3px rgba(0, 0, 0, 0.1);
     position: relative;
 
     /* &::before {
@@ -1326,6 +1697,14 @@ header {
   @media screen and (max-width: $xl-breakpoint) {
     padding: 3rem 0rem 3rem 0rem;
   }
+  /*   .tab-pane.fade {
+    transition: all 0.2s;
+    transform: translateY(1rem);
+  }
+  
+  .tab-pane.fade.show {
+    transform: translateY(0rem);
+  } */
   .slide-area {
     position: relative;
     h2 {
@@ -1340,24 +1719,49 @@ header {
         padding-left: 4.5rem;
         font-size: 2.5rem;
       }
+      @media screen and (max-width: $xl-breakpoint) {
+        padding-top: 4rem;
+        padding-left: 3rem;
+      }
+      @media screen and (max-width: $lg-breakpoint) {
+        font-size: 2rem;
+        padding-left: 2rem;
+      }
+      @media screen and (max-width: $sm-breakpoint) {
+        font-size: 1.6rem;
+        padding-top: 3rem;
+      }
     }
   }
   .container-fluid {
     padding: 0;
   }
+  .slide-desktop {
+  }
   .tab-content {
-    position: relative !important;
     padding: 0 !important;
     border: none !important;
     height: 50rem;
+    position: relative;
     z-index: 9;
-
+    &::before {
+      content: "";
+      background-color: #e7e7e7ec;
+      position: absolute;
+      height: 100%;
+      z-index: 9;
+      width: 100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+    }
     .tab-pane {
       position: relative;
       overflow: hidden;
       height: 100%;
-      z-index: 9;
-      &::before {
+
+      /* &::before {
         content: "";
         background-color: #e7e7e7ec;
         position: absolute;
@@ -1368,7 +1772,7 @@ header {
         right: 0;
         bottom: 0;
         top: 0;
-      }
+      } */
       .content {
         padding-left: 11.5rem;
         height: 100%;
@@ -1376,6 +1780,8 @@ header {
         justify-content: flex-start;
         align-items: center;
         margin-top: 4rem;
+        z-index: 99999;
+        position: relative;
         @media screen and (max-width: 1440px) {
           padding-left: 4.5rem;
         }
@@ -1416,11 +1822,139 @@ header {
       z-index: -2;
     }
   }
+  .mobile-service{
+    #myVideo{
+      opacity: 0.1;
+    }
+  }
+  #myVideo {
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+    
+    @media screen and (max-width: $lg-breakpoint) {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+   
+    .swiper-slide {
+      font-size: 18px;
+
+      display: flex;
+      align-items: center;
+    }
+  }
+  .mobile-service{
+    position: relative;
+    z-index: 9;
+    &::before {
+      content: "";
+      background-color: #e7e7e7ec;
+      position: absolute;
+      height: 100%;
+      z-index: -1;
+      width: 100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+    }
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .content {
+    padding-left: 11.5rem;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 4rem;
+    z-index: 999999;
+    position: relative;
+    @media screen and (max-width: 1440px) {
+      padding-left: 4.5rem;
+    }
+    @media screen and (max-width: $xl-breakpoint) {
+      margin-top: 10rem;
+      margin-bottom: 2rem;
+      padding-left: 3rem;
+    }
+    @media screen and (max-width: $lg-breakpoint) {
+      padding-left: 2rem;
+    }
+    @media screen and (max-width: $sm-breakpoint) {
+      margin-top: 7rem;
+      padding-right: 2rem;
+    }
+    h5 {
+      color: var(--color-dark-blue);
+      font-style: italic;
+      font-size: 2.5rem;
+      font-weight: 200;
+      margin-bottom: 3rem;
+      @media screen and (max-width: $xl-breakpoint) {
+        margin-bottom: 2rem;
+      }
+      @media screen and (max-width: $lg-breakpoint) {
+        font-size: 2rem;
+      }
+      @media screen and (max-width: $sm-breakpoint) {
+        font-size: 1.6rem;
+      }
+    }
+    p {
+      max-width: 42rem;
+      font-size: 1rem;
+      font-weight: 300;
+      &.small-text {
+        font-weight: 200;
+        font-style: italic;
+        max-width: 45rem;
+        margin-bottom: 2rem;
+      }
+      @media screen and (max-width: $xl-breakpoint) {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+      }
+      @media screen and (max-width: $lg-breakpoint) {
+        -webkit-line-clamp: 3;
+      }
+    }
+    .btn {
+      color: var(--color-dark-blue);
+      font-weight: 900;
+      padding-left: 0rem;
+      margin-top: 2rem;
+      transition: 0.3s all;
+      &:hover {
+        color: var(--color-black);
+      }
+      @media screen and (max-width: $lg-breakpoint) {
+        margin-top: 1rem;
+      }
+      @media screen and (max-width: $sm-breakpoint) {
+        font-size: 0.8rem;
+      }
+    }
+  }
   nav {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 99;
+    z-index: 99999;
     height: 100%;
     padding-right: 10rem;
     display: flex;
@@ -1588,6 +2122,7 @@ header {
       }
       @media screen and (max-width: $sm-breakpoint) {
         height: 5rem;
+        object-fit: contain;
       }
     }
     .right {
@@ -1663,6 +2198,9 @@ header {
     width: 2.5rem;
     height: 3px;
     margin-right: 0.5rem;
+    @media screen and (max-width: $sm-breakpoint) {
+      width: 1.5rem;
+    }
   }
   .swiper--bottom {
     .swiper-wrapper {
@@ -2247,7 +2785,143 @@ header {
     }
   }
 }
+.hover-icon {
+  position: fixed;
+  bottom: 1rem;
+  right: 3rem;
+  z-index: 999;
+  width: 150px;
+  height: 165px;
+  ul {
+    padding-left: 0rem;
+  }
 
+  @media screen and(max-width:$xl-breakpoint) {
+    right: 0rem;
+  }
+
+  @media screen and(max-width:$lg-breakpoint) {
+    right: 1rem;
+    width: 100px;
+    height: 50px;
+  }
+
+  img {
+    max-width: 3rem;
+
+    @media screen and(max-width:$lg-breakpoint) {
+      max-width: 3rem;
+      right: 1rem;
+    }
+  }
+
+  &:hover {
+    .social-item {
+      transition: 0.3s all;
+      opacity: 9 !important;
+      visibility: visible !important;
+
+      &:hover {
+        background-color: var(--color-blue3);
+      }
+
+      &:nth-child(1) {
+        top: 3.6rem !important;
+        left: 1rem !important;
+
+        @media screen and(max-width:$lg-breakpoint) {
+          left: -0.5rem !important;
+          top: -1rem !important;
+        }
+      }
+
+      &:nth-child(2) {
+        left: 2.5rem !important;
+        top: 1.5rem !important;
+
+        @media screen and(max-width:$lg-breakpoint) {
+          left: 1.1rem !important;
+          top: -2.5rem !important;
+        }
+      }
+
+      &:nth-child(3) {
+        right: 2.5rem !important;
+        top: 1.5rem !important;
+
+        @media screen and(max-width:$lg-breakpoint) {
+          right: 1.1rem !important;
+          top: -2.5rem !important;
+        }
+      }
+
+      &:nth-child(4) {
+        top: 3.6rem !important;
+        right: 1rem !important;
+
+        @media screen and(max-width:$lg-breakpoint) {
+          right: -0.5rem !important;
+          top: -1rem !important;
+        }
+      }
+    }
+  }
+
+  cursor: pointer;
+
+  .social-box {
+    .social-item {
+      background: var(--color-blue4);
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      position: absolute;
+      z-index: -1;
+      transition: 0.3s all;
+      opacity: 0;
+      visibility: hidden;
+
+      &:nth-child(1) {
+        top: 4.6rem;
+        left: 3rem;
+        @media screen and(max-width:$lg-breakpoint) {
+          top: 1.6rem;
+        }
+      }
+
+      &:nth-child(2) {
+        top: 4.6rem;
+        left: 3rem;
+        @media screen and(max-width:$lg-breakpoint) {
+          top: 1.6rem;
+        }
+      }
+
+      &:nth-child(3) {
+        top: 4.6rem;
+        right: 3rem;
+        @media screen and(max-width:$lg-breakpoint) {
+          top: 1.6rem;
+        }
+      }
+
+      &:nth-child(4) {
+        top: 4.6rem;
+        right: 3rem;
+        @media screen and(max-width:$lg-breakpoint) {
+          top: 1.6rem;
+        }
+      }
+
+      a {
+        i {
+          font-size: 0.8rem;
+          color: var(--color-white);
+        }
+      }
+    }
+  }
+}
 footer {
   position: relative;
   overflow: hidden;
@@ -2364,13 +3038,15 @@ footer {
       flex-wrap: wrap;
       li {
         width: 50%;
+        margin-bottom: 0.3rem;
         a {
           color: var(--color-blue4);
           font-weight: 300;
           font-size: 1rem;
           transition: 0.3s all;
           &:hover {
-            color: var(--color-blue3);
+            color: #6ab7ed;
+            font-weight: 500;
           }
           @media screen and (max-width: 1440px) {
             font-size: 0.9rem;
@@ -2398,6 +3074,7 @@ footer {
     }
     &:hover {
       color: var(--color-blue2);
+      font-weight: 500;
     }
   }
   .email {
