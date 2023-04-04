@@ -191,13 +191,13 @@ header {
   width: 100%;
   z-index: 99;
   @media screen and (max-width: 1750px) {
-    padding: 2rem 5rem 0rem 4rem;
+    padding: 0rem 5rem 0rem 4rem;
   }
   @media screen and (max-width: 1440px) {
-    padding: 2rem 4rem 0rem 4rem;
+    padding: 0rem 4rem 0rem 4rem;
   }
   @media screen and (max-width: 1366px) {
-    padding: 2rem 2rem 0rem 2rem;
+    padding: 0rem 2rem 0rem 2rem;
   }
   @media screen and (max-width: $lg-breakpoint) {
     padding: 2rem 1rem 2rem 1rem;
