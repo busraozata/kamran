@@ -1062,17 +1062,27 @@ header {
   }
   .mySwiperBanner {
     /*  pointer-events:none;  */
-  
+    .full-img-wrapper {
+      .img-wrapper{
+        @media screen and (max-width: $sm-breakpoint) {
+          background-position: 81% 50% !important;
+        }
+      }
+    }
     .swiper-slide {
       position: relative;
       z-index: 9;
-      &::before{
+      &::before {
         content: "";
-        background-color: #ffffffab;
+        background-color: #ffffff65;
         height: 100%;
         width: 100%;
         position: absolute;
         z-index: 9;
+      }
+      .row {
+        --bs-gutter-x: 0rem;
+        --bs-gutter-y: 0;
       }
       min-height: 65rem;
       @media screen and (min-width: 2000px) and (min-height: 1000px) {
@@ -1089,7 +1099,14 @@ header {
       }
 
       .img-wrapper {
+        &.other-img{
+          @media screen and (max-width: $sm-breakpoint) {
+         
+            background-position: right !important;
+          }
+        }
         min-height: 65rem !important;
+        background-position: center;
         @media screen and (min-width: 2000px) and (min-height: 1000px) {
           min-height: 100vh !important;
         }
@@ -1102,7 +1119,7 @@ header {
         }
         @media screen and (max-width: $sm-breakpoint) {
           min-height: 45rem !important;
-          background-position: right !important;
+          background-position: right;
         }
       }
       &.swiper-slide-active {
@@ -1139,7 +1156,7 @@ header {
         }
         @media screen and (max-width: $lg-breakpoint) {
           position: absolute;
-          margin-left: 1rem;
+          margin-left: 2rem;
           top: 8rem;
           max-width: 29rem;
         }
@@ -1270,14 +1287,14 @@ header {
     .swiper-slide {
       height: 19rem;
       background-color: var(--color-white) !important;
-position: relative;
+      position: relative;
       @media screen and (max-width: 1440px) {
         height: 17rem;
       }
       @media screen and (max-width: $sm-breakpoint) {
         height: 14rem;
       }
-      &::before{
+      &::before {
         background-color: var(--color-white);
         content: "";
         position: absolute;
@@ -1833,8 +1850,8 @@ position: relative;
       z-index: -2;
     }
   }
-  .mobile-service{
-    #myVideo{
+  .mobile-service {
+    #myVideo {
       opacity: 0.1;
     }
   }
@@ -1842,7 +1859,7 @@ position: relative;
     width: 100%;
     position: absolute;
     z-index: -2;
-    
+
     @media screen and (max-width: $lg-breakpoint) {
       object-fit: cover;
       width: 100%;
@@ -1852,7 +1869,7 @@ position: relative;
   .swiper {
     width: 100%;
     height: 100%;
-   
+
     .swiper-slide {
       font-size: 18px;
 
@@ -1860,7 +1877,7 @@ position: relative;
       align-items: center;
     }
   }
-  .mobile-service{
+  .mobile-service {
     position: relative;
     z-index: 9;
     &::before {
@@ -2802,7 +2819,7 @@ position: relative;
 .hover-icon {
   position: fixed;
   bottom: 1rem;
-  right: 3rem;
+  right: 0rem;
   z-index: 999;
   width: 150px;
   height: 165px;
@@ -2821,7 +2838,7 @@ position: relative;
   }
 
   img {
-    max-width: 3rem;
+    max-width: 4rem;
 
     @media screen and(max-width:$lg-breakpoint) {
       max-width: 3rem;
@@ -2841,7 +2858,7 @@ position: relative;
 
       &:nth-child(1) {
         top: 3.6rem !important;
-        left: 1rem !important;
+        left: 0.3rem !important;
 
         @media screen and(max-width:$lg-breakpoint) {
           left: -0.5rem !important;
@@ -2850,8 +2867,8 @@ position: relative;
       }
 
       &:nth-child(2) {
-        left: 2.5rem !important;
-        top: 1.5rem !important;
+        left: 2rem !important;
+        top: 1.2rem !important;
 
         @media screen and(max-width:$lg-breakpoint) {
           left: 1.1rem !important;
@@ -2861,7 +2878,7 @@ position: relative;
 
       &:nth-child(3) {
         right: 2.5rem !important;
-        top: 1.5rem !important;
+        top: 1.2rem !important;
 
         @media screen and(max-width:$lg-breakpoint) {
           right: 1.1rem !important;
@@ -2871,7 +2888,7 @@ position: relative;
 
       &:nth-child(4) {
         top: 3.6rem !important;
-        right: 1rem !important;
+        right: 0.5rem !important;
 
         @media screen and(max-width:$lg-breakpoint) {
           right: -0.5rem !important;
@@ -2885,7 +2902,7 @@ position: relative;
 
   .social-box {
     .social-item {
-      background: var(--color-blue4);
+      background: #92e8ff;
       width: 2rem;
       height: 2rem;
       border-radius: 50%;

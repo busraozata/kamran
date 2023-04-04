@@ -35,7 +35,7 @@ var swiperServices = new Swiper(".mySwiperServices", {
   loopedSlides: 3,
   slidesPerView: 2,
   autoplay: {
-    delay: 2500,
+    delay: 5500,
     disableOnInteraction: false,
   },
   navigation: {

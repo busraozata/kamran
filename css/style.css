@@ -1472,6 +1472,12 @@ header .header-inner .search-area .fas fa-search {
   /*  pointer-events:none;  */
 }
 
+@media screen and (max-width: 600px) {
+  .banner .mySwiperBanner .full-img-wrapper .img-wrapper {
+    background-position: 81% 50% !important;
+  }
+}
+
 .banner .mySwiperBanner .swiper-slide {
   position: relative;
   z-index: 9;
@@ -1480,11 +1486,16 @@ header .header-inner .search-area .fas fa-search {
 
 .banner .mySwiperBanner .swiper-slide::before {
   content: "";
-  background-color: #ffffffab;
+  background-color: #ffffff65;
   height: 100%;
   width: 100%;
   position: absolute;
   z-index: 9;
+}
+
+.banner .mySwiperBanner .swiper-slide .row {
+  --bs-gutter-x: 0rem;
+  --bs-gutter-y: 0;
 }
 
 @media screen and (min-width: 2000px) and (min-height: 1000px) {
@@ -1513,6 +1524,13 @@ header .header-inner .search-area .fas fa-search {
 
 .banner .mySwiperBanner .swiper-slide .img-wrapper {
   min-height: 65rem !important;
+  background-position: center;
+}
+
+@media screen and (max-width: 600px) {
+  .banner .mySwiperBanner .swiper-slide .img-wrapper.other-img {
+    background-position: right !important;
+  }
 }
 
 @media screen and (min-width: 2000px) and (min-height: 1000px) {
@@ -1536,7 +1554,7 @@ header .header-inner .search-area .fas fa-search {
 @media screen and (max-width: 600px) {
   .banner .mySwiperBanner .swiper-slide .img-wrapper {
     min-height: 45rem !important;
-    background-position: right !important;
+    background-position: right;
   }
 }
 
@@ -1587,7 +1605,7 @@ header .header-inner .search-area .fas fa-search {
 @media screen and (max-width: 991px) {
   .banner .mySwiperBanner .swiper-slide .big-content {
     position: absolute;
-    margin-left: 1rem;
+    margin-left: 2rem;
     top: 8rem;
     max-width: 29rem;
   }
@@ -3952,7 +3970,7 @@ header .header-inner .search-area .fas fa-search {
 .hover-icon {
   position: fixed;
   bottom: 1rem;
-  right: 3rem;
+  right: 0rem;
   z-index: 999;
   width: 150px;
   height: 165px;
@@ -3978,7 +3996,7 @@ header .header-inner .search-area .fas fa-search {
 }
 
 .hover-icon img {
-  max-width: 3rem;
+  max-width: 4rem;
 }
 
 @media screen and (max-width: 991px) {
@@ -4001,7 +4019,7 @@ header .header-inner .search-area .fas fa-search {
 
 .hover-icon:hover .social-item:nth-child(1) {
   top: 3.6rem !important;
-  left: 1rem !important;
+  left: 0.3rem !important;
 }
 
 @media screen and (max-width: 991px) {
@@ -4012,8 +4030,8 @@ header .header-inner .search-area .fas fa-search {
 }
 
 .hover-icon:hover .social-item:nth-child(2) {
-  left: 2.5rem !important;
-  top: 1.5rem !important;
+  left: 2rem !important;
+  top: 1.2rem !important;
 }
 
 @media screen and (max-width: 991px) {
@@ -4025,7 +4043,7 @@ header .header-inner .search-area .fas fa-search {
 
 .hover-icon:hover .social-item:nth-child(3) {
   right: 2.5rem !important;
-  top: 1.5rem !important;
+  top: 1.2rem !important;
 }
 
 @media screen and (max-width: 991px) {
@@ -4037,7 +4055,7 @@ header .header-inner .search-area .fas fa-search {
 
 .hover-icon:hover .social-item:nth-child(4) {
   top: 3.6rem !important;
-  right: 1rem !important;
+  right: 0.5rem !important;
 }
 
 @media screen and (max-width: 991px) {
@@ -4048,7 +4066,7 @@ header .header-inner .search-area .fas fa-search {
 }
 
 .hover-icon .social-box .social-item {
-  background: var(--color-blue4);
+  background: #92e8ff;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
