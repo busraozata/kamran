@@ -180,7 +180,10 @@ button {
   background-size: 12%;
 
   @media screen and(max-width:$lg-breakpoint) {
-      background-size: 40%;
+    background-size: 30%;
+  }
+  @media screen and(max-width:$sm-breakpoint) {
+    background-size: 40%;
   }
 }
 header {
@@ -1079,7 +1082,7 @@ header {
   .mySwiperBanner {
     /*  pointer-events:none;  */
     .full-img-wrapper {
-      .img-wrapper{
+      .img-wrapper {
         @media screen and (max-width: $sm-breakpoint) {
           background-position: 81% 50% !important;
         }
@@ -1115,9 +1118,8 @@ header {
       }
 
       .img-wrapper {
-        &.other-img{
+        &.other-img {
           @media screen and (max-width: $sm-breakpoint) {
-         
             background-position: right !important;
           }
         }
@@ -2834,11 +2836,14 @@ header {
 }
 .hover-icon {
   position: fixed;
-  bottom: 1rem;
+  bottom: 0rem;
   right: 0rem;
-  z-index: 999;
+  z-index: 999999;
   width: 150px;
   height: 165px;
+  @media screen and (max-width:$lg-breakpoint) {
+    bottom: 1rem;
+  }
   ul {
     padding-left: 0rem;
   }
@@ -2854,10 +2859,10 @@ header {
   }
 
   img {
-    max-width: 4rem;
+    max-width: 7rem;
 
     @media screen and(max-width:$lg-breakpoint) {
-      max-width: 3rem;
+      max-width: 6rem;
       right: 1rem;
     }
   }
@@ -2873,41 +2878,41 @@ header {
       }
 
       &:nth-child(1) {
-        top: 3.6rem !important;
+        top: 1.6rem !important;
         left: 0.3rem !important;
 
         @media screen and(max-width:$lg-breakpoint) {
-          left: -0.5rem !important;
+          left: -1rem !important;
           top: -1rem !important;
         }
       }
 
       &:nth-child(2) {
-        left: 2rem !important;
-        top: 1.2rem !important;
+        left: 2.2rem !important;
+        top: -0.5rem !important;
 
         @media screen and(max-width:$lg-breakpoint) {
-          left: 1.1rem !important;
-          top: -2.5rem !important;
+          left: 0.5rem !important;
+          top: -3.5rem !important;
         }
       }
 
       &:nth-child(3) {
-        right: 2.5rem !important;
-        top: 1.2rem !important;
+        right: 2.2rem !important;
+        top: -0.5rem !important;
 
         @media screen and(max-width:$lg-breakpoint) {
-          right: 1.1rem !important;
-          top: -2.5rem !important;
+          right: 1rem !important;
+          top: -3.5rem !important;
         }
       }
 
       &:nth-child(4) {
-        top: 3.6rem !important;
+        top: 1.6rem !important;
         right: 0.5rem !important;
 
         @media screen and(max-width:$lg-breakpoint) {
-          right: -0.5rem !important;
+          right: -0.8rem !important;
           top: -1rem !important;
         }
       }
@@ -2918,7 +2923,7 @@ header {
 
   .social-box {
     .social-item {
-      background: #92e8ff;
+      background: #264d6d;
       width: 2rem;
       height: 2rem;
       border-radius: 50%;
