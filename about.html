@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.1/jquery.fancybox.min.css" rel="stylesheet" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.1/jquery.fancybox.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Kamran Aghayev</title>
+</head>
+
+<body class="js">
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    <!-- Preloader -->
+    <header>
+        <div class="container-fluid">
+            <div class="header-inner d-flex align-items-center justify-content-between">
+                <div class="img-wrapper">
+                    <a href="index.html">
+                        <img src="./img/logo.png" class="img-fluid" alt="logo">
+                    </a>
+                    <div class="menu-bar services_toggle">
+                        <label for="hamburger" class="hamburger " class="">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </label>
+
+                    </div>
+                </div>
+                <button id="toggle-btn"><i class="fa fa-bars"></i> </button>
+
+                <div class="navigation">
+                    <a href="index.html" class="d-xl-none d-block logo">
+                        <img src="./img/logo.png" class="img-fluid" alt="logo">
+                    </a>
+                    <ul class="menu-area d-flex justify-content-center align-items-center">
+                        <li class="nav-item"><a href="index.html" class="nav-link active">ANA SAYFA</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">HAKKIMDA</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="services.html" class="nav-link dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">AMELİYATLAR</a>
+                            <!--   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="service-detail.html">Beyin ve Sinir Cerrahisi</a></li>
+                                <li><a class="dropdown-item" href="service-detail.html">GUMMY SMILE</a></li>
+                                <li><a class="dropdown-item" href="service-detail.html">İMPLANT TEDAVİSİ</a></li>
+                                <li><a class="dropdown-item" href="service-detail.html">LAMİNE KAPLAMA</a></li>
+                                <li><a class="dropdown-item" href="service-detail.html">KANAL TEDAVİSİ</a></li>
+                                <li><a class="dropdown-item" href="service-detail.html">PORSELEN KAPLAMA</a></li>
+                                <li><a class="dropdown-item" href="service-detail.html">DİŞ TAŞI TEMİZLİĞİ</a></li>
+
+                            </ul> -->
+                        </li>
+                        <li class="nav-item"><a href="blog.html" class="nav-link">BLOG</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link"> İLETİŞİM</a></li>
+                    </ul>
+                    <div class="search-area d-xl-none d-block">
+                        <div class="search">
+                            <input class="search-txt" type="text" name="" />
+                            <div id="borderTop"></div>
+
+
+                            <a class="search-btn" href="#">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="social-media d-xl-none d-block">
+                        <ul class="d-flex">
+                            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="speed-appointment d-xl-none d-block  services_toggle">
+                        <h2>
+                            Hızlı
+                            <span>
+                                Randevu
+                            </span>
+                        </h2>
+                    </div>
+                    <div class="language d-xl-none d-block">
+                        <div class="language-icon">
+                            <img src="./img/language.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="dropdown dropdown-language">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>TR</span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#" style="background: url(./img/en.png) no-repeat; background-size: cover; background-position: center;"><span>EN</span></a></li>
+                                <li><a class="dropdown-item" href="#" style="background: url(./img/ru.png) no-repeat; background-size: cover; background-position: center;"><span>RU</span></a></li>
+                                <li><a class="dropdown-item" href="#" style="background: url(./img/ar.png) no-repeat; background-size: cover; background-position: center;"><span>AR</span></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="search-area d-xl-block d-none">
+                    <div class="search">
+                        <input class="search-txt" type="text" name="" />
+                        <div id="borderTop"></div>
+
+
+                        <a class="search-btn" href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="language d-xl-block d-none">
+                    <div class="language-icon">
+                        <img src="./img/language.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="dropdown dropdown-language">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>TR</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#" style="background: url(./img/en.png) no-repeat; background-size: cover; background-position: center;"><span>EN</span></a></li>
+                            <li><a class="dropdown-item" href="#" style="background: url(./img/ru.png) no-repeat; background-size: cover; background-position: center;"><span>RU</span></a></li>
+                            <li><a class="dropdown-item" href="#" style="background: url(./img/ar.png) no-repeat; background-size: cover; background-position: center;"><span>AR</span></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="services-menu">
+
+        <div class="area">
+            <div class="social-media">
+                <ul>
+                    <li>
+                        <a href="">TWITTER</a>
+
+                    </li>
+                    <li>
+                        <a href="">FACEBOOK</a>
+
+                    </li>
+                    <li>
+                        <a href="">INSTAGRAM</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-bar services_toggle">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+            <div class="row w-100">
+                <div class="col-lg-12">
+                    <a href="/">
+                        <img src="./img/logo.png" class="img-fluid logo" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-6 left-area flex-column d-flex align-items-center justify-content-center">
+
+
+                    <div class="content">
+                        <div class="navigation">
+                            <ul class="d-flex">
+                                <li>
+                                    <a href="">Anasayfa</a>
+                                </li>
+                                <li>
+                                    <a href="">Hızlı Randevu</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2>
+                            Hızlı
+                            <span>
+                                Randevu
+                            </span>
+                        </h2>
+                        <p>
+                            Formdaki bilgileri doldurun, size hemen uygun randevu
+                            gün ve saatleri ile ilgili dönüş yapalım.
+                        </p>
+                        <p>
+                            Dilerseniz <a href="tel:+90 531 261 60 17">+90 531 261 60 17</a> numaralı çözüm
+                            merkezimizden bize ulaşabilirsiniz
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 right-area">
+                    <div class="form-area">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-lg-12 mb-4 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Adınız Soyadınız*">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mb-4 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="E-Posta Adresiniz*">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mb-4 col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Telefonunuz*">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mb-4 col-md-12">
+                                    <div class="form-group">
+                                        <textarea name="" id="" class="form-control" placeholder="Mesajınız*"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <button class="btn">GÖNDER</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="sub-banner">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5 text-area">
+
+                    <div class="d-flex align-items-end">
+                        <div class="banner-index">
+                            <h2>1</h2>
+                        </div>
+                        <ul>
+                            <li><a href="">HAKKIMDA</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-7 img-area">
+                    <img src="./img/sub-banner.jpg" class="img-fluid w-100" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <img src="./img/about-img.jpg" class="img-fluid w-100" alt="">
+                </div>
+                <div class="col-lg-9">
+                    <div class="content">
+                        <h3>Dr. Kamran AGHAYEV <span>kimdir?</span></h3>
+                        <div class="small-text">
+                            <p>
+                                Beyin ve sinir cerrahisi uzmanı Doçent Doktor Kamran Aghayev zor beyin ve omurga problemlerinin ön saflarında
+                                yer alan,uluslararası alanda tanınan bir beyin cerrahıdır.
+                            </p>
+                        </div>
+                        <p>
+                            Dr. Aghayev, beyin anevrizmaları, AVM'leri, beyin tümörleri, hareket bozuklukları (Parkinson hastalığı, esansiyel tremor,
+                            distoni), fonksiyonel bozukluklar (epilepsi, trigeminal nevralji, hemifasiyal spazm), kafatası gibi kompleks beyin ve
+                            omurga bozukluklarının tedavisinde uzmandır.
+                        </p>
+                        <p>
+                            2001 yılında Azerbaycan Tıp Üniversitesi'nden yüksek başarı ile mezun olan Dr. Agayev, beyin cerrahisinde
+                            uzmanlaşmayı seçti ve 2002-2009'da Hacettepe Tıp Fakültesi'nde Beyin ve Sinir Cerrahisi ihtisasını tamamladı.
+                        </p>
+                        <p>
+                            Dr. Aghayev daha sonra Spinal Onkoloji Klinik Feloowship programını Güney Florida Üniversitesi, Tampa, Florida, ABD,
+                            H. Lee Moffitt Kanser Merkezi'nde tamamladı. Bir sonraki yıl Nöro-Onkoloji alanında üst ihtisasını tamamladı. H. Lee
+                            Moffitt Kanser Merkezi fakültesinin akademik kadrosuna katıldı ve Klinik Nöroşirurji Eğitmeni oldu.
+                        </p>
+                        <p>
+                            Dr. Agayev 2015 yılında Türkiye'ye döndü ve o zamanda itibaren Türkiyede çalışmaktadır. Kendini klinik, bilimsel ve eğitim
+                            faaliyetlerine adamıştır. Hakemli tıp dergilerinde çok sayıda bilimsel makale yayınladı ve dünya çapında birçok bilimsel
+                            toplantıda çok sayıda sözlü sunum yaptı. Halen, çeşitli hakemli bilimsel dergilerin editörüdür.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <p>
+                        Dr. Aghayev, beyin anevrizmaları, AVM'leri, beyin tümörleri, hareket bozuklukları (Parkinson hastalığı, esansiyel tremor,distoni), fonksiyonel bozukluklar (epilepsi, trigeminal nevralji,
+                        hemifasiyal spazm), kafatası gibi kompleks beyin ve omurga bozukluklarının tedavisinde uzmandır. 2001 yılında Azerbaycan Tıp Üniversitesi'nden yüksek başarı ile mezun olan
+                        Dr. Agayev, beyin cerrahisinde uzmanlaşmayı seçti ve 2002-2009'da Hacettepe Tıp Fakültesi'nde Beyin ve Sinir Cerrahisi ihtisasını tamamladı.Dr. Aghayev daha sonra Spinal Onkoloji
+                        Klinik Feloowship programını Güney Florida Üniversitesi, Tampa, Florida, ABD, H. Lee Moffitt Kanser Merkezi'nde tamamladı. Bir sonraki yıl Nöro-Onkoloji alanında üst ihtisasını
+                        tamamladı. H. Lee Moffitt Kanser Merkezi fakültesinin akademik kadrosuna katıldı ve Klinik Nöroşirurji Eğitmeni oldu.Dr. Agayev 2015 yılında Türkiye'ye döndü ve o zamanda itibaren
+                        Türkiyede çalışmaktadır. Kendini klinik, bilimsel ve eğitim faaliyetlerine adamıştır. Hakemli tıp dergilerinde çok sayıda bilimsel makale yayınladı ve dünya çapında birçok bilimsel
+                        toplantıda çok sayıda sözlü sunum yaptı. Halen, çeşitli hakemli bilimsel dergilerin editörüdür.
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-bottom-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="left-full">
+                        <div class="experience">
+                            <h3>Deneyim</h3>
+                            <div class="item">
+                                <h5>Esencan Hastanesi</h5>
+                                <span>
+                                    Beyin Cerrahı, İstanbul, Türkiye 2021 -
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h5>Biruni Üniversitesi</h5>
+                                <span>
+                                    Nöroşirürji Anabilim Dalı, Başkan, İstanbul, Türkiye 2017 - 2020
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h5>İrmet Hastanesi</h5>
+                                <span>
+                                    Beyin Cerrahı, Çerkezköy, Türkiye 2015 - 2016
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h5>Güney Florida Üniversitesi </h5>
+                                <span>
+                                    Nöroşirürji Klinik Eğitmeni, H. Lee Moffitt Kanser Merkezi, Tampa, Florida, ABD 2012 - 2014Tampa, Florida, ABD 2012 - 2014
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h5>Güney Florida Üniversitesi </h5>
+                                <span>
+                                    Nöro-Onkoloji Üyesi, H. Lee Moffitt Kanser Merkezi, Tampa, Florida, ABD 2011 - 2012
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h5>Güney Florida Üniversitesi </h5>
+                                <span>
+                                    Spinal Onkoloji Üyesi, H. Lee Moffitt Kanser Merkezi,Tampa, Florida, ABD 2010 – 2011
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h5>Bakü Azerbaycan Merkez Klinik Hastanesi </h5>
+                                <span>
+                                    Nöroşirürjiye Katılıyor 2009 - 2010
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h5>Hacettepe Tıp Fakültesi</h5>
+                                <span>
+                                    Asistan, Nöroşirürji Anabilim Dalı 2002 - 2009 Stajyer,
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h5>Azerbaycan Tıp Üniversitesi </h5>
+                                <span>
+                                    Nörolojik Cerrahi, 2001 - 2002
+                                </span>
+                            </div>
+                        </div>
+                        <div class="scientific-studies">
+                            <h3>Bilimsel Çalışmalar</h3>
+                            <h6>
+                                Hakemli Dergi Makaleleri
+                            </h6>
+                            <div>
+                                <input type="checkbox" class="read-more-state" id="post-2" />
+
+                                <ol class="read-more-wrap">
+                                    <li>Aghayev, K, Vrionis F. Intramedullary Spinal Cord Tumors. In Diseases of the Spinal Cord: Novel Imaging, Diagnosis, Treatment.</li>
+                                    <li>Berker M, Aghayev K. Brain Trauma. In: Emergent Neurosurgery. Hacettepe University press. Ankara. Turkey. 2010.</li>
+                                    <li>Ozdol, C., Gediz, T., and Aghayev, K., Cranial and spinal injuries in motorcycle accidents: A hospital-based study. Ulus Travma Acil Cerrahi Derg, 2019. 25(2): p. 167-171.</li>
+                                    <li>Ozdol, C. and Aghayev, K., U-shaped Dural Flap: A Simple Method for Transcranial Skull Base Defect Repair-Technical Report. J Neurol Surg A Cent Eur Neurosurg, 2019.</li>
+                                    <li>
+                                        Bilen, B., Ates Alkan, F., Barutcu, U.B., Sezen, M., Unlu, M.B., and Aghayev, K., Examination of metal mobilization from a gunshot by scanning acoustic microscopy, scanning electron microscopy, energy-dispersive X-ray spectroscopy, and inductively coupled plasma optical emission spectroscopy: a case report. J Med Case Rep, 2018. 12(1): p. 391.
+                                    </li>
+                                </ol>
+
+                                <label for="post-2" class="read-more-trigger"><span class="more-see">Devamını Gör</span><span class="less-see">Daha Azını Gör</span></label>
+                            </div>
+
+
+                        </div>
+                        <div class="presentations">
+                            <h6>Bilimsel Özetler / Sunumlar</h6>
+                            <div>
+                                <input type="checkbox" class="read-more-state" id="post-1" />
+
+                                <ol class="read-more-wrap">
+                                    <li>Gokhan Bozkurt, Cezmi Turk, Kamran Aghayev, Mustafa Sakar, Atilla Akbay, Selcuk Palaoglu. Chiari. Type I Malformation and Ponto-Cerebellar Angle Tumor. Turkish Neurosurgical Society Congress. Oral presentation, April, 2005.
+                                    </li>
+                                    <li>Gokhan Bozkurt, Kamran Aghayev, Figen Soylemezoglu, Selcuk Palaoglu. Spinal Neurofibromatosis. Turkish Neurosurgical Society Congress. Oral presentation, April, 2005.
+                                    </li>
+                                    <li>Kamran Aghayev, Bulent Onal, Kivilcim Yavuz, Ibrahim Ziyal. The Association of A1 Segment Hypoplasia/Aplasia with Anterior Communicating Artery Aneurysms. Turkish Neurosurgical Society Congress. Oral presentation, April, 2005.
+                                    </li>
+                                    <li>Burcak Bilginer, Kamran Aghayev, Atilla Akbay, Kivilcim Yavuz, Ibrahim Ziyal, Osman Ekin Ozcan. Intracranial cotton granuloma mimicking recurrent tumor. Turkish Neurosurgical Society Congress. Oral presentation, April, 2005.
+                                    </li>
+                                    <li>
+                                        Kamran Aghayev, Ercan Bal, Tural Rahimli, Melike Mut, Serdar Balci, Frank Vrionis, Nejat Akalan. Expression of Aquaporin-4 in Experimental Mild Hydrocephalus. AANS Annual meeting. Oral presentation. 2011
+
+                                    </li>
+                                </ol>
+
+                                <label for="post-1" class="read-more-trigger"><span class="more-see">Devamını Gör</span><span class="less-see">Daha Azını Gör</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="last-blog">
+                        <div class="widget">
+                            <div class="top">
+                                <h2>
+                                    SON
+                                    
+                                    <span>
+                                        yazılar
+                                    </span>
+                                </h2>
+                            </div>
+                            <div class="last-blogs">
+                                <div class="swiper mySwiperLastDoctorBlog">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-12">
+                                                    <div class="d-flex flex-column align-items-start">
+                                                        <a href="">
+                                                            <h6>
+                                                                BEYİNDE KANAMA OLURSA NE OLUR?
+                                                            </h6>
+                                                        </a>
+                                                        <p>
+                                                            Beyin ameliyatları, operasyonun neden yapıldığına göre
+                                                            5 ile 14 saat gibi uzun sürelerde gerçekleşen bey
+                                                        </p>
+                                                        <a href="" class="btn">DEVAM ET</a>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-12">
+                                                    <div class="d-flex flex-column align-items-start">
+                                                        <a href="">
+                                                            <h6>
+                                                                BEYİNDE KANAMA OLURSA NE OLUR?
+                                                            </h6>
+                                                        </a>
+                                                        <p>
+                                                            Beyin ameliyatları, operasyonun neden yapıldığına göre
+                                                            5 ile 14 saat gibi uzun sürelerde gerçekleşen bey
+                                                        </p>
+                                                        <a href="" class="btn">DEVAM ET</a>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-12">
+                                                    <div class="d-flex flex-column align-items-start">
+                                                        <a href="">
+                                                            <h6>
+                                                                BEYİNDE KANAMA OLURSA NE OLUR?
+                                                            </h6>
+                                                        </a>
+                                                        <p>
+                                                            Beyin ameliyatları, operasyonun neden yapıldığına göre
+                                                            5 ile 14 saat gibi uzun sürelerde gerçekleşen bey
+                                                        </p>
+                                                        <a href="" class="btn">DEVAM ET</a>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-12">
+                                                    <div class="d-flex flex-column align-items-start">
+                                                        <a href="">
+                                                            <h6>
+                                                                BEYİNDE KANAMA OLURSA NE OLUR?
+                                                            </h6>
+                                                        </a>
+                                                        <p>
+                                                            Beyin ameliyatları, operasyonun neden yapıldığına göre
+                                                            5 ile 14 saat gibi uzun sürelerde gerçekleşen bey
+                                                        </p>
+                                                        <a href="" class="btn">DEVAM ET</a>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-12">
+                                                    <div class="d-flex flex-column align-items-start">
+                                                        <a href="">
+                                                            <h6>
+                                                                BEYİNDE KANAMA OLURSA NE OLUR?
+                                                            </h6>
+                                                        </a>
+                                                        <p>
+                                                            Beyin ameliyatları, operasyonun neden yapıldığına göre
+                                                            5 ile 14 saat gibi uzun sürelerde gerçekleşen bey
+                                                        </p>
+                                                        <a href="" class="btn">DEVAM ET</a>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="space">
+        <div class="container">
+            <div class="row d-lg-flex d-none">
+                <div class="col-lg-4 col-4">
+                    <div class="box">
+                        <img src="./img/icon.png" class="img-fluid" alt="icon">
+                        <a href="" class="title">Sık Sorularan Sorular</a>
+                        <a href="">Dikkat Edilmesi Gerekenler...</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-4">
+                    <div class="box">
+                        <img src="./img/icon2.png" class="img-fluid" alt="icon">
+                        <a href="" class="title">Akademik Çalışmalar</a>
+                        <a href="">Bildiriler, Makaleler ve Yayınlar...</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-4">
+                    <div class="box">
+                        <img src="./img/icon3.png" class="img-fluid" alt="icon">
+                        <a href="" class="title">Sanatsal Etkinlikler</a>
+                        <a href="">Fotoğraf, Yazı ve Fikir Eserleri...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-area d-lg-none d-block">
+                <div class="swiper mySwiperSSS">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="box">
+                                <img src="./img/icon.png" class="img-fluid" alt="icon">
+                                <a href="" class="title">Sık Sorularan Sorular</a>
+                                <a href="">Dikkat Edilmesi Gerekenler...</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="box">
+                                <img src="./img/icon2.png" class="img-fluid" alt="icon">
+                                <a href="" class="title">Akademik Çalışmalar</a>
+                                <a href="">Bildiriler, Makaleler ve Yayınlar...</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="box">
+                                <img src="./img/icon2.png" class="img-fluid" alt="icon">
+                                <a href="" class="title">Akademik Çalışmalar</a>
+                                <a href="">Bildiriler, Makaleler ve Yayınlar...</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-xl-2 col-lg-3 col-md-12">
+                <div class="logo-area">
+                    <div class="img-wrapper">
+                        <img src="./img/logo.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="social-media">
+                        <ul class="d-flex">
+                            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text">
+                    Doç. Dr. Kamran Aghayev Beyin ve Sinir Cerrahisi Uzmanıdır. Kompleks beyin ve omurga hastalıklarının
+                    cerrahi tedavisinde ihtisaslaşmıştır. İlgi alanları ileri omurga c...
+                </p>
+                <a href="" class="btn">DEVAM ET</a>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="list-area">
+                    <h4>AMELİYATLAR</h4>
+                    <div>
+                        <ul class="list">
+                            <li><a href="">BEYİN ANEVRİZMALARI</a></li>
+                            <li><a href="">BEYİN TÜMÖRLERİ</a></li>
+                            <li><a href="">HİDROSEFALİ</a></li>
+                            <li><a href="">HİPOFİZ ADENOMU</a></li>
+                            <li><a href="">CHİARİ MALFORMASYONU</a></li>
+                            <li><a href="">TRİGEMİNAL NEVRALJİ</a></li>
+                            <li><a href="">HEMİFASİYAL SPAZM</a></li>
+                            <li><a href="">BEYİN AVM'LERİ</a></li>
+                            <li><a href="">BOYUN FITIĞI</a></li>
+                            <li><a href="">BEL FITIĞI</a></li>
+                            <li><a href="">BEYİN ANEVRİZMALARI</a></li>
+                            <li><a href="">BEYİN TÜMÖRLERİ</a></li>
+                            <li><a href="">HİDROSEFALİ</a></li>
+                            <li><a href="">HİPOFİZ ADENOMU</a></li>
+                            <li><a href="">CHİARİ MALFORMASYONU</a></li>
+                            <li><a href="">TRİGEMİNAL NEVRALJİ</a></li>
+                            <li><a href="">HEMİFASİYAL SPAZM</a></li>
+                            <li><a href="">BEYİN AVM'LERİ</a></li>
+                            <li><a href="">BOYUN FITIĞI</a></li>
+                            <li><a href="">BEL FITIĞI</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-3 content-area">
+                <div class="content">
+                    <h4>İLETİŞİM</h4>
+                    <p>
+                        Ataköy 7-8-9-10,
+                        Selenium, XRRP+5C,
+                        34158 Bakırköy/İstanbul
+                    </p>
+                    <a href="tel:+90 531 261 60 17">+90 531 261 60 17</a>
+                    <a href="mailto:dr.kamran.aghayev@gmail.com" class="email">dr.kamran.aghayev@gmail.com</a>
+                    <div class="d-flex flex-column">
+                        <span>
+                            Çalışma Saatleri
+                        </span>
+                        <span>
+                            Pazartesi - Cuma 08:30 - 17:00
+                        </span>
+                        <span>Cumartesi: 08:30 - 14:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="map">
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6023.225481283132!2d28.83676!3d40.98996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa3ed2e9bfc13%3A0x656ca525a39fe0fa!2sDr%20Kamran%20Aghayev%2C%20Professor%20of%20Neurosurgery!5e0!3m2!1str!2str!4v1678796771544!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="hover-icon d-flex justify-content-center align-items-center">
+        <img src="./img/social-icon.png" class="img-fluid" alt="hover img">
+        <ul class="social-box flex-column  d-flex align-items-center justify-content-center">
+            <li class="social-item d-flex justify-content-center align-items-center">
+                <a href="" class="d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </li>
+            <li class="social-item d-flex justify-content-center align-items-center">
+                <a href="" class="d-flex justify-content-center align-items-center">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+            </li>
+            <li class="social-item d-flex justify-content-center align-items-center">
+                <a href="" class="d-flex align-items-center justify-content-center">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </li>
+            <li class="social-item d-flex justify-content-center align-items-center">
+                <a href="" class="d-flex align-items-center justify-content-center">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.10/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

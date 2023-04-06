@@ -226,6 +226,25 @@ var swiper = new Swiper(".mySwiperSSS", {
     disableOnInteraction: false,
   },
 });
+
+var swiper = new Swiper(".mySwiperLastDoctorBlog", {
+  direction: "vertical",
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+  },
+});
+
 /* 
 const registerVideo = (bound, video) => {
 	bound = document.querySelector(bound);
@@ -256,11 +275,11 @@ var tabChange = function () {
 };
 var tabCycle = setInterval(tabChange, 6000);
 $(function () {
-  $(".nav-tabs button").click(function(e) {
+  $(".nav-tabs button").click(function (e) {
     e.preventDefault();
     clearInterval(tabCycle);
     $(this).tab("show");
-    setTimeout(function() {
+    setTimeout(function () {
       tabCycle = setInterval(tabChange, 6000);
     }, 6000);
   });
