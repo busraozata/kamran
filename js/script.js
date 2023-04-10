@@ -245,6 +245,9 @@ var swiper = new Swiper(".mySwiperLastDoctorBlog", {
   },
 });
 
+var swiper = new Swiper(".mySwiperVideoSub", {});
+
+
 /* 
 const registerVideo = (bound, video) => {
 	bound = document.querySelector(bound);
