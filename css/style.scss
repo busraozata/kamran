@@ -1540,6 +1540,9 @@ header {
     position: relative;
     bottom: 0;
     left: 0;
+    @media screen and (max-width: $sm-breakpoint) {
+      display: none;
+    }
     h2 {
       font-style: italic;
       font-weight: 500;
@@ -1567,6 +1570,20 @@ header {
     box-shadow: 0px 5px 17px -3px rgba(0, 0, 0, 0.1);
     padding-right: 0rem;
     z-index: 9;
+    position: relative;
+    &::before {
+      content: "";
+      background-color: #e1f3ff;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      z-index: -1;
+      @media screen and (max-width: $sm-breakpoint) {
+        opacity: 0.9;
+      }
+    }
     @media screen and (max-width: 1500px) {
       height: 36.5rem;
     }
@@ -1576,6 +1593,9 @@ header {
     @media screen and (max-width: $lg-breakpoint) {
       height: 23rem;
     }
+    @media screen and (max-width: $sm-breakpoint) {
+      height: 18rem;
+    }
     ul {
       padding-left: 10rem;
       padding-bottom: 3rem;
@@ -1583,8 +1603,12 @@ header {
       @media screen and (max-width: $xl-breakpoint) {
         padding-left: 5rem;
       }
-      @media screen and (max-width:$lg-breakpoint){
+      @media screen and (max-width: $lg-breakpoint) {
         padding-left: 3rem;
+      }
+      @media screen and (max-width: $sm-breakpoint) {
+        padding-left: 1.5rem;
+        padding-bottom: 2rem;
       }
       li {
         a {
@@ -1599,6 +1623,9 @@ header {
           }
           @media screen and (max-width: $lg-breakpoint) {
             font-size: 1.8rem;
+          }
+          @media screen and (max-width: $sm-breakpoint) {
+            font-size: 1.6rem;
           }
         }
       }
@@ -1634,7 +1661,7 @@ header {
   @media screen and (max-width: $lg-breakpoint) {
     padding: 4rem 2rem 3rem 2rem;
   }
-  @media screen and (max-width:$sm-breakpoint){
+  @media screen and (max-width: $sm-breakpoint) {
     padding: 4rem 1rem 3rem 1rem;
   }
   .about-img {
@@ -1650,7 +1677,7 @@ header {
     @media screen and (max-width: $lg-breakpoint) {
       padding-left: 0rem;
     }
-    @media screen and (max-width:$sm-breakpoint) {
+    @media screen and (max-width: $sm-breakpoint) {
       padding-top: 0rem;
     }
     h3 {
@@ -1668,7 +1695,7 @@ header {
       @media screen and (max-width: $xl-breakpoint) {
         font-size: 2rem;
       }
-      @media screen and (max-width:$sm-breakpoint) {
+      @media screen and (max-width: $sm-breakpoint) {
         font-size: 1.5rem;
         margin-bottom: 2rem;
       }
@@ -1704,9 +1731,8 @@ header {
     .small-text {
       padding-right: 3rem;
       margin-bottom: 1.5rem;
-      @media screen and (max-width:$sm-breakpoint) {
+      @media screen and (max-width: $sm-breakpoint) {
         padding-right: 0rem;
-
       }
       p {
         font-style: italic;
@@ -1716,7 +1742,7 @@ header {
         @media screen and (max-width: 1500px) {
           font-size: 1rem;
         }
-        @media screen and (max-width:$sm-breakpoint) {
+        @media screen and (max-width: $sm-breakpoint) {
           font-size: 0.9rem;
         }
       }
@@ -1729,7 +1755,7 @@ header {
     @media screen and (max-width: 1500px) {
       font-size: 1rem;
     }
-    @media screen and (max-width:$sm-breakpoint) {
+    @media screen and (max-width: $sm-breakpoint) {
       font-size: 0.9rem;
     }
   }
@@ -1742,15 +1768,15 @@ header {
   @media screen and (max-width: $xl-breakpoint) {
     padding: 0rem 2rem 10rem 2rem;
   }
-  @media screen and (max-width:$sm-breakpoint) {
-    padding: 0rem 1rem 10rem 1rem;
+  @media screen and (max-width: $sm-breakpoint) {
+    padding: 0rem 1rem 1rem 1rem;
   }
   .left-full {
     border: 2px solid #2e5472;
     padding: 5rem 3rem 4rem 3rem;
-    @media screen and (max-width:$sm-breakpoint) {
+    @media screen and (max-width: $sm-breakpoint) {
       border: none;
-      padding: 0rem 0rem 4rem 0rem;
+      padding: 0rem 0rem 0rem 0rem;
     }
   }
   .experience,
@@ -1769,6 +1795,9 @@ header {
       right: 0;
       width: 100%;
       margin: 5rem 0rem;
+      @media screen and (max-width: $sm-breakpoint) {
+        margin: 3rem 0rem;
+      }
     }
     h3 {
       font-style: italic;
@@ -1804,7 +1833,7 @@ header {
     }
     .item {
       padding: 3rem 0rem 0rem 0rem;
-      @media screen and (max-width:$sm-breakpoint) {
+      @media screen and (max-width: $sm-breakpoint) {
         padding: 2rem 0rem 0rem 0rem;
       }
       h5 {
@@ -1828,8 +1857,11 @@ header {
   .scientific-studies {
     ol {
       max-height: 4.5rem !important;
-      @media screen and (max-width: $xl-breakpoint) {
+      @media screen and (max-width: 1500px) {
         max-height: 6.5rem !important;
+      }
+      @media screen and (max-width: $sm-breakpoint) {
+        max-height: 9.5rem !important;
       }
     }
   }
@@ -1841,6 +1873,9 @@ header {
       transition: 0.25s ease;
       @media screen and (max-width: $xl-breakpoint) {
         max-height: 12rem;
+      }
+      @media screen and (max-width: $sm-breakpoint) {
+        max-height: 14rem;
       }
       li {
         margin-bottom: 0.8rem;
@@ -1904,6 +1939,9 @@ header {
       &:hover {
         color: var(--color-blue2);
       }
+      @media screen and (max-width: $sm-breakpoint) {
+        font-size: 0.8rem;
+      }
     }
   }
 }
@@ -1920,6 +1958,9 @@ header {
   @media screen and (max-width: $lg-breakpoint) {
     padding-left: 0rem;
   } */
+  @media screen and (max-width: $sm-breakpoint) {
+    margin-top: 0rem;
+  }
   .swiper-wrapper {
     flex-direction: column;
   }
@@ -1966,11 +2007,17 @@ header {
           font-size: 5rem;
           bottom: -3rem;
         }
+        @media screen and (max-width: $sm-breakpoint) {
+          font-size: 4rem;
+        }
       }
     }
   }
   .swiper-wrapper {
     height: 80rem;
+    @media screen and (max-width: $xl-breakpoint) {
+      height: unset;
+    }
   }
   .swiper {
     width: 100%;
@@ -2369,6 +2416,15 @@ header {
 
 .blog-page {
   padding: 8rem 9rem 7rem 8rem;
+  @media screen and (max-width: 1500px) {
+    padding: 6rem 5rem 7rem 5rem;
+  }
+  @media screen and (max-width:$xl-breakpoint){
+    padding: 6rem 3rem 3rem 3rem;
+  }
+  @media screen and (max-width:$sm-breakpoint) {
+    padding: 4rem 1rem 1rem 1rem;
+  }
   h3 {
     font-weight: bold;
     font-size: 3rem;
@@ -2384,10 +2440,26 @@ header {
       font-size: 4.5rem;
       margin-left: 2rem;
       display: block;
+      @media screen and (max-width:$sm-breakpoint) {
+        font-size: 3.5rem;
+      }
+    }
+    @media screen and  (max-width:$xl-breakpoint) {
+      margin-bottom: 7rem;
+    }
+    @media screen and (max-width:$lg-breakpoint) {
+      margin-bottom: 5rem;
+    }
+    @media screen and (max-width:$sm-breakpoint){
+      font-size: 2rem;
     }
   }
   .content {
     margin-bottom: 3rem;
+    @media screen and (max-width:$xl-breakpoint){
+      margin-bottom: 0rem;
+    }
+    
     h4 {
       color: var(--color-black);
       font-weight: bold;
@@ -2396,8 +2468,36 @@ header {
       font-style: italic;
       margin-bottom: 2rem;
       transition: 0.3s all;
+      position: relative;
       &:hover {
         color: var(--color-dark-blue);
+      }
+      &::before {
+        content: "";
+        background-color: var(--color-dark-blue);
+        z-index: -1;
+        top: -1rem;
+        left: -2rem;
+        position: absolute;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        @media screen and (max-width:$xl-breakpoint) {
+          width: 2.5rem;
+          height: 2.5rem;
+          left: -1.5rem;
+        }
+        @media screen and (max-width:$sm-breakpoint) {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 1500px) {
+        font-size: 2rem;
+        max-width: 25rem;
+      }
+      @media screen and (max-width:$xl-breakpoint) {
+        font-size: 1.5rem;
+        max-width: 18rem;
       }
     }
     p {
@@ -2406,6 +2506,18 @@ header {
       font-weight: 300;
       font-style: italic;
       font-size: 1rem;
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      @media screen and (max-width: 1500px) {
+        max-width: 30rem;
+        
+        -webkit-line-clamp: 3;
+      }
+      @media screen and (max-width:$lg-breakpoint) {
+        font-size: 0.9rem;
+      }
     }
     .btn {
       color: var(--color-dark-blue);
@@ -2417,14 +2529,37 @@ header {
       &:hover {
         color: var(--color-black);
       }
+      @media screen and (max-width:$xl-breakpoint){
+        margin-top: 1rem;
+        font-size: 0.8rem;
+      }
     }
   }
   .top {
     margin-bottom: 7rem;
+    @media screen and (max-width:$lg-breakpoint) {
+      margin-bottom: 3rem;
+      .row{
+        flex-direction: column-reverse;
+      }
+      .content{
+        margin-top: 4rem;
+        @media screen and (max-width:$sm-breakpoint){
+          margin-top: 2rem;
+        }
+      }
+    }
   }
   .card {
     border: none;
     padding: 0rem 1rem;
+    @media screen and (max-width:$xl-breakpoint) {
+      padding: 0rem;
+      margin-bottom: 3rem;
+    }
+    @media screen and (max-width:$sm-breakpoint) {
+      margin-bottom: 1rem;
+    }
     .card-body {
       padding-left: 0rem;
       h5 {
@@ -2439,28 +2574,51 @@ header {
         &:hover {
           color: var(--color-dark-blue);
         }
+        @media screen and (max-width: 1500px) {
+          font-size: 1.5rem;
+          max-width: 15rem;
+        }
+        @media screen and (max-width:$xl-breakpoint) {
+          font-size: 1.3rem;
+        }
       }
       p {
         font-style: italic;
         color: var(--color-black);
         font-weight: 300;
         font-size: 1rem;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        @media screen and (max-width:$xl-breakpoint) {
+          font-size: 0.9rem;
+        }
       }
       .btn {
         padding-left: 0rem;
         font-weight: 900;
-        font-size: 1rem;
+        font-size: 0.9rem;
         color: var(--color-dark-blue);
         transition: 0.3s all;
         &:hover {
           color: var(--color-black);
+        }
+        @media screen and (max-width:$xl-breakpoint){
+          font-size: 0.8rem;
         }
       }
     }
   }
 }
 .blog-detail {
-  padding: 6rem 0rem 5rem 8rem;
+  padding: 6rem 0rem 10rem 8rem;
+  @media screen and (max-width:1500px) {
+    padding: 6rem 4rem 10rem 4rem;
+  }
+  @media screen and (max-width:$sm-breakpoint){
+    padding: 4rem 1rem 5rem 1rem;
+  }
   .content {
     max-width: 67rem;
     h3 {
@@ -2468,25 +2626,86 @@ header {
       font-weight: bold;
       font-style: italic;
       margin-bottom: 3rem;
+      position: relative;
+      z-index: 99;
+      &::before {
+        content: "";
+        background-color: var(--color-dark-blue);
+        z-index: -1;
+        top: -1rem;
+        left: -1.5rem;
+        position: absolute;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        @media screen and (max-width:$sm-breakpoint){
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+      }
+      @media screen and (max-width:1500px) {
+        font-size: 2.3rem;
+      }
+      @media screen and (max-width:$xl-breakpoint){
+        font-size: 1.6rem;
+      }
+      @media screen and (max-width:$sm-breakpoint) {
+        font-size: 1.3rem;
+      }
     }
     p {
       font-size: 1.2rem;
       color: var(--color-black);
       font-style: italic;
       font-weight: 300;
+      @media screen and (max-width:1500px) {
+        font-size: 1.1rem;
+      }
+      @media screen and (max-width:$xl-breakpoint) {
+        font-size: 1rem;
+      }
     }
     .img-wrapper {
       margin-top: 4rem;
       margin-bottom: 2rem;
+      @media screen and (max-width:$sm-breakpoint) {
+        margin-top: 2rem;
+      }
     }
   }
   .widget {
     padding-left: 6rem !important;
+    @media screen and (max-width:$xl-breakpoint) {
+      padding-left: 0rem !important;
+    }
     .top {
       padding-left: 3.5rem;
+      @media screen and (max-width:$xl-breakpoint) {
+        padding-left: 1rem;
+        margin-top: 4rem;
+      }
+      @media screen and (max-width:$sm-breakpoint){
+        margin-top: 2rem;
+      }
     }
     .last-blogs {
-      padding-left: 4.5rem;
+      padding-left: 0rem;
+      .swiper-slide{
+        @media screen and (max-width:$sm-breakpoint){
+          padding-left: 1rem !important;
+        }
+      }
+    }
+    .bottom{
+      padding-left: 2rem;
+      margin-top: 10rem !important;
+      @media screen and (max-width:1500px) {
+        padding-right: 0rem !important;
+        margin-top: 7rem !important;
+      }
+      @media screen and (max-width:$xl-breakpoint){
+        padding-left: 0rem;
+      }
     }
     .form {
       margin-top: 4rem;
@@ -2495,32 +2714,60 @@ header {
       padding-top: 5rem !important;
       form {
         padding: 0rem 4rem !important;
+        @media screen and (max-width:$sm-breakpoint) {
+          padding: 0rem 2rem !important;
+        }
       }
       h3 {
         position: absolute;
         left: 3.3rem;
         font-size: 4rem;
         top: -7rem;
+        @media screen and (max-width:$sm-breakpoint){
+          font-size: 3rem;
+        }
       }
       p {
         text-align: left;
         padding: 3rem 4rem 2rem 4rem;
         font-size: 1rem;
+        @media screen and (max-width:1500px) {
+          font-size: 0.9rem;
+        }
+        @media screen and (max-width:$sm-breakpoint){
+          padding: 3rem 2rem 2rem 2rem;
+        }
       }
       .btn {
         margin-top: 4rem;
+        @media screen and (max-width:$sm-breakpoint){
+          font-size: 0.9rem;
+        }
       }
     }
   }
 }
-.service-detail {
-  padding: 6rem 0rem 5rem 9rem;
+.services-page {
+  padding: 6rem 3rem 15rem 9rem;
+  @media screen and (max-width: 1550px) {
+    padding: 6rem 3rem 15rem 7rem;
+  }
+  @media screen and (max-width: $xl-breakpoint) {
+    padding: 6rem 3rem 15rem 3rem;
+  }
+  @media screen and (max-width: $sm-breakpoint) {
+    padding: 4rem 1rem 5rem 1rem;
+  }
   .first-top-title {
     h5 {
       font-style: italic;
       color: var(--color-black);
       font-size: 1.8rem;
       margin-bottom: 6rem;
+      @media screen and (max-width: $sm-breakpoint) {
+        font-size: 1.4rem;
+        margin-bottom: 3rem;
+      }
     }
   }
   .title-two {
@@ -2531,6 +2778,28 @@ header {
       font-weight: 900;
       font-size: 2.2rem;
       margin-bottom: 3rem;
+      @media screen and (max-width: $xl-breakpoint) {
+        font-size: 1.8rem;
+      }
+      @media screen and (max-width: $sm-breakpoint) {
+        font-size: 1.4rem;
+      }
+    }
+    @media screen and (max-width: $sm-breakpoint) {
+      margin-top: 3rem;
+    }
+  }
+  .icon {
+    img {
+      @media screen and (max-width: $lg-breakpoint) {
+        max-width: 4rem;
+      }
+    }
+  }
+  .col-lg-6 {
+    @media screen and (max-width: $xl-breakpoint) {
+      display: flex;
+      justify-content: center;
     }
   }
   .big-title {
@@ -2653,37 +2922,119 @@ header {
   .widget {
     margin-top: 20rem !important;
     padding-left: 2rem !important;
+    @media screen and (max-width: $xl-breakpoint) {
+      margin-top: 0rem !important;
+      padding-left: 0rem !important;
+    }
     .top {
-      padding-left: 3rem;
+      padding-left: 1rem;
     }
     .last-blogs {
-      padding-left: 3rem;
+      padding-left: 0rem;
+    }
+    .swiper-slide {
+      padding-left: 1rem !important;
     }
     .form {
       margin-top: 4rem;
       position: relative;
-
       padding-top: 5rem !important;
       form {
-        padding: 0rem 4rem !important;
+        padding: 0rem 3rem !important;
+        padding-top: 3rem !important;
+        @media screen and (max-width: $sm-breakpoint) {
+          padding: 0rem 2rem !important;
+        }
       }
       h3 {
         position: absolute;
-        left: 3.3rem;
-        font-size: 4rem;
-        top: -7rem;
+        left: 0;
+        font-size: 4.2rem;
+        top: -6rem;
+        font-weight: 900;
+        span {
+          margin-left: unset;
+          margin-left: -2rem;
+          margin-top: 8rem;
+          @media screen and (max-width: $sm-breakpoint) {
+            margin-top: 5rem;
+          }
+        }
+        @media screen and (max-width: 1550px) {
+          font-size: 3.6rem;
+        }
+        @media screen and (max-width: $sm-breakpoint) {
+          font-size: 2.5rem;
+          top: -3.5rem;
+        }
       }
       p {
         text-align: left;
-        padding: 3rem 4rem 2rem 4rem;
+        padding: 0 3rem;
         font-size: 1rem;
+        @media screen and (max-width: $sm-breakpoint) {
+          padding: 0rem 2rem;
+          font-size: 0.9rem;
+        }
       }
       .btn {
         margin-top: 4rem;
+        margin-bottom: 3rem;
+        @media screen and (max-width: $sm-breakpoint) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    .bottom {
+      padding-left: 1rem;
+      padding-right: 0rem;
+      @media screen and (max-width: $sm-breakpoint) {
+        padding-left: 0rem;
       }
     }
   }
   .box {
+    .img-wrapper {
+      position: relative;
+      z-index: 99;
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: $sm-breakpoint) {
+        justify-content: center;
+      }
+      img {
+        height: 32rem;
+        @media screen and (max-width: 1500px) {
+          height: 25rem;
+        }
+      }
+      &:before {
+        content: "";
+        background-color: var(--color-dark-blue);
+        left: -3rem;
+        width: 14rem;
+        border-radius: 50%;
+        height: 16rem;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -1;
+        @media screen and (max-width: $lg-breakpoint) {
+          display: none;
+        }
+        @media screen and (max-width: $sm-breakpoint) {
+          display: block;
+          left: -1rem;
+          height: 18rem;
+        }
+      }
+    }
+    .content-box {
+      @media screen and (max-width: $sm-breakpoint) {
+        padding-left: 1.5rem;
+      }
+    }
     .box-title {
       h4 {
         margin-top: 3rem;
@@ -2696,6 +3047,9 @@ header {
         &:hover {
           color: var(--color-black);
         }
+        @media screen and (max-width: 1500px) {
+          font-size: 1.5rem;
+        }
       }
     }
     .text {
@@ -2703,6 +3057,10 @@ header {
         max-width: 25rem;
         color: var(--color-black);
         font-weight: 300;
+        @media screen and (max-width: 1500px) {
+          font-size: 1rem;
+          max-width: 20rem;
+        }
       }
     }
     .btn {
@@ -2711,6 +3069,336 @@ header {
       font-size: 0.8rem;
       padding-left: 0rem;
       margin-top: 1rem;
+      transition: 0.3s all;
+      &:hover {
+        color: var(--color-black);
+      }
+    }
+  }
+}
+.service-detail {
+  padding: 6rem 3rem 15rem 9rem;
+  @media screen and (max-width: 1550px) {
+    padding: 6rem 3rem 15rem 7rem;
+  }
+  @media screen and (max-width: $xl-breakpoint) {
+    padding: 6rem 3rem 15rem 3rem;
+  }
+  @media screen and (max-width: $sm-breakpoint) {
+    padding: 4rem 1rem 5rem 1rem;
+  }
+  .first-top-title {
+    h5 {
+      font-style: italic;
+      color: var(--color-black);
+      font-size: 1.8rem;
+      margin-bottom: 6rem;
+      @media screen and (max-width: $sm-breakpoint) {
+        font-size: 1.4rem;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+  .title-two {
+    margin-top: 6rem;
+    h3 {
+      color: var(--color-dark-blue);
+      font-style: italic;
+      font-weight: 900;
+      font-size: 2.2rem;
+      margin-bottom: 3rem;
+      @media screen and (max-width: $xl-breakpoint) {
+        font-size: 1.8rem;
+      }
+      @media screen and (max-width: $sm-breakpoint) {
+        font-size: 1.4rem;
+      }
+    }
+    @media screen and (max-width: $sm-breakpoint) {
+      margin-top: 3rem;
+    }
+  }
+  .icon {
+    img {
+      @media screen and (max-width: $lg-breakpoint) {
+        max-width: 4rem;
+      }
+    }
+  }
+  .col-lg-6 {
+    @media screen and (max-width: $xl-breakpoint) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .big-title {
+    h3 {
+      color: var(--color-dark-blue);
+      font-style: italic;
+      font-size: 2.4rem;
+      font-weight: bold;
+      margin-top: 3rem;
+      margin-bottom: 4rem;
+    }
+  }
+  .small-title {
+    h5 {
+      color: var(--color-black);
+      font-style: italic;
+      font-weight: 600;
+      margin-bottom: 3rem;
+      font-size: 1.7rem;
+    }
+  }
+  p {
+    font-weight: 300;
+    font-size: 1.1rem;
+  }
+  .video-area {
+    margin: 6rem 0rem 6rem 2rem !important;
+    img {
+      width: 100%;
+      object-fit: cover;
+      @media screen and (max-width: 1440px) {
+        height: 25rem;
+      }
+      @media screen and (max-width: $xl-breakpoint) {
+        height: 22rem;
+      }
+      @media screen and (max-width: $sm-breakpoint) {
+        height: 15rem;
+      }
+    }
+    .play {
+      height: 11rem;
+      @media screen and (max-width: 1440px) {
+        height: 6rem;
+      }
+      @media screen and (max-width: $sm-breakpoint) {
+        height: 5rem;
+        object-fit: contain;
+      }
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      .content {
+        background-color: #6ab7ed;
+        height: 29rem;
+        padding: 2rem 6rem 3rem 6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-left: -5rem;
+        z-index: 99;
+        margin-bottom: 2rem;
+        @media screen and (max-width: 1440px) {
+          padding: 2rem 1rem 2rem 1rem;
+        }
+        @media screen and (max-width: $xl-breakpoint) {
+          padding: 2rem 0rem 2rem 0rem;
+        }
+        @media screen and (max-width: $sm-breakpoint) {
+          padding: 2rem 0rem 1rem 0rem;
+        }
+
+        i {
+          color: var(--color-white);
+          transform: rotate(231deg);
+          font-size: 3rem;
+          margin-bottom: 1rem;
+          @media screen and (max-width: $sm-breakpoint) {
+            font-size: 2rem;
+          }
+        }
+        h4 {
+          font-weight: 700;
+          font-size: 2rem;
+          color: var(--color-white);
+          margin-bottom: 1rem;
+          @media screen and (max-width: 1440px) {
+            font-size: 1.5rem;
+          }
+          @media screen and (max-width: $xl-breakpoint) {
+            font-size: 1.3rem;
+          }
+          @media screen and (max-width: $sm-breakpoint) {
+            font-size: 1rem;
+          }
+        }
+        p {
+          font-size: 0.9rem;
+          color: var(--color-white);
+          @media screen and (max-width: 1440px) {
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+          }
+          @media screen and (max-width: $sm-breakpoint) {
+            font-size: 0.8rem;
+            -webkit-line-clamp: 3;
+          }
+        }
+      }
+    }
+  }
+  .img-area {
+    padding: 4rem 6rem;
+  }
+  .widget {
+    margin-top: 20rem !important;
+    padding-left: 2rem !important;
+    @media screen and (max-width: $xl-breakpoint) {
+      margin-top: 0rem !important;
+      padding-left: 0rem !important;
+    }
+    .top {
+      padding-left: 1rem;
+    }
+    .last-blogs {
+      padding-left: 0rem;
+    }
+    .swiper-slide {
+      padding-left: 1rem !important;
+    }
+    .form {
+      margin-top: 4rem;
+      position: relative;
+      padding-top: 5rem !important;
+      form {
+        padding: 0rem 3rem !important;
+        padding-top: 3rem !important;
+        @media screen and (max-width: $sm-breakpoint) {
+          padding: 0rem 2rem !important;
+        }
+      }
+      h3 {
+        position: absolute;
+        left: 0;
+        font-size: 4.2rem;
+        top: -6rem;
+        font-weight: 900;
+        span {
+          margin-left: unset;
+          margin-left: -2rem;
+          margin-top: 8rem;
+          @media screen and (max-width: $sm-breakpoint) {
+            margin-top: 5rem;
+          }
+        }
+        @media screen and (max-width: 1550px) {
+          font-size: 3.6rem;
+        }
+        @media screen and (max-width: $sm-breakpoint) {
+          font-size: 2.5rem;
+          top: -3.5rem;
+        }
+      }
+      p {
+        text-align: left;
+        padding: 0 3rem;
+        font-size: 1rem;
+        @media screen and (max-width: $sm-breakpoint) {
+          padding: 0rem 2rem;
+          font-size: 0.9rem;
+        }
+      }
+      .btn {
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+        @media screen and (max-width: $sm-breakpoint) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    .bottom {
+      padding-left: 1rem;
+      padding-right: 0rem;
+      @media screen and (max-width: $sm-breakpoint) {
+        padding-left: 0rem;
+      }
+    }
+  }
+  .box {
+    .img-wrapper {
+      position: relative;
+      z-index: 99;
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: $sm-breakpoint) {
+        justify-content: center;
+      }
+      img {
+        height: 32rem;
+        @media screen and (max-width: 1500px) {
+          height: 25rem;
+        }
+      }
+      &:before {
+        content: "";
+        background-color: var(--color-dark-blue);
+        left: -3rem;
+        width: 14rem;
+        border-radius: 50%;
+        height: 16rem;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -1;
+        @media screen and (max-width: $lg-breakpoint) {
+          display: none;
+        }
+        @media screen and (max-width: $sm-breakpoint) {
+          display: block;
+          left: -1rem;
+          height: 18rem;
+        }
+      }
+    }
+    .content-box {
+      @media screen and (max-width: $sm-breakpoint) {
+        padding-left: 1.5rem;
+      }
+    }
+    .box-title {
+      h4 {
+        margin-top: 3rem;
+        font-style: italic;
+        color: var(--color-dark-blue);
+        font-weight: 900;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        transition: 0.3s all;
+        &:hover {
+          color: var(--color-black);
+        }
+        @media screen and (max-width: 1500px) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .text {
+      p {
+        max-width: 25rem;
+        color: var(--color-black);
+        font-weight: 300;
+        @media screen and (max-width: 1500px) {
+          font-size: 1rem;
+          max-width: 20rem;
+        }
+      }
+    }
+    .btn {
+      color: var(--color-dark-blue);
+      font-weight: 900;
+      font-size: 0.8rem;
+      padding-left: 0rem;
+      margin-top: 1rem;
+      transition: 0.3s all;
       &:hover {
         color: var(--color-black);
       }
@@ -2722,6 +3410,18 @@ header {
 }
 .video-sub {
   padding: 0rem 11rem 13rem 11rem;
+  @media screen and (max-width: 1500px) {
+    padding: 0rem 8rem 13rem 8rem;
+  }
+  @media screen and (max-width:$xl-breakpoint) {
+    padding: 0rem 2rem 13rem 2rem;
+  }
+  @media screen and (max-width:$lg-breakpoint) {
+    padding: 0rem 2rem 7rem 2rem;
+  }
+  @media screen and (max-width:$sm-breakpoint) {
+    padding: 0rem 1rem 3rem 1rem;
+  }
   .swiper {
     width: 100%;
     height: 100%;
@@ -2736,6 +3436,15 @@ header {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        @media screen and (max-width:$xl-breakpoint) {
+          height: 28rem;
+        }
+        @media screen and (max-width:$lg-breakpoint) {
+          height: 24rem;
+        }
+        @media screen and (max-width:$sm-breakpoint) {
+          height: 18rem;
+        }
       }
       .content {
         text-align: left;
@@ -2743,18 +3452,9 @@ header {
       img {
         width: 100%;
         object-fit: cover;
-        @media screen and (max-width: 1440px) {
-          height: 25rem;
-        }
-        @media screen and (max-width: $xl-breakpoint) {
-          height: 22rem;
-        }
-        @media screen and (max-width: $sm-breakpoint) {
-          height: 15rem;
-        }
       }
       .play {
-        height: 11rem;
+        height: 10rem;
         @media screen and (max-width: 1440px) {
           height: 6rem;
         }
@@ -2771,21 +3471,31 @@ header {
         .content {
           background-color: #6ab7ed;
           height: 29rem;
-          padding: 2rem 6rem 3rem 6rem;
+          padding: 2rem 6rem 3rem 5rem;
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
           margin-left: -5rem;
+          width: 36rem;
           z-index: 99;
           margin-bottom: 2rem;
-          @media screen and (max-width: 1440px) {
-            padding: 2rem 1rem 2rem 1rem;
+          @media screen and (max-width: 1500px) {
+            padding: 2rem 2rem 2rem 2rem;
+            height: 20rem;
+            width: 28rem;
           }
           @media screen and (max-width: $xl-breakpoint) {
-            padding: 2rem 0rem 2rem 0rem;
+            padding: 2rem 2rem 2rem 2rem;
+          }
+          @media screen and (max-width:$lg-breakpoint) {
+            padding: 2rem 5rem 2rem 2rem;
           }
           @media screen and (max-width: $sm-breakpoint) {
-            padding: 2rem 0rem 1rem 0rem;
+            padding: 2rem 2rem 1rem 2rem;
+            margin-left: 2rem;
+            width: 18rem;
+            height: 10rem;
+            margin-top: -3rem;
           }
 
           i {
@@ -2793,6 +3503,9 @@ header {
             transform: rotate(231deg);
             font-size: 3rem;
             margin-bottom: 1rem;
+            @media screen and (max-width:1500px) {
+              font-size: 2.5rem;
+            }
             @media screen and (max-width: $sm-breakpoint) {
               font-size: 2rem;
             }
@@ -2824,6 +3537,7 @@ header {
             @media screen and (max-width: $sm-breakpoint) {
               font-size: 0.8rem;
               -webkit-line-clamp: 3;
+              display: none;
             }
           }
         }
@@ -2833,45 +3547,124 @@ header {
 }
 .videos-page {
   padding: 7rem 0rem 5rem 4rem;
+  @media screen and (max-width: 1550px) {
+    padding: 7rem 3rem 9rem 3rem;
+  }
+  @media screen and (max-width: $xl-breakpoint) {
+    padding: 4rem 2rem 6rem 2rem;
+  }
+  @media screen and (max-width: $lg-breakpoint) {
+    padding: 4rem 1rem 6rem 1rem;
+  }
   .widget {
     padding-left: 6rem !important;
+    margin-top: 2rem !important;
+    @media screen and (max-width: $xl-breakpoint) {
+      padding-left: 0rem !important;
+    }
     .top {
-      padding-left: 3.5rem;
+      padding-left: 1rem;
     }
     .last-blogs {
-      padding-left: 0.5rem;
+      padding-left: 0rem;
+      h6 {
+        @media screen and (max-width: 1500px) {
+          font-size: 1.4rem;
+        }
+        @media screen and (max-width: $sm-breakpoint) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .swiper-slide {
+      padding-left: 1rem !important;
+    }
+    .bottom {
+      @media screen and (max-width: 1500px) {
+        padding-right: 0rem;
+      }
     }
 
     .form {
       margin-top: 4rem;
       position: relative;
-
       padding-top: 5rem !important;
       form {
-        padding: 0rem 4rem !important;
+        padding: 0rem 3rem !important;
+        padding-top: 5rem !important;
+        @media screen and (max-width: 1550px) {
+          padding: 0rem 2rem !important;
+          padding-top: 3rem !important;
+        }
       }
       h3 {
         position: absolute;
-        left: 3.3rem;
-        font-size: 4rem;
-        top: -7rem;
+        left: 0;
+        font-size: 4.2rem;
+        top: -6rem;
+        font-weight: 900;
+        @media screen and (max-width: 1500px) {
+          font-size: 3.2rem !important;
+        }
+        @media screen and (max-width: $sm-breakpoint) {
+          font-size: 3rem !important;
+        }
+        span {
+          margin-left: unset;
+          margin-left: -2rem;
+          margin-top: 8rem;
+          @media screen and (max-width: $sm-breakpoint) {
+            margin-top: 5rem;
+          }
+        }
+        @media screen and (max-width: 1550px) {
+          font-size: 3.6rem;
+        }
+        @media screen and (max-width: $sm-breakpoint) {
+          font-size: 2.5rem;
+          top: -4rem;
+        }
       }
       p {
         text-align: left;
-        padding: 3rem 4rem 2rem 4rem;
+        padding: 0 3rem;
         font-size: 1rem;
+        @media screen and (max-width: 1550px) {
+          font-size: 0.9rem;
+          padding: 0rem 2rem;
+        }
+
+        @media screen and (max-width: $sm-breakpoint) {
+          padding: 0rem 2rem;
+          font-size: 0.9rem;
+        }
       }
       .btn {
         margin-top: 4rem;
+        margin-bottom: 3rem;
+        @media screen and (max-width: $sm-breakpoint) {
+          font-size: 0.9rem;
+        }
       }
+    }
+  }
+  .col-lg-6 {
+    @media screen and (max-width: $sm-breakpoint) {
+      margin-bottom: 0rem !important;
     }
   }
   .card {
     border: none;
     padding: 1.5rem;
+    .play {
+      max-width: 6rem;
+      @media screen and (max-width: $lg-breakpoint) {
+        max-width: 5rem;
+      }
+    }
     .card-body {
       background-color: #6ab7ed;
-      padding: 3rem 3rem 3rem 3rem;
+      padding: 4rem 3rem 1rem 4rem;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -2881,20 +3674,34 @@ header {
       margin-left: 6rem;
       margin-top: -4rem;
 
-      @media screen and (max-width: 1440px) {
-        padding: 2rem 1rem 2rem 1rem;
+      @media screen and (max-width: 1500px) {
+        padding: 3rem 1rem 1rem 2rem;
+        width: 22rem;
+        margin-left: 3.5rem;
       }
       @media screen and (max-width: $xl-breakpoint) {
-        padding: 2rem 0rem 2rem 0rem;
+        padding: 2rem 2rem 2rem 2rem;
+      }
+      @media screen and (max-width: $lg-breakpoint) {
+        width: 17rem;
+        margin-top: -3rem;
+        margin-left: 3rem;
       }
       @media screen and (max-width: $sm-breakpoint) {
-        padding: 2rem 0rem 1rem 0rem;
+        padding: 2rem 1rem 1rem 2rem;
+        margin-left: 4rem;
       }
 
       i {
         color: var(--color-white);
         font-size: 3rem;
         margin-bottom: 1rem;
+        display: inline-block;
+        width: 2rem;
+        transform: rotate(-45deg);
+        @media screen and (max-width: $xl-breakpoint) {
+          font-size: 2rem;
+        }
         @media screen and (max-width: $sm-breakpoint) {
           font-size: 2rem;
         }
@@ -2908,20 +3715,24 @@ header {
           font-size: 1.5rem;
         }
         @media screen and (max-width: $xl-breakpoint) {
-          font-size: 1.3rem;
+          font-size: 1.2rem;
         }
         @media screen and (max-width: $sm-breakpoint) {
           font-size: 1rem;
         }
       }
+
       p {
         font-size: 0.9rem;
         color: var(--color-white);
-        @media screen and (max-width: 1440px) {
+        @media screen and (max-width: 1550px) {
           display: -webkit-box;
           overflow: hidden;
-          -webkit-line-clamp: 4;
+          -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
+        }
+        @media screen and (max-width: $lg-breakpoint) {
+          display: none;
         }
         @media screen and (max-width: $sm-breakpoint) {
           font-size: 0.8rem;
