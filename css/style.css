@@ -271,7 +271,8 @@ header.sticky .navigation .nav-link::before {
 
 header .dropdown .dropdown-menu-full {
   display: none;
-  padding: 2rem 0rem 2rem 0rem;
+  padding: 3rem 0rem 2.5rem 0rem;
+  background-color: #ffffffee;
 }
 
 header .dropdown-menu-full {
@@ -297,13 +298,22 @@ header .dropdown-menu-full li {
 header .dropdown-menu-full li .dropdown-item {
   background-color: transparent;
   padding: 0.25rem 1rem 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+header .dropdown-menu-full li .dropdown-item i {
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 header .dropdown-menu-full li::before {
   content: "";
   width: 0.6rem;
   height: 0.6rem;
-  background-color: var(--color-dark-blue);
+  background-color: #92e8ff;
   display: block;
   margin-right: 0.1rem;
   border-radius: 50%;
@@ -312,7 +322,7 @@ header .dropdown-menu-full li::before {
 }
 
 header .dropdown-menu-full li .dropdown-item:hover {
-  color: var(--color-dark-blue) !important;
+  color: #92e8ff !important;
 }
 
 header .dropdown:hover > .dropdown-menu-full,
