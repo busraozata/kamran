@@ -235,6 +235,10 @@ button {
     &:hover {
       color: var(--color-dark-blue);
     }
+    &:focus{
+      outline: none;
+      box-shadow: none;
+    }
   }
 }
 
@@ -248,6 +252,9 @@ button {
   overflow: visible;
   background: #fff url(../img/logo.png) no-repeat center center;
   background-size: 12%;
+  @media screen and (max-width:1500px) {
+    background-size: 15%;
+  }
 
   @media screen and(max-width:$lg-breakpoint) {
     background-size: 30%;
@@ -387,6 +394,10 @@ header {
         padding-left: 2rem;
 
         .btn {
+          &:focus{
+            outline: none;
+            box-shadow: none;
+          }
           span {
             padding-left: 2rem;
           }
@@ -1093,6 +1104,10 @@ header {
           transition: 0.3s all;
           &:hover {
             color: var(--color-dark-blue);
+          }
+          &:focus{
+            outline: none;
+            box-shadow: none;
           }
           @media screen and (max-width: $sm-breakpoint) {
             margin-top: 1rem;
@@ -2120,6 +2135,10 @@ header {
       &:hover {
         color: var(--color-black);
       }
+      &:focus{
+        outline: none;
+        box-shadow: none;
+      }
       @media screen and (max-width: 1500px) {
         font-size: 0.7rem;
       }
@@ -2529,6 +2548,10 @@ header {
       &:hover {
         color: var(--color-black);
       }
+      &:focus{
+        outline: none;
+        box-shadow: none;
+      }
       @media screen and (max-width:$xl-breakpoint){
         margin-top: 1rem;
         font-size: 0.8rem;
@@ -2603,6 +2626,10 @@ header {
         transition: 0.3s all;
         &:hover {
           color: var(--color-black);
+        }
+        &:focus{
+          outline: none;
+          box-shadow: none;
         }
         @media screen and (max-width:$xl-breakpoint){
           font-size: 0.8rem;
@@ -2742,6 +2769,10 @@ header {
         margin-top: 4rem;
         @media screen and (max-width:$sm-breakpoint){
           font-size: 0.9rem;
+        }
+        &:focus{
+          outline: none;
+          box-shadow: none;
         }
       }
     }
@@ -2983,6 +3014,10 @@ header {
         @media screen and (max-width: $sm-breakpoint) {
           font-size: 0.9rem;
         }
+        &:focus{
+          outline: none;
+          box-shadow: none;
+        }
       }
     }
     .bottom {
@@ -3070,6 +3105,10 @@ header {
       padding-left: 0rem;
       margin-top: 1rem;
       transition: 0.3s all;
+      &:focus{
+        outline: none;
+        box-shadow: none;
+      }
       &:hover {
         color: var(--color-black);
       }
@@ -3312,6 +3351,10 @@ header {
         @media screen and (max-width: $sm-breakpoint) {
           font-size: 0.9rem;
         }
+        &:focus{
+          outline: none;
+          box-shadow: none;
+        }
       }
     }
     .bottom {
@@ -3399,6 +3442,10 @@ header {
       padding-left: 0rem;
       margin-top: 1rem;
       transition: 0.3s all;
+      &:focus{
+        outline: none;
+        box-shadow: none;
+      }
       &:hover {
         color: var(--color-black);
       }
@@ -3642,6 +3689,10 @@ header {
       .btn {
         margin-top: 4rem;
         margin-bottom: 3rem;
+        &:focus{
+          outline: none;
+          box-shadow: none;
+        }
         @media screen and (max-width: $sm-breakpoint) {
           font-size: 0.9rem;
         }
@@ -3861,6 +3912,10 @@ header {
           padding-left: 0rem;
           margin-top: 2rem;
           transition: 0.3s all;
+          &:focus{
+            outline: none;
+            box-shadow: none;
+          }
           &:hover {
             color: var(--color-black);
           }
@@ -3991,6 +4046,10 @@ header {
       padding-left: 0rem;
       margin-top: 2rem;
       transition: 0.3s all;
+      &:focus{
+        outline: none;
+        box-shadow: none;
+      }
       &:hover {
         color: var(--color-black);
       }
@@ -4768,12 +4827,24 @@ header {
   }
 }
 .contact-page {
-  padding: 9rem 10rem 11rem 11rem;
+  padding: 9rem 10rem 13rem 11rem;
+  @media screen and (max-width:1500px) {
+    padding: 7rem 4rem 8rem 4rem;
+  }
+  @media screen and (max-width:$lg-breakpoint) {
+    padding: 4rem 2rem 4rem 2rem;
+  }
+  @media screen and (max-width:$sm-breakpoint) {
+    padding: 4rem 1rem 4rem 1rem;
+  }
   .form {
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
     background-color: #e1f3ff;
-    padding: 0rem 0rem 2rem 0rem;
+    padding: 0rem 0rem 4rem 0rem !important;
     text-align: center;
+    @media screen and (max-width:$sm-breakpoint) {
+      padding: 0rem 0rem 2rem 0rem !important;
+    }
     h3 {
       text-align: center;
       display: inline-flex;
@@ -4782,7 +4853,17 @@ header {
       font-size: 5rem;
       align-items: center;
       font-weight: bold;
-      margin-bottom: 3rem;
+      margin-bottom: 0rem !important;
+      @media screen and (max-width:1500px) {
+        font-size: 4rem !important;
+      }
+      @media screen and (max-width:$xl-breakpoint) {
+        font-size: 3rem !important;
+      }
+      @media screen and (max-width:$sm-breakpoint) {
+        margin-bottom: 2rem !important;
+        font-size: 2.5rem !important;
+      }
       span {
         font-weight: 100 !important;
         font-family: "Australia Custom";
@@ -4792,43 +4873,92 @@ header {
       }
     }
     @include form();
+    form{
+      padding: 0rem 6rem;
+      @media screen and (max-width:$xl-breakpoint) {
+        padding: 0rem 3rem;
+      }
+    }
     p {
-      padding: 5rem 5rem 4rem 5rem;
+      padding: 0 3rem;
       font-size: 1rem;
       color: var(--color-black);
       font-weight: 400;
+      text-align: left;
       a {
         color: var(--color-black);
       }
+      @media screen and (max-width:$sm-breakpoint){
+        font-size: 0.9rem;
+      }
     }
     .btn {
-      margin-top: 6rem;
+      margin-top: 4rem;
       padding-left: 0rem;
       font-weight: bold;
       color: var(--color-black);
       transition: 0.3s all;
       font-size: 1.1rem;
+      margin-bottom: 3rem;
+      &:focus{
+        outline: none;
+        box-shadow: none;
+      }
       &:hover {
         color: var(--color-dark-blue);
       }
+      @media screen and (max-width:$sm-breakpoint){
+        font-size: 0.9rem;
+        margin-top: 2.5rem;
+        margin-bottom: 2rem;
+      }
     }
   }
+  .col-lg-6{
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
   .contact-info {
-    padding-left: 8rem;
+    background-color: #d3d3d3;
+    padding: 4.5rem 0rem;
+    margin-left: -2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (max-width:$xl-breakpoint){
+      margin-left: -1rem;
+    }
+    @media screen and (max-width:$lg-breakpoint){
+      margin-left: 0rem;
+    }
+    @media screen and (max-width:$sm-breakpoint){
+      align-items: flex-start;
+      padding-left: 3rem;
+    }
     h5 {
-      color: var(--color-blue4);
+      color: var(--color-white);
       font-weight: 900;
       margin-bottom: 3rem;
       font-size: 2rem;
+      @media screen and (max-width:$sm-breakpoint){
+        font-size: 1.5rem;
+      }
     }
     p {
-      max-width: 14rem;
+      max-width: 16rem;
       font-weight: 300;
       font-size: 1.4rem;
-      color: var(--color-blue4);
+      color: var(--color-white);
+      @media screen and (max-width:1500px){
+        font-size: 1.3rem;
+        max-width: 15rem;
+      }
+      @media screen and (max-width:$sm-breakpoint){
+        font-size: 1rem;
+      }
     }
     a {
-      color: var(--color-blue4);
+      color: var(--color-white);
       font-size: 1.4rem;
       display: block;
       font-weight: 300;
@@ -4842,11 +4972,23 @@ header {
         font-weight: 500;
         font-style: italic;
       }
+      @media screen and (max-width:1500px) {
+        font-size: 1.3rem;
+      }
+      @media screen and (max-width:$sm-breakpoint){
+        font-size: 1rem;
+      }
     }
     span {
-      color: var(--color-blue4);
+      color: var(--color-white);
       font-weight: 300;
       font-size: 1.4rem;
+      @media screen and (max-width:1500px) {
+        font-size: 1.3rem;
+      }
+      @media screen and (max-width:$sm-breakpoint){
+        font-size: 1rem;
+      }
     }
   }
 }
