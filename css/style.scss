@@ -509,14 +509,16 @@ header {
       }
     }
     .language {
-      position: fixed;
-      z-index: 9999999999;
-      top: 6rem;
-      right: 2rem;
+    
+      @media screen and (min-width:$xl-breakpoint){
+        position: fixed;
+        z-index: 9999999999;
+        top: 6rem;
+        right: 2rem;
+      }
+      position: relative;
       @media screen and (max-width: $xl-breakpoint) {
         padding-left: 2rem;
-        display: none !important;
-
         .btn {
           &:focus {
             outline: none;
@@ -542,7 +544,7 @@ header {
         background-color: transparent;
         border: none;
         @media screen and (max-width: $xl-breakpoint) {
-          margin-left: 0.4rem !important;
+          margin-left: 1.7rem !important;
         }
         .dropdown-item {
           font-weight: bold;
@@ -3129,7 +3131,7 @@ header {
         flex-direction: column;
         justify-content: flex-end;
         margin-left: -5rem;
-        z-index: 99;
+        z-index: 9;
         margin-bottom: 2rem;
         @media screen and (max-width: 1440px) {
           padding: 2rem 1rem 2rem 1rem;
@@ -3267,7 +3269,7 @@ header {
   .box {
     .img-wrapper {
       position: relative;
-      z-index: 99;
+      z-index: 9;
       display: flex;
       align-items: center;
       @media screen and (max-width: $sm-breakpoint) {
@@ -4052,7 +4054,7 @@ header {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      z-index: 99;
+      z-index: 9;
       margin-bottom: 2rem;
       width: 30rem;
       margin-left: 6rem;
@@ -5406,7 +5408,7 @@ header {
   position: fixed;
   bottom: 0rem;
   right: 0rem;
-  z-index: 999999;
+  z-index: 9;
   width: 150px;
   height: 165px;
   @media screen and (max-width: $lg-breakpoint) {

@@ -562,16 +562,21 @@ header .header-inner .speed-appointment h2 span {
 }
 
 header .header-inner .language {
-  position: fixed;
-  z-index: 9999999999;
-  top: 6rem;
-  right: 2rem;
+  position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+  header .header-inner .language {
+    position: fixed;
+    z-index: 9999999999;
+    top: 6rem;
+    right: 2rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
   header .header-inner .language {
     padding-left: 2rem;
-    display: none !important;
   }
   header .header-inner .language .btn:focus {
     outline: none;
@@ -602,7 +607,7 @@ header .header-inner .language .dropdown-menu {
 
 @media screen and (max-width: 1200px) {
   header .header-inner .language .dropdown-menu {
-    margin-left: 0.4rem !important;
+    margin-left: 1.7rem !important;
   }
 }
 
@@ -4477,7 +4482,7 @@ header .header-inner .search-area .fas fa-search {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-left: -5rem;
-  z-index: 99;
+  z-index: 9;
   margin-bottom: 2rem;
 }
 
@@ -4681,7 +4686,7 @@ header .header-inner .search-area .fas fa-search {
 
 .services-page .box .img-wrapper {
   position: relative;
-  z-index: 99;
+  z-index: 9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5886,7 +5891,7 @@ header .header-inner .search-area .fas fa-search {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  z-index: 99;
+  z-index: 9;
   margin-bottom: 2rem;
   width: 30rem;
   margin-left: 6rem;
@@ -7952,7 +7957,7 @@ header .header-inner .search-area .fas fa-search {
   position: fixed;
   bottom: 0rem;
   right: 0rem;
-  z-index: 999999;
+  z-index: 9;
   width: 150px;
   height: 165px;
   cursor: pointer;
