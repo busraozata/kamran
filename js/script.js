@@ -207,10 +207,7 @@ let SwiperTopVideo = new Swiper(".swiper--top", {
 var swiper = new Swiper(".mySwiperSSS", {
   slidesPerView: 1,
   spaceBetween: 0,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+  
   breakpoints: {
     640: {
       slidesPerView: 1,
@@ -227,7 +224,7 @@ var swiper = new Swiper(".mySwiperSSS", {
   },
 });
 
-var swiper = new Swiper(".mySwiperLastDoctorBlog", {
+/* var swiper = new Swiper(".mySwiperLastDoctorBlog", {
   direction: "vertical",
   breakpoints: {
     640: {
@@ -243,8 +240,33 @@ var swiper = new Swiper(".mySwiperLastDoctorBlog", {
       spaceBetween: 40,
     },
   },
+}); */
+var swiper = new Swiper(".mySwiperLastPosts", {
+  direction: 'vertical',
+  slidesPerView: 2,
+  loop: true,
+  autoplay: {
+    delay: 1500,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 5,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 10,
+    },
+    1366: {
+      slidesPerView: 5,
+      spaceBetween: 40,
+    },
+  },
 });
-
 var swiper = new Swiper(".mySwiperVideoSub", {});
 
 
