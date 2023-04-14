@@ -191,7 +191,7 @@ button {
 }
 
 header {
-  padding: 4rem 12rem 0rem 6rem;
+  padding: 4rem 2rem 0rem 6rem;
   position: relative;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
@@ -202,13 +202,13 @@ header {
 
 @media screen and (max-width: 1750px) {
   header {
-    padding: 3rem 12rem 0rem 3rem;
+    padding: 3rem 2rem 0rem 3rem;
   }
 }
 
 @media screen and (max-width: 1440px) {
   header {
-    padding: 3rem 12rem 0rem 3rem;
+    padding: 3rem 2rem 0rem 3rem;
   }
 }
 
@@ -238,18 +238,18 @@ header.sticky {
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
   background-color: #fff;
-  padding: 1rem 12rem 0.5rem 6rem;
+  padding: 1rem 2rem 0.5rem 6rem;
 }
 
 @media screen and (max-width: 1750px) {
   header.sticky {
-    padding: 1rem 12rem 0.5rem 4rem;
+    padding: 1rem 2rem 0.5rem 4rem;
   }
 }
 
 @media screen and (max-width: 1440px) {
   header.sticky {
-    padding: 1rem 12rem 0.5rem 2rem;
+    padding: 1rem 2rem 0.5rem 2rem;
   }
 }
 
@@ -562,16 +562,13 @@ header .header-inner .speed-appointment h2 span {
 }
 
 header .header-inner .language {
+  /*   @media screen and (min-width:$xl-breakpoint){
+        position: fixed;
+        z-index: 9999999999;
+        top: 3.5rem;
+        right: 2rem;
+      } */
   position: relative;
-}
-
-@media screen and (min-width: 1200px) {
-  header .header-inner .language {
-    position: fixed;
-    z-index: 9999999999;
-    top: 6rem;
-    right: 2rem;
-  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -589,20 +586,48 @@ header .header-inner .language {
 }
 
 header .header-inner .language .dropdown-language {
-  position: absolute;
-  top: -0.2rem;
-  left: 0.5rem;
   font-weight: bold !important;
   font-style: italic;
+  position: relative;
+}
+
+header .header-inner .language .dropdown-language .btn {
+  z-index: 9;
+  background-position: right;
+  position: relative;
+}
+
+header .header-inner .language .dropdown-language .btn span {
+  opacity: 0;
+  margin-bottom: 0rem;
+  display: block;
+  line-height: 1rem;
+}
+
+header .header-inner .language .dropdown-language .btn::before {
+  content: "";
+  background-size: contain !important;
+  background: url(../img/language.png) no-repeat;
+  position: absolute;
+  background-position: center;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
 }
 
 header .header-inner .language .dropdown-menu {
-  min-width: 3rem !important;
+  min-width: 2rem !important;
   margin-top: 1rem !important;
   border: 1px solid var(--color-black);
   padding: 0rem !important;
   background-color: transparent;
   border: none;
+  display: block;
+  padding-left: 0.7rem !important;
 }
 
 @media screen and (max-width: 1200px) {
@@ -615,7 +640,7 @@ header .header-inner .language .dropdown-menu .dropdown-item {
   font-weight: bold;
   background-color: #e1f3ff;
   border: 2px solid var(--color-black);
-  padding: 0.25rem 0.7rem;
+  padding: 0rem 0.5rem;
   margin-bottom: 0.5rem;
   position: relative;
   z-index: 9;
@@ -625,19 +650,21 @@ header .header-inner .language .dropdown-menu .dropdown-item {
 header .header-inner .language .dropdown-menu .dropdown-item span {
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
-}
-
-header .header-inner .language .dropdown-menu .dropdown-item:hover span {
+  font-size: 0.8rem;
   opacity: 0;
 }
 
+header .header-inner .language .dropdown-menu .dropdown-item:hover span {
+  opacity: 1;
+}
+
 header .header-inner .language .dropdown-menu .dropdown-item:hover::before {
-  background-color: #ffffff75;
+  background-color: #e1f3ff;
 }
 
 header .header-inner .language .dropdown-menu .dropdown-item::before {
   content: "";
-  background-color: #e1f3ff;
+  background-color: #ffffff75;
   height: 100%;
   width: 100%;
   top: 0;
@@ -1835,6 +1862,13 @@ header .header-inner .search-area .fas fa-search {
   font-weight: bold;
   font-size: 3rem;
   margin-bottom: 1.5rem;
+  color: var(--color-black);
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.banner .mySwiperBanner .swiper-slide .big-content h1:hover {
+  color: var(--color-blue3);
 }
 
 @media screen and (max-width: 1750px) {
@@ -1882,6 +1916,31 @@ header .header-inner .search-area .fas fa-search {
   .banner .mySwiperBanner .swiper-slide .big-content p {
     -webkit-line-clamp: 2;
   }
+}
+
+.banner .mySwiperBanner .swiper-slide .big-content .btn {
+  font-weight: 900;
+  color: var(--color-black);
+  font-size: 0.8rem;
+  padding-left: 0rem;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+@media screen and (max-width: 600px) {
+  .banner .mySwiperBanner .swiper-slide .big-content .btn {
+    font-size: 0.7rem;
+  }
+}
+
+.banner .mySwiperBanner .swiper-slide .big-content .btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+.banner .mySwiperBanner .swiper-slide .big-content .btn:hover {
+  color: var(--color-blue3);
 }
 
 .banner .navigate-button {
@@ -2697,7 +2756,7 @@ header .header-inner .search-area .fas fa-search {
 .about-bottom-section .experience,
 .about-bottom-section .scientific-studies,
 .about-bottom-section .presentations {
-  margin-bottom: 2rem;
+  margin-top: 2rem;
   position: relative;
 }
 
@@ -2767,7 +2826,7 @@ header .header-inner .search-area .fas fa-search {
 .about-bottom-section .presentations h6 {
   font-weight: bold;
   font-size: 2rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
   position: relative;
   margin-bottom: 1.2rem;
 }
@@ -4438,6 +4497,8 @@ header .header-inner .search-area .fas fa-search {
 
 .services-page .video-area .play {
   height: 11rem;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media screen and (max-width: 1440px) {
@@ -4974,6 +5035,8 @@ header .header-inner .search-area .fas fa-search {
 
 .service-detail .video-area .play {
   height: 9rem;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media screen and (max-width: 1440px) {
@@ -5548,6 +5611,8 @@ header .header-inner .search-area .fas fa-search {
 
 .video-sub .swiper .swiper-slide .play {
   height: 10rem;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media screen and (max-width: 1440px) {
@@ -5865,11 +5930,13 @@ header .header-inner .search-area .fas fa-search {
 
 .videos-page .card {
   border: none;
-  padding: 1.5rem;
+  padding: 1.5rem 2rem;
 }
 
 .videos-page .card .play {
   max-width: 6rem;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media screen and (max-width: 991px) {
@@ -5893,15 +5960,15 @@ header .header-inner .search-area .fas fa-search {
           justify-content: flex-end;
   z-index: 9;
   margin-bottom: 2rem;
-  width: 30rem;
-  margin-left: 6rem;
+  width: 100%;
+  max-width: 30rem;
+  margin-left: 4.5rem;
   margin-top: -4rem;
 }
 
 @media screen and (max-width: 1500px) {
   .videos-page .card .card-body {
     padding: 3rem 1rem 1rem 2rem;
-    width: 22rem;
     margin-left: 3.5rem;
   }
 }
@@ -5909,14 +5976,14 @@ header .header-inner .search-area .fas fa-search {
 @media screen and (max-width: 1200px) {
   .videos-page .card .card-body {
     padding: 2rem 2rem 2rem 2rem;
+    margin-left: 1.5rem;
   }
 }
 
 @media screen and (max-width: 991px) {
   .videos-page .card .card-body {
-    width: 17rem;
     margin-top: -3rem;
-    margin-left: 3rem;
+    margin-left: 1rem;
   }
 }
 
@@ -5924,6 +5991,7 @@ header .header-inner .search-area .fas fa-search {
   .videos-page .card .card-body {
     padding: 2rem 1rem 1rem 2rem;
     margin-left: 4rem;
+    max-width: 16rem;
   }
 }
 
@@ -5956,6 +6024,12 @@ header .header-inner .search-area .fas fa-search {
   margin-bottom: 1rem;
 }
 
+@media screen and (max-width: 1650px) {
+  .videos-page .card .card-body h4 {
+    font-size: 1.5rem;
+  }
+}
+
 @media screen and (max-width: 1440px) {
   .videos-page .card .card-body h4 {
     font-size: 1.5rem;
@@ -5964,7 +6038,7 @@ header .header-inner .search-area .fas fa-search {
 
 @media screen and (max-width: 1200px) {
   .videos-page .card .card-body h4 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 
@@ -6601,6 +6675,8 @@ header .header-inner .search-area .fas fa-search {
 
 .video .swiper-slide .play {
   height: 8rem;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media screen and (max-width: 1440px) {
@@ -7209,7 +7285,7 @@ header .header-inner .search-area .fas fa-search {
 .full-blog .blog .swiper {
   width: 100%;
   height: 100%;
-  margin-right: -6rem;
+  margin-right: -7rem;
   padding-top: 5rem;
 }
 
