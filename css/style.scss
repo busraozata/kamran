@@ -264,20 +264,20 @@ button {
   }
 }
 header {
-  padding: 4rem 2rem 0rem 6rem;
+  padding: 4rem 0rem 0rem 6rem;
   position: relative;
   transition: 0.3s all;
   position: absolute;
   width: 100%;
   z-index: 99;
   @media screen and (max-width: 1750px) {
-    padding: 3rem 2rem 0rem 3rem;
+    padding: 3rem 0rem 0rem 3rem;
   }
   @media screen and (max-width: 1440px) {
-    padding: 3rem 2rem 0rem 3rem;
+    padding: 3rem 0rem 0rem 3rem;
   }
   @media screen and (max-width: 1366px) {
-    padding: 0rem 2rem 0rem 2rem;
+    padding: 0rem 0rem 0rem 2rem;
   }
   @media screen and (max-width: $xl-breakpoint) {
     padding: 3rem 2rem 0rem 1rem;
@@ -292,15 +292,15 @@ header {
     z-index: 99999999999;
     transition: 0.3s all;
     background-color: #fff;
-    padding: 1rem 2rem 0.5rem 6rem;
+    padding: 1rem 0rem 0.5rem 6rem;
     @media screen and (max-width: 1750px) {
-      padding: 1rem 2rem 0.5rem 4rem;
+      padding: 1rem 0rem 0.5rem 4rem;
     }
     @media screen and (max-width: 1440px) {
-      padding: 1rem 2rem 0.5rem 2rem;
+      padding: 1rem 0rem 0.5rem 2rem;
     }
     @media screen and (max-width: 1366px) {
-      padding: 1rem 2rem 0.5rem 2rem;
+      padding: 1rem 0rem 0.5rem 2rem;
     }
     @media screen and (max-width: $xl-breakpoint) {
       padding: 2rem 1rem 2rem 1rem;
@@ -509,8 +509,7 @@ header {
       }
     }
     .language {
-    
-    /*   @media screen and (min-width:$xl-breakpoint){
+      /*   @media screen and (min-width:$xl-breakpoint){
         position: fixed;
         z-index: 9999999999;
         top: 3.5rem;
@@ -530,23 +529,29 @@ header {
         }
       }
       .dropdown-language {
-       
         font-weight: bold !important;
         font-style: italic;
         position: relative;
-       
-       
-        .btn{
+
+        .btn {
           z-index: 9;
-          background-position: right;
-          span{
-            opacity: 0;
-            margin-bottom: 0rem;
-            display: block;
-            line-height: 1rem;
-          }
+          padding: 1.4rem;
+          transition: 0.3s all;
           position: relative;
-          &::before{
+          z-index: 9;
+          display: inline-block;
+          /*  background-size: 48px !important; */
+          background-position: right !important;
+          transition: 0.3s all;
+          overflow: hidden;
+          background: transparent !important;
+          &:hover {
+            background: transparent !important;
+            /*  background-size: 48px !important; */
+            background-position: right !important;
+            transition: 0.3s all;
+          }
+          &::before {
             content: "";
             background-size: contain !important;
             background: url(../img/language.png) no-repeat;
@@ -560,6 +565,23 @@ header {
             bottom: 0;
             top: 0;
           }
+          @media screen and (max-width: $xl-breakpoint) {
+            padding: 0.5rem;
+          }
+          span {
+            opacity: 1;
+            margin-bottom: 0rem;
+            display: block;
+            line-height: 1rem;
+
+            padding-top: 0.2rem;
+
+            @media screen and (max-width: $xl-breakpoint) {
+              padding-left: 1rem;
+              padding-right: 1rem;
+            }
+          }
+          position: relative;
         }
       }
       .dropdown-menu {
@@ -569,10 +591,12 @@ header {
         padding: 0rem !important;
         background-color: transparent;
         border: none;
-        display: block;
-        padding-left: 0.7rem !important;
+        @media screen and (min-width: $xl-breakpoint) {
+          display: block;
+        }
+        padding-left: 1rem !important;
         @media screen and (max-width: $xl-breakpoint) {
-          margin-left: 1.7rem !important;
+          margin-left: 0.2rem !important;
         }
         .dropdown-item {
           font-weight: bold;
@@ -586,20 +610,20 @@ header {
           span {
             transition: 0.3s all;
             font-size: 0.8rem;
-            opacity: 0;
+            opacity: 1;
           }
           &:hover {
             span {
-              opacity: 1;
+              opacity: 0;
             }
             &::before {
-               background-color: #e1f3ff;
+              background-color: #ffffff75;
             }
           }
           &::before {
             content: "";
-           
-            background-color: #ffffff75;
+            background-color: #e1f3ff;
+          
             height: 100%;
             width: 100%;
             top: 0;
@@ -1430,7 +1454,7 @@ header {
           margin-bottom: 1.5rem;
           color: var(--color-black);
           transition: 0.3s all;
-          &:hover{
+          &:hover {
             color: var(--color-blue3);
           }
           @media screen and (max-width: 1750px) {
@@ -1744,7 +1768,7 @@ header {
       padding-left: 0.6rem;
       line-height: 0.6;
       color: var(--color-white);
-      @media screen and (max-width:1650px) {
+      @media screen and (max-width: 1650px) {
         font-size: 16rem;
       }
       @media screen and (max-width: 1500px) {
@@ -1759,10 +1783,10 @@ header {
       span {
         font-size: 6rem;
         margin-left: -0.4rem;
-        @media screen and (max-width:$xl-breakpoint){
+        @media screen and (max-width: $xl-breakpoint) {
           font-size: 4rem;
         }
-        @media screen and (max-width:$lg-breakpoint){
+        @media screen and (max-width: $lg-breakpoint) {
           display: none;
         }
       }
@@ -1807,10 +1831,10 @@ header {
       padding-left: 18rem;
       padding-bottom: 2rem;
       margin-top: 1rem;
-      @media screen and (max-width:1650px) {
+      @media screen and (max-width: 1650px) {
         padding-left: 15rem;
       }
-      @media screen and (max-width:1500px) {
+      @media screen and (max-width: 1500px) {
         padding-left: 14rem;
       }
       @media screen and (max-width: $xl-breakpoint) {
@@ -1829,15 +1853,14 @@ header {
           font-weight: bold;
           font-size: 1.6rem;
           line-height: 1.6;
-          @media screen and (max-width:$lg-breakpoint){
-            font-size:1.8rem
+          @media screen and (max-width: $lg-breakpoint) {
+            font-size: 1.8rem;
           }
-          
         }
         &:last-child {
           a {
             font-size: 2.5rem;
-            @media screen and (max-width:1650px){
+            @media screen and (max-width: 1650px) {
               font-size: 2rem;
             }
             @media screen and (max-width: 1500px) {
@@ -1854,12 +1877,12 @@ header {
             }
           }
         }
-        &:nth-child(2){
-          a{
+        &:nth-child(2) {
+          a {
             font-style: italic;
             font-weight: bold !important;
             line-height: 1.3;
-            @media screen and (max-width:$lg-breakpoint) {
+            @media screen and (max-width: $lg-breakpoint) {
               display: none;
             }
           }
@@ -1895,10 +1918,10 @@ header {
     padding: 6rem 2rem 3rem 2rem;
   }
   @media screen and (max-width: $lg-breakpoint) {
-    padding: 4rem 2rem 3rem 2rem;
+    padding: 4rem 2rem 1rem 2rem;
   }
   @media screen and (max-width: $sm-breakpoint) {
-    padding: 4rem 1rem 3rem 1rem;
+    padding: 4rem 1rem 1rem 1rem;
   }
   .about-img {
     margin-bottom: 3rem;
@@ -1912,6 +1935,7 @@ header {
     }
     @media screen and (max-width: $lg-breakpoint) {
       padding-left: 0rem;
+      margin-bottom: 0rem;
     }
     @media screen and (max-width: $sm-breakpoint) {
       padding-top: 0rem;
@@ -2023,6 +2047,9 @@ header {
   .presentations {
     margin-top: 2rem;
     position: relative;
+    @media screen and (max-width: $lg-breakpoint) {
+      margin-top: 0rem;
+    }
     &::after {
       content: "";
       background-color: #2e5472;
@@ -2055,9 +2082,17 @@ header {
         @media screen and (max-width: $xl-breakpoint) {
           width: 8rem;
         }
+        @media screen and (max-width: $lg-breakpoint) {
+          width: 5rem;
+          margin-top: 1rem;
+          height: 0.3rem;
+        }
       }
       @media screen and (max-width: $xl-breakpoint) {
         font-size: 1.7rem;
+      }
+      @media screen and (max-width: $lg-breakpoint) {
+        font-size: 1.5rem;
       }
     }
     h6 {
@@ -2069,11 +2104,15 @@ header {
       @media screen and (max-width: $xl-breakpoint) {
         font-size: 1.5rem;
       }
+      @media screen and (max-width: $lg-breakpoint) {
+        margin-top: 2rem;
+        font-size: 1.3rem;
+      }
     }
     .item {
       padding: 3rem 0rem 0rem 0rem;
       @media screen and (max-width: $sm-breakpoint) {
-        padding: 2rem 0rem 0rem 0rem;
+        padding: 1rem 0rem 0rem 0rem;
       }
       h5 {
         font-weight: 600;
@@ -2186,17 +2225,8 @@ header {
 }
 .widget {
   overflow: hidden;
-  /* padding-left: 4rem; */
   margin-top: 7rem;
-  /* @media screen and (max-width: 1440px) {
-    padding-left: 4rem;
-  }
-  @media screen and (max-width: $xl-breakpoint) {
-    padding-left: 2rem;
-  }
-  @media screen and (max-width: $lg-breakpoint) {
-    padding-left: 0rem;
-  } */
+
   @media screen and (max-width: $sm-breakpoint) {
     margin-top: 0rem;
   }
@@ -2230,7 +2260,7 @@ header {
       }
       @media screen and (max-width: $sm-breakpoint) {
         font-size: 1.8rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
       }
 
       span {
@@ -2249,7 +2279,8 @@ header {
           bottom: -3rem;
         }
         @media screen and (max-width: $sm-breakpoint) {
-          font-size: 4rem;
+          font-size: 3rem;
+          bottom: -2rem;
         }
       }
     }
@@ -2263,6 +2294,7 @@ header {
     height: 80rem;
     @media screen and(max-width:$lg-breakpoint) {
       height: 28rem;
+      margin-bottom: 2rem;
     }
     .swiper-slide {
       font-size: 18px;
@@ -2892,6 +2924,9 @@ header {
         @media screen and (max-width: $xl-breakpoint) {
           font-size: 1.3rem;
         }
+        @media screen and (max-width: $lg-breakpoint) {
+          max-width: 100%;
+        }
       }
       p {
         font-style: italic;
@@ -2942,7 +2977,7 @@ header {
       font-style: italic;
       margin-bottom: 3rem;
       position: relative;
-      z-index: 99;
+      z-index: 9;
       &::before {
         content: "";
         background-color: var(--color-dark-blue);
@@ -2954,8 +2989,9 @@ header {
         height: 3rem;
         border-radius: 50%;
         @media screen and (max-width: $sm-breakpoint) {
-          width: 2.5rem;
-          height: 2.5rem;
+          width: 2rem;
+          height: 2rem;
+          left: -1rem;
         }
       }
       @media screen and (max-width: 1500px) {
@@ -3085,15 +3121,15 @@ header {
       font-style: italic;
       color: var(--color-black);
       font-size: 1.8rem;
-      margin-bottom: 6rem;
+      margin-bottom: 4rem;
       @media screen and (max-width: $sm-breakpoint) {
         font-size: 1.4rem;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
       }
     }
   }
   .title-two {
-    margin-top: 6rem;
+    margin-top: 4rem;
     h3 {
       color: var(--color-dark-blue);
       font-style: italic;
@@ -3112,9 +3148,13 @@ header {
     }
   }
   .icon {
+    margin-top: 2rem;
+
     img {
+      height: 4rem;
+
       @media screen and (max-width: $lg-breakpoint) {
-        max-width: 4rem;
+        height: 3rem;
       }
     }
   }
@@ -3263,6 +3303,9 @@ header {
       position: relative;
       padding-top: 5rem !important;
       max-width: 26rem;
+      @media screen and (max-width: $lg-breakpoint) {
+        margin-top: 3rem;
+      }
       form {
         padding: 0rem 3rem !important;
         padding-top: 3rem !important;
@@ -3378,6 +3421,10 @@ header {
         @media screen and (max-width: 1500px) {
           font-size: 1.5rem;
         }
+        @media screen and (max-width: $lg-breakpoint) {
+          margin-bottom: 1rem;
+          font-size: 1.4rem;
+        }
       }
     }
     .text {
@@ -3404,6 +3451,9 @@ header {
       }
       &:hover {
         color: var(--color-black);
+      }
+      @media screen and (max-width: $lg-breakpoint) {
+        margin-top: 0rem;
       }
     }
   }
@@ -3453,6 +3503,9 @@ header {
       margin-top: 3rem;
     }
   }
+  .content{
+    margin-bottom: 2rem;
+  }
 
   .col-lg-6 {
     @media screen and (max-width: $xl-breakpoint) {
@@ -3492,6 +3545,9 @@ header {
     font-size: 1.1rem;
     @media screen and (max-width: 1500px) {
       font-size: 1rem;
+    }
+    @media screen and (max-width: $sm-breakpoint) {
+      font-size: 0.9rem;
     }
   }
   .video-area {
@@ -3642,20 +3698,26 @@ header {
         max-width: 24rem;
       }
       @media screen and (max-width: $lg-breakpoint) {
-        padding: 4.5rem 2rem 4rem 1rem;
+        padding: 0.5rem 2rem 1rem 0rem;
+        border: none;
       }
       @media screen and (max-width: $sm-breakpoint) {
         margin: 0;
         margin-top: 2rem;
-        padding: 4.5rem 2rem 1rem 1rem;
       }
       ul {
+        @media screen and (max-width: $lg-breakpoint) {
+          padding-left: 0rem;
+        }
         li {
           margin-bottom: 3rem;
           position: relative;
           display: flex;
           align-items: center;
           z-index: 9;
+          @media screen and (max-width: $lg-breakpoint) {
+            margin-bottom: 1rem;
+          }
           &::before {
             content: "";
             width: 0.6rem;
@@ -3708,6 +3770,9 @@ header {
       padding-top: 5rem !important;
       @media screen and (max-width: $xl-breakpoint) {
         margin-top: 8rem;
+      }
+      @media screen and (max-width: $lg-breakpoint) {
+        margin-top: 6rem;
       }
       form {
         padding: 0rem 3rem !important;
@@ -3839,6 +3904,105 @@ header {
       }
       &:hover {
         color: var(--color-black);
+      }
+    }
+  }
+  .sss{
+    .user-comment {
+    
+      .comment-box {
+        margin-top: 3rem;
+        /* margin-bottom: 5rem; */
+        &:nth-child(2n + 0) {
+          margin-top: 0;
+          text-align: right;
+          .text {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-end !important;
+            text-align: right;
+            p{
+              text-align: right !important;
+            }
+          }
+        }
+        @media screen and (max-width: $sm-breakpoint) {
+          margin-bottom: 3rem;
+          margin-top: 0rem;
+        }
+        h5 {
+          color: var(--color-black);
+          font-weight: 600;
+          font-style: italic;
+          font-size: 1.8rem;
+          @media screen and (max-width: $xl-breakpoint) {
+            font-size: 1.5rem;
+          }
+          @media screen and (max-width: $sm-breakpoint) {
+            font-size: 1.2rem !important;
+          }
+        }
+        span {
+          color: var(--color-dark-blue);
+          font-weight: 600;
+          font-style: italic;
+          font-size: 1rem;
+        }
+        .title {
+          font-weight: 300;
+          color: var(--color-turquoise);
+          font-size: 1rem;
+          @media screen and (max-width: $sm-breakpoint) {
+            font-size: 0.7rem;
+          }
+        }
+        .text {
+          padding: 1.4rem 0rem 0rem 0rem;
+          @media screen and (max-width: $sm-breakpoint) {
+            padding: 1.2rem 0rem 0rem 0rem;
+          }
+          position: relative;
+          z-index: 9;
+          &:before {
+            content: "";
+            background: url(../img/text-shape.png) no-repeat;
+  
+            background-size: contain;
+            background-position: left;
+            width: 7rem;
+            height: 7rem;
+            left: -2rem;
+            top: 0;
+            position: absolute;
+            @media screen and (max-width: $sm-breakpoint) {
+              width: 4rem;
+              height: 3rem;
+            }
+          }
+          .img-wrapper {
+            margin-bottom: 1rem;
+            img {
+              height: 5rem;
+              width: 5rem;
+              object-fit: cover;
+              margin-right: 1rem;
+              @media screen and (max-width: $sm-breakpoint) {
+                height: 4rem;
+                width: 4rem;
+              }
+            }
+          }
+          p {
+            color: var(--color-black);
+            font-size: 1.1rem;
+            font-style: italic;
+            font-weight: 300;
+            text-align: left !important;
+            @media screen and (max-width: $sm-breakpoint) {
+              font-size: 0.8rem;
+            }
+          }
+        }
       }
     }
   }
@@ -4028,6 +4192,9 @@ header {
       margin-top: 8rem;
       position: relative;
       padding-top: 5rem !important;
+      @media screen and (max-width: $sm-breakpoint) {
+        margin-top: 4rem;
+      }
       form {
         padding: 0rem 3rem !important;
         padding-top: 5rem !important;
@@ -4537,6 +4704,22 @@ header {
   overflow: hidden;
   .container-fluid {
     padding: 0;
+  }
+  .btn{
+    color: var(--color-dark-blue);
+    padding-left: 0rem;
+    font-weight: 900;
+    font-size: 1rem;
+    transition: 0.3s all;
+    &:hover{
+      color: var(--color-black);
+    }
+    @media screen and (max-width:$lg-breakpoint){
+      font-size: 0.9rem;
+    }
+    @media screen and (max-width:$sm-breakpoint){
+      font-size: 0.8rem;
+    }
   }
   .section-title {
     margin-bottom: 1rem;
@@ -5171,7 +5354,7 @@ header {
             font-size: 1.5rem;
             max-width: 15rem;
             transition: 0.3s all;
-            &:hover{
+            &:hover {
               color: var(--color-dark-blue);
             }
             @media screen and (max-width: 1650px) {
@@ -5229,9 +5412,6 @@ header {
   }
 }
 .contact-page {
-  @media screen {
-    
-  }
   padding: 9rem 10rem 13rem 11rem;
   @media screen and (max-width: 1500px) {
     padding: 7rem 4rem 8rem 4rem;
@@ -5324,7 +5504,7 @@ header {
     padding-right: 0rem;
   }
   .contact-info {
-    background-color: #d3d3d3;
+    background-color: #b5b5b5;
     padding: 4.5rem 0rem;
     margin-left: -2rem;
     display: flex;
@@ -5510,7 +5690,9 @@ header {
       visibility: visible !important;
 
       &:hover {
-        background-color: var(--color-blue3);
+        
+        width: 2.2rem;
+        height: 2.2rem;
       }
 
       &:nth-child(1) {
