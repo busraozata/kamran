@@ -270,6 +270,11 @@ header {
   position: absolute;
   width: 100%;
   z-index: 99;
+  @media screen and (min-width:$xl-breakpoint) {
+   .container-fluid{
+    padding: 0.2rem;
+   }
+  }
   @media screen and (max-width: 1750px) {
     padding: 3rem 0rem 0rem 3rem;
   }
@@ -593,6 +598,7 @@ header {
         border: none;
         @media screen and (min-width: $xl-breakpoint) {
           display: block;
+          padding-left: 2rem !important;
         }
         padding-left: 1rem !important;
         @media screen and (max-width: $xl-breakpoint) {
@@ -4711,6 +4717,10 @@ header {
     font-weight: 900;
     font-size: 1rem;
     transition: 0.3s all;
+    &:hover{
+      outline: none;
+      box-shadow: none;
+    }
     &:hover{
       color: var(--color-black);
     }

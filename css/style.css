@@ -200,6 +200,12 @@ header {
   z-index: 99;
 }
 
+@media screen and (min-width: 1200px) {
+  header .container-fluid {
+    padding: 0.2rem;
+  }
+}
+
 @media screen and (max-width: 1750px) {
   header {
     padding: 3rem 0rem 0rem 3rem;
@@ -664,6 +670,7 @@ header .header-inner .language .dropdown-menu {
 @media screen and (min-width: 1200px) {
   header .header-inner .language .dropdown-menu {
     display: block;
+    padding-left: 2rem !important;
   }
 }
 
@@ -6823,6 +6830,12 @@ header .header-inner .search-area .fas fa-search {
   font-size: 1rem;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
+}
+
+.video .btn:hover {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .video .btn:hover {
