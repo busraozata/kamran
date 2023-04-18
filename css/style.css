@@ -2175,6 +2175,7 @@ header .header-inner .search-area .fas fa-search {
   border: 2px solid var(--color-black);
   padding-left: 0.8rem;
   border-radius: 0.9rem;
+  padding-bottom: 0.1rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -2451,6 +2452,7 @@ header .header-inner .search-area .fas fa-search {
   border: 2px solid var(--color-black);
   padding-left: 0.8rem;
   border-radius: 0.9rem;
+  padding-bottom: 0.1rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -3933,6 +3935,7 @@ header .header-inner .search-area .fas fa-search {
   border: 2px solid var(--color-black);
   padding-left: 0.8rem;
   border-radius: 0.9rem;
+  padding-bottom: 0.1rem;
 }
 
 .doctor-about .top .content .btn:focus {
@@ -6838,6 +6841,7 @@ header .header-inner .search-area .fas fa-search {
   padding-left: 0.8rem;
   border-radius: 0.9rem;
   font-size: 0.8rem;
+  padding-bottom: 0.1rem;
 }
 
 .services .tab-content .tab-pane .content .btn:focus {
@@ -7026,6 +7030,7 @@ header .header-inner .search-area .fas fa-search {
   padding-left: 0.8rem;
   border-radius: 0.9rem;
   font-size: 0.7rem;
+  padding-bottom: 0.1rem;
 }
 
 .services .content .btn:hover {
@@ -7182,6 +7187,7 @@ header .header-inner .search-area .fas fa-search {
   padding-left: 0.8rem;
   border-radius: 0.9rem;
   font-size: 0.7rem;
+  padding-bottom: 0.1rem;
 }
 
 .video .btn:hover {
@@ -8156,7 +8162,7 @@ header .header-inner .search-area .fas fa-search {
   border: 2px solid var(--color-black);
   padding-left: 0.8rem;
   border-radius: 0.9rem;
-  padding: 0.375rem 0.75rem 0.3rem;
+  padding: 0.375rem 0.75rem 0.2rem;
 }
 
 @media screen and (max-width: 600px) {
