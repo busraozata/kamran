@@ -79,10 +79,10 @@ var swiper = new Swiper(".mySwiperComments", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  autoplay: {
+/*   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
-  },
+  }, */
   breakpoints: {
     640: {
       slidesPerView: 1,
@@ -101,7 +101,7 @@ var swiper = new Swiper(".mySwiperComments", {
       spaceBetween: 00,
     },
     1650: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 60,
     },
   },
