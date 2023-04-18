@@ -693,12 +693,17 @@ header .header-inner .language .language-area .language-list ul {
   display: flex;
 }
 
+header .header-inner .language .language-area .language-list ul li a {
+  background: none;
+  border-right: 1px solid var(--color-black);
+}
+
 header .header-inner .language .language-area .language-list ul li:hover span {
-  opacity: 1;
+  opacity: 0;
 }
 
 header .header-inner .language .language-area .language-list ul li:hover a {
-  background: transparent !important;
+  background: inherit;
 }
 
 header .header-inner .language .language-area .language-list ul li:hover::before {
@@ -706,20 +711,22 @@ header .header-inner .language .language-area .language-list ul li:hover::before
   opacity: 1;
 }
 
-header .header-inner .language .language-area .language-list ul li a::before {
-  content: "";
-  background-color: #e1f3ff;
-  opacity: 0;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  position: absolute;
-  z-index: 2;
-  -webkit-transition: 0.3s all;
-  transition: 0.3s all;
+header .header-inner .language .language-area .language-list ul li a {
+  z-index: 9;
+  /*  &::before {
+                  content: "";
+                  background-color: #fff;
+                  
+                  height: 100%;
+                  width: 100%;
+                  top: 0;
+                  bottom: 0;
+                  right: 0;
+                  left: 0;
+                  position: absolute;
+                  z-index: -1;
+                  transition: 0.3s all;
+                } */
 }
 
 header .header-inner .language .language-area .language-item {
@@ -746,8 +753,12 @@ header .header-inner .language .language-area .language-item {
   }
 }
 
+header .header-inner .language .language-area .language-item:hover img {
+  opacity: 1;
+}
+
 header .header-inner .language .language-area .language-item span {
-  opacity: 0;
+  opacity: 1;
   display: block;
   height: 100%;
   color: var(--color-black);
@@ -761,6 +772,12 @@ header .header-inner .language .language-area .language-item img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0;
 }
 
 header .header-inner .language .language-area ul {
