@@ -79,10 +79,11 @@ var swiper = new Swiper(".mySwiperComments", {
     el: ".swiper-pagination",
     clickable: true,
   },
-/*   autoplay: {
+
+  autoplay: {
     delay: 2500,
     disableOnInteraction: false,
-  }, */
+  },
   breakpoints: {
     640: {
       slidesPerView: 1,
@@ -98,7 +99,7 @@ var swiper = new Swiper(".mySwiperComments", {
     },
     1440: {
       slidesPerView: 1,
-      spaceBetween: 00,
+      spaceBetween: 20,
     },
     1650: {
       slidesPerView: 1,
@@ -316,5 +317,5 @@ $("#preloader")
     $(this).remove();
   });
 
-
+ 
 AOS.init();
