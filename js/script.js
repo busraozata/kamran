@@ -208,7 +208,7 @@ let SwiperTopVideo = new Swiper(".swiper--top", {
 var swiper = new Swiper(".mySwiperSSS", {
   slidesPerView: 1,
   spaceBetween: 0,
-  
+
   breakpoints: {
     640: {
       slidesPerView: 1,
@@ -243,7 +243,7 @@ var swiper = new Swiper(".mySwiperSSS", {
   },
 }); */
 var swiper = new Swiper(".mySwiperLastPosts", {
-  direction: 'vertical',
+  direction: "vertical",
   slidesPerView: 2,
   loop: true,
   autoplay: {
@@ -270,7 +270,6 @@ var swiper = new Swiper(".mySwiperLastPosts", {
 });
 var swiper = new Swiper(".mySwiperVideoSub", {});
 
-
 /* 
 const registerVideo = (bound, video) => {
 	bound = document.querySelector(bound);
@@ -292,7 +291,7 @@ const registerVideo = (bound, video) => {
 registerVideo(".services", ".services video"); */
 
 var tabChange = function () {
-  var tabs = $(".nav-tabs > button");
+  var tabs = $(".nav-tabs-private > button");
   var active = tabs.filter(".active");
   var next = active.next("button").length
     ? active.next("button")
@@ -301,7 +300,7 @@ var tabChange = function () {
 };
 var tabCycle = setInterval(tabChange, 6000);
 $(function () {
-  $(".nav-tabs button").click(function (e) {
+  $(".nav-tabs-private button").click(function (e) {
     e.preventDefault();
     clearInterval(tabCycle);
     $(this).tab("show");
@@ -317,5 +316,15 @@ $("#preloader")
     $(this).remove();
   });
 
- 
+var swiper = new Swiper(".mySwiperWidgetSlides", {
+  centeredSlides: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 AOS.init();
