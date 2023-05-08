@@ -1150,12 +1150,12 @@ header .header-inner .navigation .menu-area {
 }
 
 header .header-inner .navigation .menu-area li {
-  margin-right: 4rem;
+  margin-right: 2rem;
 }
 
 @media screen and (max-width: 1550px) {
   header .header-inner .navigation .menu-area li {
-    margin-right: 2rem;
+    margin-right: 1rem;
   }
 }
 
