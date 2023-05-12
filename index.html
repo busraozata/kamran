@@ -1639,217 +1639,22 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="./js/slick.js"></script>
+    <script src="./js/jscomments.js"></script>
     <script src="./js/script.js"></script>
 
 
 
-    <script>
-        /* https://github.com/peledies/google-places */
-        (function ($) {
 
-            $.googlePlaces = function (element, options) {
-
-                var defaults = {
-                    placeId: 'ChIJt5FzH2e9yhQR0vZdnKHRkJ8' // placeId provided by google api documentation
-                    , render: ['reviews']
-                    , min_rating: 5
-                    , max_rows: 6
-                    , rotateTime: false
-                };
-
-                var plugin = this;
-
-                plugin.settings = {}
-
-                var $element = $(element),
-                    element = element;
-
-                plugin.init = function () {
-                    plugin.settings = $.extend({}, defaults, options);
-                    $element.html("<div id='map-plug'></div>"); // create a plug for google to load data into
-                    initialize_place(function (place) {
-                        plugin.place_data = place;
-                        // render specified sections
-                        if (plugin.settings.render.indexOf('reviews') > -1) {
-                            renderReviews(plugin.place_data.reviews);
-                            if (!!plugin.settings.rotateTime) {
-                                initRotation();
-                            }
-                        }
-                    });
-                }
-
-                var initialize_place = function (c) {
-                    var map = new google.maps.Map(document.getElementById('map-plug'));
-
-                    var request = {
-                        placeId: plugin.settings.placeId
-                    };
-
-                    var service = new google.maps.places.PlacesService(map);
-
-                    service.getDetails(request, function (place, status) {
-                        if (status == google.maps.places.PlacesServiceStatus.OK) {
-                            c(place);
-                        }
-                    });
-                }
-
-                var sort_by_date = function (ray) {
-                    ray.sort(function (a, b) {
-                        var keyA = new Date(a.time),
-                            keyB = new Date(b.time);
-                        // Compare the 2 dates
-                        if (keyA < keyB) return -1;
-                        if (keyA > keyB) return 1;
-                        return 0;
-                    });
-                    return ray;
-                }
-
-                var filter_minimum_rating = function (reviews) {
-                    for (var i = reviews.length - 1; i >= 0; i--) {
-                        if (reviews[i].rating < plugin.settings.min_rating) {
-                            reviews.splice(i, 1);
-                        }
-                    }
-                    return reviews;
-                }
-
-                var renderReviews = function (reviews) {
-                    // reviews = sort_by_date(reviews);
-
-                    reviews = filter_minimum_rating(reviews);
-                    var html = "<div class='review-item-wrapper'>";
-                    var row_count = (plugin.settings.max_rows > 0) ? plugin.settings.max_rows - 1 : reviews.length - 1;
-                    // make sure the row_count is not greater than available records
-                    row_count = (row_count > reviews.length - 1) ? reviews.length - 1 : row_count;
-                    for (var i = row_count; i >= 0; i--) {
-                        var stars = renderStars(reviews[i].rating);
-                        var date = convertTime(reviews[i].time);
-                        html = html +
-                            `<div class="box">
-                                <div class="img-wrapper">
-                                    <a href="${reviews[i].author_url}" target="_blank"><img src="./img/google-logo.png" class="img-fluid" alt=""></a>
-                                </div>
-                                <span class="stars d-block mb-2">
-                                    ${stars}
-                                </span>
-                               
-                                <div class="text">
-                                    <p>${truncate(reviews[i].text)}</p>
-                                </div>
-                                <div class="d-flex flex-column align-items-start">
-                                    <a href="${reviews[i].author_url}" target="_blank"><span class="title">${reviews[i].author_name}</span></a>
-                                    <span class="time">${reviews[i].relative_time_description}</span>
-                                </div>
-                            </div>`
-
-                        /* "<div class='box'><div class='review-meta'><span class='review-img'><img src='"
-                             + reviews[i].profile_photo_url + "'></span> <span class='title'>" 
-                                + reviews[i].author_name + "</span><span class=''>, </span><span class='time'>" + "" + date 
-                                    + "</span></div>" + stars + "<div class='text'>"+"<p >" + truncate(reviews[i].text) + "</p></div></div>" */
-                    };
-                    $element.append(html);
-                    html = html + "</div";
-                }
-
-                function truncate(string) {
-                    if (string.length > 189)
-                        return string.substring(0, 189) + '...';
-                    else
-                        return string;
-                };
-
-                var initRotation = function () {
-                    var $reviewEls = $element.children('.review-item');
-                    var currentIdx = $reviewEls.length > 0 ? 0 : false;
-                    $reviewEls.hide();
-                    if (currentIdx !== false) {
-                        $($reviewEls[currentIdx]).show();
-                        setInterval(function () {
-                            if (++currentIdx >= $reviewEls.length) {
-                                currentIdx = 0;
-                            }
-                            $reviewEls.hide();
-                            $($reviewEls[currentIdx]).fadeIn('slow');
-                        }, plugin.settings.rotateTime);
-                    }
-                }
-
-                var renderStars = function (rating) {
-                    var stars = "<div class='review-stars'><ul>";
-
-                    // fill in gold stars
-                    for (var i = 0; i < rating; i++) {
-                        stars = stars + "<li><i class='star'></i></li>";
-                    };
-
-                    // fill in empty stars
-                    if (rating < 5) {
-                        for (var i = 0; i < (5 - rating); i++) {
-                            stars = stars + "<li><i class='star inactive'></i></li>";
-                        };
-                    }
-                    stars = stars + "</ul></div>";
-                    return stars;
-                }
-
-                var convertTime = function (UNIX_timestamp) {
-                    var a = new Date(UNIX_timestamp * 1000);
-                    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-                    var time = months[a.getMonth()] + ' ' + a.getDate() + ', ' + a.getFullYear();
-                    return time;
-                }
-
-                plugin.init();
-
-            }
-
-            $.fn.googlePlaces = function (options) {
-
-                return this.each(function () {
-                    if (undefined == $(this).data('googlePlaces')) {
-                        var plugin = new $.googlePlaces(this, options);
-                        $(this).data('googlePlaces', plugin);
-                    }
-                });
-
-            }
-
-        })(jQuery);
-
-    </script>
 
     <!--!!! PUT YOUR PLACE ID HERE !!!-->
     <script>
 
-        $(document).ready(function ($) {
-            $("#google-reviews").googlePlaces({
-                placeId: 'ChIJt5FzH2e9yhQR0vZdnKHRkJ8',
-                render: ['reviews'],
-                min_rating: 4,
-                max_rows: 7
-            });
-        });
     </script>
     <!--Slider init-->
     <script>
-        setTimeout(function () {
-            $('#google-reviews .review-item-wrapper').slick({
-                mobileFirst: true,
-                variableWidth: false,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-
-            });
-
-        }, 1000);
+      
 
     </script>
 </body>

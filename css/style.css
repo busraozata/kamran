@@ -4904,6 +4904,7 @@ header .header-inner .search-area .fas fa-search {
   background-color: #6ab7ed;
   width: 0.6rem;
   height: 0.6rem;
+  margin-right: 1rem !important;
 }
 
 .blog-detail .widget .services-slider .swiper .swiper-slide {
